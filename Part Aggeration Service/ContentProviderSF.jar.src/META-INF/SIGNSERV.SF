@@ -1,0 +1,711 @@
+Signature-Version: 1.0
+Created-By: SignServer EE 5.9.0.Final
+SHA-256-Digest-Manifest: cC/in5JIqG+C1BMD4WFnuzWfupuCQkN5bWlqlp2xkpI=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/DataModelDe
+ finition.class
+SHA-256-Digest: JhaaIaeecI/virmYq1uDH+xqok8q2Rx3sYkj8YKZepw=
+
+Name: plugin.xml
+SHA-256-Digest: LuQmmw+JcecczR0tJscTNFieg38gNUATcAS66/Ob0gM=
+
+Name: com/mentor/dms/contentprovider/sf/SFUtil.class
+SHA-256-Digest: 4wTHU/btQ7QIn+/5BaUNtMWjcO2oPirfpKzAErY63Z8=
+
+Name: com/mentor/dms/contentprovider/sf/response/facets/Facets.class
+SHA-256-Digest: lucGqrEx9218ZqD1MPon7QtoiXzyuMJaG9Fga+veG0I=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/EnrichingParameter.
+ class
+SHA-256-Digest: swm9kSajQmOVCntq4FMhOiU3i5dygcIQ2lSyV7gmYLM=
+
+Name: com/mentor/dms/contentprovider/sf/client/SEClient.class
+SHA-256-Digest: na36/dxS59X1QtFkKsOz50ggNJM64V+O5eLOMi+dzyI=
+
+Name: com/mentor/dms/contentprovider/sf/ComponentHeightInterceptorFactor
+ y.class
+SHA-256-Digest: AHTPznxjOQewJXEz7o98TTqk7VGPU279gDxBPSUK588=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/filter/FilterAnd.cl
+ ass
+SHA-256-Digest: oWL2yO/PCZtaqLzQkf6NNuk7/b++QqPs+xocVjjN3DI=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/CSVParseBase.c
+ lass
+SHA-256-Digest: J3xhd+FIz/rUJCaC7DXq90nIui+rgjLaYyjGaBDA+44=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/ScriptedMapping.class
+SHA-256-Digest: xjsEHYuqxtqnyMktz8Y2vxC7/UeEibydHiZs1pH4uEk=
+
+Name: config/MappingUpgradeSettings.properties
+SHA-256-Digest: GVC/REYyyQUMuY6nmozOsbppj5iNJYlMqAfIpoFI/VI=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/SetOfFields
+ .class
+SHA-256-Digest: 7ygtBxPakWVPlXC7xbaQ088wlA5c5GUPbPi8Qi1MAD0=
+
+Name: com/mentor/dms/contentprovider/sf/response/searchcapabilities/Prop
+ ertySearchCapability.class
+SHA-256-Digest: kYthnJtGSQzUpNN2Rn9WOO+bWFyI+8lKnt1ju6A0GQM=
+
+Name: com/mentor/dms/contentprovider/sf/ContentProviderSEAuthenticationE
+ xception.class
+SHA-256-Digest: UW4qGqz7jcr8+C2zB6vyfs/CPHwl5AutemEOzzV7Vrg=
+
+Name: com/mentor/dms/contentprovider/sf/response/facets/Error.class
+SHA-256-Digest: D2xO2Rc4hNM6ur1oFdvxSq9cPgoVvY2xPX5UeKhmC1Y=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/modifymappings/ModifyM
+ appingApp.class
+SHA-256-Digest: W9EzAlOKInPuriguXvcOXdhOaQJc1ZP7+NuPSFZ1+Sg=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/ObjectType.
+ class
+SHA-256-Digest: 4BEvRn7C+bg+mffezTdEIu0J6e99ZjbZLS+XArtud9Y=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/DeleteType.
+ class
+SHA-256-Digest: uAK5KH6w+mwXSIxwCEhe76JC3HZiXvhYVnmrBzrWQ2I=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/ObjectFactory.
+ class
+SHA-256-Digest: Wi6CnWX6IwdSx2Ggj4C791O6U5f4uGPBWfvXxtK6GN4=
+
+Name: com/mentor/dms/contentprovider/sf/response/EnrichProperties.class
+SHA-256-Digest: Q60IVWDJfmqG/hpMJLZYDZ+42WBj4VSry1rs5a86lxw=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/ScriptedMapping$Script
+ edMappingArgumentMPNProperty.class
+SHA-256-Digest: gggodtRvmdycZ31KcbZ92xMSjCHQbVxjpPlQFZez5r4=
+
+Name: com/mentor/dms/contentprovider/sf/Activator.class
+SHA-256-Digest: CxEKUsTIIgKyIBO97N/TPUDfx9j4bgSxQPENEWrleuQ=
+
+Name: com/mentor/dms/contentprovider/sf/responsePartByID/FailedRecord.cl
+ ass
+SHA-256-Digest: Jb3ORRGPnn2Qm855WstyesymcV5Hg3FS6RZR/H0PDmA=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/CSVParseCompon
+ ent.class
+SHA-256-Digest: eaxja72qs6uiJkSzk9UnlamntvX2MmT3W+qcxjWhsio=
+
+Name: com/mentor/dms/contentprovider/sf/response/propertydef/PropResult.
+ class
+SHA-256-Digest: 7nftHp1gkcEvS5eXPgLSdqQd/5CRJ9+EZXLHNK8JXfw=
+
+Name: com/mentor/dms/contentprovider/sf/response/SearchResult.class
+SHA-256-Digest: TAeOWH8M/iwWq74pd2TI4HpbV90GW1hs7IAvJFMNyW0=
+
+Name: com/mentor/dms/contentprovider/sf/ComponentHeightCompInterceptorFa
+ ctory$1.class
+SHA-256-Digest: ucISaSsVA/Snqx+ejInOVjR60vjsvlWGvnnww7mObME=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/RenameProperty
+ .class
+SHA-256-Digest: uZybsNbZJYFkZ9hLEeKjLizwUAeLCSuWghuwIs+hya8=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/schemas/XML
+ Import.xsd
+SHA-256-Digest: f3E6zPEGyY2kRHdLfRaPc5yeyn/LBFdFGXp5ygylnUc=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/DeleteProperty
+ .class
+SHA-256-Digest: KQnJI66DF4kqH7zJaKBLlO42T//IZ5jQr4WaBMgpgYs=
+
+Name: com/mentor/dms/contentprovider/sf/ContentProviderUpdateSearchResul
+ tsImpl.class
+SHA-256-Digest: twgOqA+bvjrYws28Oz3BR0kMq9O+tjfd9hIb3ByLuns=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/MappingUpgradeProperti
+ es.class
+SHA-256-Digest: 1yVn8MI0piX+ZaaTDDAeSVmbO4+4dTqw8I93MMDUsSs=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/MappingUpgrade
+ App.class
+SHA-256-Digest: i5MQXawEnm73HNcbo4jXrQF14hxtYShqjacLNdr79BE=
+
+Name: com/mentor/dms/contentprovider/sf/response/partclassdef/Type.class
+SHA-256-Digest: 0ixMNTfCBG9q+iCS1rVA1F7/bK7m2MwntbD/9iHNv0U=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/Taxonomy.class
+SHA-256-Digest: D/sQXed8Sx1W+pB6p497fYaPqmWdpO3YJDi9ioHsk7U=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/SearchDetailsParame
+ ters.class
+SHA-256-Digest: hXENFgAw1riD7B1TYfBaVzIACSXyoTxeKI6Do7a5BKk=
+
+Name: com/mentor/dms/contentprovider/sf/images/counterfeit.png
+SHA-256-Digest: JXBIVC+DxV/FGHa1G+t4ITCgfKTVl7uIZ8XX+zt1I9Q=
+
+Name: com/mentor/dms/contentprovider/sf/actions/images/SiliconExpert_Sma
+ ll.png
+SHA-256-Digest: 4f1cDZf1eGYoWAB5/hCGpqxsyGnQaOD5FP11BpbQ3HU=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/Characteristic
+ sToTopLevel.class
+SHA-256-Digest: nHv4WASvhzc9VBs5+nR6jsUqtIWfSwO5GZbBt1Mz9a4=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/csvdata/Proper
+ tyFromCsv.class
+SHA-256-Digest: gSzamqjiN9mwZwaYYl+mtafYZr8CMYrmy6DqNYZAOY8=
+
+Name: com/mentor/dms/contentprovider/sf/response/partclassdef/Result.cla
+ ss
+SHA-256-Digest: cni0FpU9mdhEU2O6rhKwAV3qLudlPLnbbhQ3xwx2UaY=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/UpgradeDirecti
+ veType.class
+SHA-256-Digest: LxKC3umwqz6/747RuY+FxEWzvjIfL0XTJfFu8zjAFTo=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/EDMClassMode.class
+SHA-256-Digest: 4Us59hvhYNUZsIehn/wLCJ6WuTLh5ssSdZBzvao2T1A=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/filter/FilterFactor
+ y.class
+SHA-256-Digest: FlAmFPko53xUAbp7eVMoBuYJXguh+C42oSbJHwAo3d4=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/MappingUpgrade
+ Report.class
+SHA-256-Digest: iNLQzg8QJu7FEWqHWBbXOrZEHphu+D9HBMq21JaFkM8=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/Feature$StrlenComparat
+ or.class
+SHA-256-Digest: Fv6OvfI/qPd3zKHc4aXzBrOgcJoDHLirVs0hH5gz7uU=
+
+Name: com/mentor/dms/contentprovider/sf/images/supplyframe_small.png
+SHA-256-Digest: 5R9cxGeAN5s186OE/TKGvIXHJCjP7yVlbs8eC8/7Gr0=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/ProductLine.class
+SHA-256-Digest: 8RnRCRDU9EQaAUeAnblrcI/mW4wBtKYHPtNvui31E/8=
+
+Name: com/mentor/dms/contentprovider/sf/responsePartByID/PartRecord.clas
+ s
+SHA-256-Digest: vXqnBPmam2yl/8Z7g1nhZXRMv4mXmT2D3ta9llsTudA=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/BaseUpgradeDir
+ ectiveType.class
+SHA-256-Digest: xR/I91YdaIxeSmbjNmBGF34Fg94pDhsbLh5ewx87YOA=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/MappingUpgrade
+ Exception.class
+SHA-256-Digest: Z0HvCQI8FjLha93Q9q5T687jdqpe2FecQF9MW/x4QPc=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/EnrichingDetailsPar
+ ameters.class
+SHA-256-Digest: LFSsRvCEuutRlWEDkuy0ZlUtqVcf97NXW2dZa05rLQU=
+
+Name: com/mentor/dms/contentprovider/sf/response/EnrichingResult.class
+SHA-256-Digest: qOlSq9iYvWgsghprSHKcEuHaAQdrmUnN+K6pJbAvPGQ=
+
+Name: com/mentor/dms/contentprovider/sf/responsePartByID/Part.class
+SHA-256-Digest: x3LQVAiCI6IUauV9V+xv0Y3NZJ/Ghhs/QtDJHL73b+A=
+
+Name: com/mentor/dms/contentprovider/sf/images/SF_logoL.png
+SHA-256-Digest: VvovxHYcBTuXqbQAWJFvNlb9xGb+34KAeMWjOFWSMMY=
+
+Name: com/mentor/dms/contentprovider/sf/response/propertydef/PropertyDef
+ initions.class
+SHA-256-Digest: gI/4fpVSjXpe0iqEzb7CoX44FR3aB/qFLsmdjDol6MA=
+
+Name: resources/define.properties
+SHA-256-Digest: Q8AdTJAW4Nk3Itzonrw8tyIGLWfqFaKjboJOK767xWk=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/RightBoundary.class
+SHA-256-Digest: BdHlcegtIZ42JYfSjrObikq9oNOjrY+l70oz+CbJ4FI=
+
+Name: com/mentor/dms/contentprovider/sf/utils/MoveManufacturerPartsApp.c
+ lass
+SHA-256-Digest: p5TWIbAFVIf7amIIu6Fndq//NIHE0BVrQzoIl5czBWc=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/DeleteAllPrope
+ rty.class
+SHA-256-Digest: JJa31OPaQrkrHArTYBgnEGjzMjjJ4eFL2xS1lzSHJF8=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/filter/FilterRange.
+ class
+SHA-256-Digest: KZMabY4J2qjHPBSTWKajdI4PAFhgT6n87dDPGDyfnnU=
+
+Name: com/mentor/dms/contentprovider/sf/AggregationServiceWebCall.class
+SHA-256-Digest: qgEuSGVYwEGcr0L0InS4LZ+0a4r4T5UjXo8/l0HtSV4=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/charactsupgrade/Charac
+ teristicsUpgrade.class
+SHA-256-Digest: TfA+9EH5vQrTZe94qVPfHWWDMps2GNiysO/qk7ooBDs=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/csvdata/Catalo
+ gFromCsv$Command.class
+SHA-256-Digest: TEr1yy41B/oLMzjvbxneaO9qEbU7OstT+qo/KtZwcwc=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/schemas/DataMo
+ delUpgrade.xsd
+SHA-256-Digest: 52Rok//sMYFcxbJQoPx99GRK7LSJVZekQ28akVjHlXQ=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/ObjectFacto
+ ry.class
+SHA-256-Digest: P9j8GJLPZXjMttyTKLZJNCo1U+QV5qkpVOM7MVfRN2g=
+
+Name: com/mentor/dms/contentprovider/sf/request/GetPartByIDRequest.class
+SHA-256-Digest: KrMZTEVt/1Geuo4HAV5dt6bkx9Hyg1B9naIE98wYnTk=
+
+Name: com/mentor/dms/contentprovider/sf/images/AccountStatus.png
+SHA-256-Digest: 6VQ0CqX9gad3dqYrXY9+12aUULACCBJ12Au+kIMfPE0=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/filter/FilterDummy.
+ class
+SHA-256-Digest: WLe8T9v3f4AFpNAxXANA+WdWHL/AHOUrk1USuJNmxu8=
+
+Name: com/mentor/dms/contentprovider/sf/response/ResponseDataParamSearch
+ .class
+SHA-256-Digest: fDgpXX1mISzt3jhXCJ4QvfcJXCje6UNwnWv3gqswe9o=
+
+Name: com/mentor/dms/contentprovider/sf/response/propertydef/PropType.cl
+ ass
+SHA-256-Digest: AozdOxoYJ7s2+xr8ExxWO9lOizunqBaynVckfG9N5Qw=
+
+Name: com/mentor/dms/contentprovider/sf/SFUserPreferences.class
+SHA-256-Digest: 3oGw0JfZrqG838pbOv591kF+SEh6t82T8ay3sGcvFoM=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/ScriptedMapping$Script
+ edMappingArgumentString.class
+SHA-256-Digest: czV046Znrjlr1eYyqNmb3FcboUUoWb2CYDB6/O+Qc/w=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/CSVUtil.class
+SHA-256-Digest: Z4r6K2CV7EJj8seepg+okTDO6MEN329xa6gH3c/xBC0=
+
+Name: com/mentor/dms/contentprovider/sf/ContentProviderImpl.class
+SHA-256-Digest: At4PhJyNvG2N4qFC+FQv1UtVsNjwxIdFn+Ly/K/dEjg=
+
+Name: com/mentor/dms/contentprovider/sf/utils/SEMatch.class
+SHA-256-Digest: lnTA87YAm7RrylGFT3MiJ2SKb1bTJdu8rIZcPpL5a24=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/MergeCatalog.c
+ lass
+SHA-256-Digest: dPQigBYW6cfAGfRAPUNI3Z4TpZxpkpJnq7R5tV+v29M=
+
+Name: com/mentor/dms/contentprovider/sf/request/GetFacetsRequest.class
+SHA-256-Digest: ggMSolFihfB4Z4vys+tYYIeh/MCu+Dxyx/OQni9Jk38=
+
+Name: com/mentor/dms/contentprovider/sf/images/inventory.png
+SHA-256-Digest: iORwjK1FFEFvOfIaWbj7xO68GzhJoDe3pDBFyxHdRkw=
+
+Name: com/mentor/dms/contentprovider/sf/ContentProviderResultsImpl.class
+SHA-256-Digest: Vo3BkZn2ev/grZiUpuPIMPWhhMaGmqqp4o85E0ImPGA=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/SearchParameter.cla
+ ss
+SHA-256-Digest: GaOGWXjpHTxYSO81F+RjguqrBwAuGRsoDol7r5gTvXY=
+
+Name: com/mentor/dms/contentprovider/sf/utils/PropertyUtil.class
+SHA-256-Digest: Vq4kVve0CxHNh0nGdO4I2a7TIhCms6jnDTx8DTOBCSE=
+
+Name: com/mentor/dms/contentprovider/sf/response/facets/ResponseDataGetF
+ acets.class
+SHA-256-Digest: 3uIeClx7ygFAetZ1XqgVko8aRZ2nkcB3zvGbcNVcRuA=
+
+Name: com/mentor/dms/contentprovider/sf/response/partclassdef/ElementsTy
+ pe.class
+SHA-256-Digest: FfsnTulPZDk7FjQbJ1HF7KVCuAkhyxqEiFt0TIlWnIk=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/FieldType.c
+ lass
+SHA-256-Digest: wUkiQCI+x8uVLt7QTdaBofndp5nVD7A1Cv2fgxConaU=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/SubCategory.class
+SHA-256-Digest: YQ3xxRSZZou5yD5qiCV2UOlRk7bH6gBTqmCu4u+9vTo=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/xml/DataModelX
+ ML.class
+SHA-256-Digest: 9U0JIvpNFGnNEKBegyyGZq2Art+v1AJBEGPq8H9lVJA=
+
+Name: com/mentor/dms/contentprovider/sf/ComponentHeightMPNInterceptorFac
+ tory$1.class
+SHA-256-Digest: NWWjVxbN+UQm47KKtiZUKdw9HUmm9WnEjrNId5LYdZo=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/csvdata/Proper
+ tyFromCsv$Command.class
+SHA-256-Digest: bD6ucKWaMEbGChWGBOiofKbnTMUUnaumXA6I48OxCw8=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/ExportMPNStati
+ csXML.class
+SHA-256-Digest: yH5gWX1R81DG3bhujlpnQDqs9nkIMotY61m18Il6L9g=
+
+Name: mentor.keys
+SHA-256-Digest: duhglOsuljXF4nTFT4+CFrwNSJNWEJVNa9j+jI+s/VA=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/IFeature.class
+SHA-256-Digest: q6VZzqiYYmVMa8jnTiJnWUa6CxYF/TwyyBljwJQ71QQ=
+
+Name: com/mentor/dms/contentprovider/sf/response/SearchProviderPart.clas
+ s
+SHA-256-Digest: DmLjf3cR3dHNT0V+7g8T9AdfFc+lCHuQSf/3rISiHdo=
+
+Name: resources/ListView.properties
+SHA-256-Digest: gnfJRP9AJZ9m5GPKlihg2jrM56nxrSnl4gLjUTIBh/c=
+
+Name: com/mentor/dms/contentprovider/sf/SFUtil$PartClassSearchInfo.class
+SHA-256-Digest: 4PClpYPnE0ycni/vGQX7h+jax93DVMG+sdDrdbixzYk=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/DoubleMapping.class
+SHA-256-Digest: 3ImpuhSOwKo8+j2GZs6/C+S7AuxJgZuxZZo2p9lmMr8=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/AbstractSEDataModelApp
+ .class
+SHA-256-Digest: f+FwXNtFj7+YXqzVsp3IpkJDrtPhsaMRmtmNW/2VfXU=
+
+Name: com/mentor/dms/contentprovider/sf/request/ParametricSearchRequest.
+ class
+SHA-256-Digest: X5R80hc9NbdzQaJ9HahrWlxuIb7MWzia9c4vzH9QrII=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/csvdata/CSVPar
+ seException.class
+SHA-256-Digest: Nzqm4OiGha5bnjiPGiYWJgv9THZ3d0BCc6ZUUXb8zvM=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/DmsElements
+ .class
+SHA-256-Digest: TbqSPyLxXI6Od0ZC9zqz/9mXuMi9CNADnu+9rX0qljg=
+
+Name: com/mentor/dms/contentprovider/sf/response/Result.class
+SHA-256-Digest: qqsQCF0S9OxWSy/FK2QHShMoqkOY6GwS44y13G/ok3I=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/RenameCatalog.
+ class
+SHA-256-Digest: hbmeNFHXvQIcAWWRot0mTpvExHbP5s0/6K7oyPvW88E=
+
+Name: com/mentor/dms/contentprovider/sf/images/material.png
+SHA-256-Digest: wTIgGCSVbSAjh9Ai/Dsi054VAZUgkwjgM2lFo3FjgiE=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/Feature.class
+SHA-256-Digest: cyCI8T26fpxQzgZRw6VTkspQ7zWKiuwwcZjTtHWvCKg=
+
+Name: com/mentor/dms/contentprovider/sf/response/facets/Facets$2.class
+SHA-256-Digest: pSmPcKTf+OFrEV9ZLKyixeJxkqjXZB1z48UBFa1V5bM=
+
+Name: com/mentor/dms/contentprovider/sf/PartSearchActionDelegate.class
+SHA-256-Digest: JQoDlekRdhWdtPKgg+gUlTckuBb1ZJIHSxtAH0hzQ1c=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/xml/DirectiveX
+ ML.class
+SHA-256-Digest: Sj87djXy4fe4kd0jo+fs0vOPCkSgsy/y+kLw1Hw0few=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/ListType.cl
+ ass
+SHA-256-Digest: BGIhGFEHZpHvtFLB+XPpR1ilsUMxAQUYT+0ioYu2i5s=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/DataModelUpgra
+ deXML.class
+SHA-256-Digest: 3I2PKoCNzKjLSGB195PVa57ignU0wWCJuptlgeDg1Pc=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/MappingUpgrade
+ Result.class
+SHA-256-Digest: FV+yRpI/THRtaXbPaPZw++QKUCu+DS+f7PhZ9zecgKo=
+
+Name: com/mentor/dms/contentprovider/sf/response/PartProperties.class
+SHA-256-Digest: oqRh33tnlNWqOEU8Jwksf66GNY7sNQ+GHoBgPnTkrfg=
+
+Name: com/mentor/dms/contentprovider/sf/response/SearchDefinitionResult.
+ class
+SHA-256-Digest: KP519winPnu84S+z07bNC/XPv4gsk+kFKADbWWnuo8c=
+
+Name: com/mentor/dms/contentprovider/sf/ui/UserPreferencesActionDelegate
+ .class
+SHA-256-Digest: 06f9JE+U0o382LjpO6OOHWbKcloSWHS29FUbcLnCRjs=
+
+Name: com/mentor/dms/contentprovider/sf/ui/AccountStatusDlg.class
+SHA-256-Digest: lakzY1jLdKfZywgna1I6d+ZGHRGwo1HUVEvVNpVoCy8=
+
+Name: com/mentor/dms/contentprovider/sf/utils/SfGson$1.class
+SHA-256-Digest: gT9EJwhEpAGy4WljW3C64AxFqwleo6TcxIjdzFm84io=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/GenerateDataModel$Sear
+ chableFeatureData.class
+SHA-256-Digest: nPISAaZUfbd/7RG06GzgVf43Nfj8o8MMrVELvrCk+Q0=
+
+Name: com/mentor/dms/contentprovider/sf/images/SF_logo.png
+SHA-256-Digest: TlIL8iyu9uUy9V38ATlCCbaMpHS9N3edEOMd10fabEA=
+
+Name: com/mentor/dms/contentprovider/sf/response/facets/Facets$1.class
+SHA-256-Digest: uPDPHAgPyUs2LcCdmpg3NShdAjqHTcmCffvl53BT1pU=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/LeftBoundary.class
+SHA-256-Digest: FQYTXbddWtpBHj0s+NhZSZBjv5OuWKZEnECrwl1OKso=
+
+Name: com/mentor/dms/contentprovider/sf/ContentProviderImpl$LoadComponen
+ tHeightInterceptorsJob.class
+SHA-256-Digest: nk9dDwT9Wbnkg8T9j4EKo6IJOeKkv75YHw7qdSFTfnw=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/FeatureInstance.class
+SHA-256-Digest: Y1R4ii5zqTS35WGVCpjRrXKa9JjtKzEplsfjLoYqow4=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/CatalogChar
+ actersticDef.class
+SHA-256-Digest: nQOB4Z5eAuNDEwlH3wITGwUZDjthRExJmeke43uG3xg=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/Characteris
+ ticDef.class
+SHA-256-Digest: cusoMN2CFqUFeZfYZ6kKTFrUxkvtyk6h1GVerZ0w8Gs=
+
+Name: com/mentor/dms/contentprovider/sf/response/partclassdef/Property.c
+ lass
+SHA-256-Digest: 6qvcT+9QZbutVP7260s3/fJ+xoWmqeepuzE/FhcASHI=
+
+Name: com/mentor/dms/contentprovider/sf/response/propertydef/PropData.cl
+ ass
+SHA-256-Digest: ijul7ED9VsNh1XA5qTpZYhY7ogwMbb6piSc4ECKVtZw=
+
+Name: com/mentor/dms/contentprovider/sf/response/partclassdef/PartData.c
+ lass
+SHA-256-Digest: oLzdct8B2ndteNiCsmMye+sN12cMRx17VdFachJuA+0=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/DMUpgradeProperties.cl
+ ass
+SHA-256-Digest: CYQ/6qC4rC7ci1ygc56NiVMkdK6fyooC8CYEwtw2CxA=
+
+Name: com/mentor/dms/contentprovider/sf/response/facets/Result.class
+SHA-256-Digest: GaPLp3v9I0i1Du/iWkMMALoMBTMmeKVXB/oWDAqxEn8=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/DeleteCatalog.
+ class
+SHA-256-Digest: jMPtMxnNbK+V3b4whyAcyqCoJO1hMb2uSTGR7b2zeKI=
+
+Name: com/mentor/dms/contentprovider/sf/mapping/MappingUtils.class
+SHA-256-Digest: ZRvY6D1gpQjnFj+VRKwGDIg7wIlwtNJEy4Vt5vRMcp4=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/ScriptedMapping$Script
+ edMappingArgument.class
+SHA-256-Digest: JMkq30BRnnWYDCdXUOI3znKiTkB2Cl1H9gb7CBjQYv8=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/DataModelUpgra
+ de.class
+SHA-256-Digest: XKoPS+ZUwoHGgy63cDqa55Kvx8vdX+qYgnr5Z/Eb/Tg=
+
+Name: com/mentor/dms/contentprovider/sf/ui/ActionSetValidValue.class
+SHA-256-Digest: uN2/a/bgHHgeniPrpAUxaN6pZmobg6zY+hMT8YChw1w=
+
+Name: com/mentor/dms/contentprovider/sf/CountriesOfOriginCustomTable.cla
+ ss
+SHA-256-Digest: RzmFJgfcYA2iIRfJ5jlwKiGEA/3uctNli3BjWZDeBSo=
+
+Name: com/mentor/dms/contentprovider/sf/response/EnrichRecordList.class
+SHA-256-Digest: LMn+0gN+cyeP95WUYxy/aTyMAt+dLlhcGdVU1XzRd0M=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/DatamodelUpgra
+ deApp.class
+SHA-256-Digest: okK7w1Xm1GDAshFkopQ2sXUqRiCPnVEUN7EMyNMBSww=
+
+Name: config/UnitConvertTable.properties
+SHA-256-Digest: sJtq6F+T/s2+Q2CLO2JsioeVlXtJXz5rKP+7KL29464=
+
+Name: com/mentor/dms/contentprovider/sf/images/SiliconExpert_Small.png
+SHA-256-Digest: ilXCaXq4hmqM7PeCwbaSy/qxtZAN4lLbVrndw/cBtLs=
+
+Name: com/mentor/dms/contentprovider/sf/responsePartByID/Result.class
+SHA-256-Digest: glJcf+ItPY1gPjLqo9huovy8c/YP1iunMWZddNrHIcc=
+
+Name: config/DomainNameConvertTable.properties
+SHA-256-Digest: 1Sy3DIEuu57dDqFtE6qkSL7TYVlO0es6drmhqMSiBe0=
+
+Name: com/mentor/dms/contentprovider/sf/AggregationServiceUserPreference
+ s.class
+SHA-256-Digest: Q2ng8g3S7hCYaJ+UfNdrBExtr9MogLUtTAmrYlTKY0Q=
+
+Name: com/mentor/dms/contentprovider/sf/TestWebService.class
+SHA-256-Digest: xVhWnttm8QfAxjQGAlASUBzxqa9B4zkmS/ProxJa3Ng=
+
+Name: com/mentor/dms/contentprovider/sf/response/searchcapabilities/Resp
+ onseDataSearchCapabilities.class
+SHA-256-Digest: StcxxNQUKCjScefBZVCqjFO4rPgBq6a9sq/1Up3r8Zk=
+
+Name: com/mentor/dms/contentprovider/sf/utils/SFSyncManufacturersApp.cla
+ ss
+SHA-256-Digest: GiXAI21hoR3fAIa0R0Ty1V4jyvrPTKGPqhldjs/zuzs=
+
+Name: com/mentor/dms/contentprovider/sf/ComponentHeightMPNInterceptorFac
+ tory.class
+SHA-256-Digest: 0hbmBCFjbEqdLtAAbzfK3dW/Dxe+0uaBICfvSuM6O4w=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/csvdata/Catalo
+ gFromCsv.class
+SHA-256-Digest: 2jeIXsYFeTNUn6Smh36/KGuvV3qJgNIQkD4ErGIFEQM=
+
+Name: com/mentor/dms/contentprovider/sf/response/DefinitionProperty.clas
+ s
+SHA-256-Digest: bkCEQfe1T6iCGsPrakBPMWPAgahMfQFWWe+r8vXDubk=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/xml/DataModelX
+ ML$Target.class
+SHA-256-Digest: wPmHxHVKVg0ZZsJRRafGoRvxccz2VAbCNbnWXWtW/Zg=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/definition/CatalogDef.
+ class
+SHA-256-Digest: 5jjGhotFyr1BlR6aM4sPd/TPpf/kkBiwofA/Gw0R8dU=
+
+Name: com/mentor/dms/contentprovider/sf/PartSearchCriteria.class
+SHA-256-Digest: nw+71FGxfx3JyJTUmUhb5DvVDHHFPqueh2WS/jV/+5c=
+
+Name: com/mentor/dms/contentprovider/sf/ComponentHeightCompInterceptorFa
+ ctory.class
+SHA-256-Digest: 8gflp7gJQYQSwDYwSacoYh3psbK1jmw1PwMwDJDBwgk=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/UnitConverter.class
+SHA-256-Digest: upmgQy1OFveMdXAlSq5umOHxsweAPs3KyFvA2rSJ3HE=
+
+Name: com/mentor/dms/contentprovider/sf/request/FreeTextSearchRequest.cl
+ ass
+SHA-256-Digest: Oo7EPqXO8ET0dvFX9WrB5bvdf7eevIqZ3NubNGr2MYg=
+
+Name: com/mentor/dms/contentprovider/sf/utils/SFStatusApp.class
+SHA-256-Digest: cSCINutXrt7Gemb60q5d8lNuSp3OuhfshLuqYzqPk8E=
+
+Name: com/mentor/dms/contentprovider/sf/ContentProviderUpdateSearchImpl.
+ class
+SHA-256-Digest: Nbu5PyBvy/L0tRlBmBd92HBVFcuTBX9gtEjVJMsam7M=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/filter/FilterAnyOf.
+ class
+SHA-256-Digest: w1yJmTWC2FYE14nfgHu46G/zFQtdTCIh+7/aD/FuEGM=
+
+Name: com/mentor/dms/contentprovider/sf/actions/ViewSEPartOnlineAction.c
+ lass
+SHA-256-Digest: ZmVQNd2fuMR+t5mD2nubjFL22Zr1bYpvx9YOKAqksGk=
+
+Name: com/mentor/dms/contentprovider/sf/ui/AccountStatusActionDelegate.c
+ lass
+SHA-256-Digest: y6EbmO5qsfA3Pv70eIflN5nV5mG5/v+4UqhlM8VsJas=
+
+Name: com/mentor/dms/contentprovider/sf/PartCounterfeitCustomTable.class
+SHA-256-Digest: MVSz0ZTo0Pgas1Qxl7eheFs6Ra2mlCyfucKnDG4pPJU=
+
+Name: com/mentor/dms/contentprovider/sf/responsePartByID/ResponseDataPar
+ tByID.class
+SHA-256-Digest: aMV1DjDLvisPPq+IePJOfoyExyPhKg4IfzJJ5SymNi4=
+
+Name: com/mentor/dms/contentprovider/sf/request/GetNextPageRequest.class
+SHA-256-Digest: qo6pxgfDXNfmPjUlFE4TgsPkzedEP/sTTasdHXWjQqE=
+
+Name: com/mentor/dms/contentprovider/sf/response/searchcapabilities/Resu
+ lt.class
+SHA-256-Digest: YWjzDCbBoACv1gFFdxaMvye8GnaByIjQ67ws3CG+u5c=
+
+Name: com/mentor/dms/contentprovider/sf/utils/ManufacturerPartMatchApp.c
+ lass
+SHA-256-Digest: 12tVFIoAkjis5/GHI/zem2ZO/kNRFOtBSCBtTnALEOE=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/AbstractTaxonomyNode.c
+ lass
+SHA-256-Digest: 5DoaLyLUyKmUezcs73dm4iWdmY2JucwD3soY2I+I/RY=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/AnalyzeDuplicateProduc
+ tLines.class
+SHA-256-Digest: sQP5k9F2hOby7qOiPRjVAo9k8kmL8v+CI7mJD56QX38=
+
+Name: com/mentor/dms/contentprovider/sf/utils/SfGson.class
+SHA-256-Digest: bJLkG1PTIIB0/MyLnqRmvLsx71lihaYjqkpjYUQewvg=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/MainCategory.class
+SHA-256-Digest: qTN64IamO7sKCFuRoDJOkdLdfQ848A8XItwweO+tfgU=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/GenerateSampleParts.cl
+ ass
+SHA-256-Digest: oEscx1ltqe6JnyWse9lcwDFn6g98ABw/wCfphuMVK0I=
+
+Name: com/mentor/dms/contentprovider/sf/SFValidValues.class
+SHA-256-Digest: PnibFIU+qnIUMhm4w/dmVekCn7IJpHyKmSaOH5bLqQ8=
+
+Name: com/mentor/dms/contentprovider/sf/response/hierarchy/ClassHierarch
+ yData.class
+SHA-256-Digest: sUp6LFOP/0K6TRPU4+S5DS5W5mSmYtZc7LFpNAESVZQ=
+
+Name: com/mentor/dms/contentprovider/sf/response/hierarchy/PartClass.cla
+ ss
+SHA-256-Digest: eFU+ifFlX43IgXBzAKIlX9UdXddKg6kWUl46i2y+aCc=
+
+Name: com/mentor/dms/contentprovider/sf/images/country.png
+SHA-256-Digest: QqvxzT4AvA1Qvv/DUPocQunLy6kotgJczRkdXfau+cY=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/Paging.class
+SHA-256-Digest: Sm2wUn/VdOx0JOH8vMlYQlDF8+7byAP2ZDJk5wD4KsM=
+
+Name: com/mentor/dms/contentprovider/sf/response/EnrichRecord.class
+SHA-256-Digest: e2LowstG/GGMtvFdb4QOmTbQ2zG37JxoziVqLpUpAMw=
+
+Name: com/mentor/dms/contentprovider/sf/FranchisedInventoryTable.class
+SHA-256-Digest: GqcO7v5iCA69kPebuSLM1fsk7+Amt2val0A6sh5zYds=
+
+Name: com/mentor/dms/contentprovider/sf/response/partclassdef/Detail.cla
+ ss
+SHA-256-Digest: GCZfXZXlx/fgICSbQJLXAPUftq4ALBSyPod7BEEgonE=
+
+Name: com/mentor/dms/contentprovider/sf/utils/MoveComponentsApp.class
+SHA-256-Digest: 5GHRI+UOI1/FSC2kXKWU5UiFB7Fl9oDqM3uEAJrD3o8=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/AddCatalog.cla
+ ss
+SHA-256-Digest: rscQ9I6fwq+Dt9DgpKuKvlqERjLNf0Cmm6ZWfeDHXV8=
+
+Name: com/mentor/dms/contentprovider/sf/mapping/MappingProperty.class
+SHA-256-Digest: NSScDv9v/3Hk5GRCoA7yGnf5WnCRtWa7GKVc8w59cks=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/DomainNameConverter.cl
+ ass
+SHA-256-Digest: eQXBSTqDB46d/m6f2Ysw8ZlrDlQliak1lvq1DAK7JTE=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/FtsParameter.class
+SHA-256-Digest: goPlsWmLlIopx78wbg2nIaOVaTyzkVIIf9K12FVxSj8=
+
+Name: com/mentor/dms/contentprovider/sf/response/ResponseDefinitionSearc
+ h.class
+SHA-256-Digest: 4whzIYW1+DIh6ZqSF0I3litxgIUzOGZbrSomzMD63gw=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/csv2xml/CSVParseMPN.cl
+ ass
+SHA-256-Digest: Qkey2XoZFtHgg4OfK3aDcIgM7DCZoB6Tvisk8XyKH58=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/filter/FilterRangeB
+ oth.class
+SHA-256-Digest: l3NzaAB6Vdql78ly4aZGfKPnp9K0WoLP6umfWnmZA4w=
+
+Name: com/mentor/dms/contentprovider/sf/response/hierarchy/Result.class
+SHA-256-Digest: 5D88fdEm3hLsXmnbWj2bxclL7JzXGgG4zsnihdsevMc=
+
+Name: config/dataModelUpgradeSettings.properties
+SHA-256-Digest: 4I2KX4F4cODMSWB9TAwTnEPUCYpf7rsrp9KuFh6CpFY=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/upgrade/MappingUpgrade
+ Exception$ELevel.class
+SHA-256-Digest: YHjOWPY17vb+VuZXdnfoPpnN2jLoNYGNUKt5CJVZFGM=
+
+Name: com/mentor/dms/contentprovider/sf/ContentProviderResultRecordImpl.
+ class
+SHA-256-Digest: bWJSnQO09P4TWSucV8voyrwI6RhGFaUkBgD8qYfi+Ns=
+
+Name: com/mentor/dms/contentprovider/sf/AggregationServiceWebCall$Search
+ Info.class
+SHA-256-Digest: +QilMI19TnPCt9RNYbICWit4Sl/F++5z4q2+74g9ur0=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/filter/FilterEqual.
+ class
+SHA-256-Digest: 5IGSFO0Jf3mcAiVSZILlU5ptb70FGU0KJssj8bM7rUk=
+
+Name: com/mentor/dms/contentprovider/sf/request/data/FtsPartClassContext
+ .class
+SHA-256-Digest: szI2FqVjxtxUO2LRTW521+dFyKKeadIyl3TObTQ/1w4=
+
+Name: com/mentor/dms/contentprovider/sf/ChemicalCustomTable.class
+SHA-256-Digest: p3Rs1EDELVSiWoqgstMRy/jkEY8IBWOkjwO343CN3Ac=
+
+Name: com/mentor/dms/contentprovider/sf/SupplyFrameConnection.class
+SHA-256-Digest: CC83fe1i/8MYwIft2wjqeaK9O0g5tidIRcxfHvorr8w=
+
+Name: com/mentor/dms/contentprovider/sf/images/preferences.gif
+SHA-256-Digest: p/ISIPqcaidccGxtUWcgcOAAFCvnyipf46qnPbVtezw=
+
+Name: com/mentor/dms/contentprovider/sf/response/ErrorObject.class
+SHA-256-Digest: 3KP1y9wV6Rih3pruNA1G6d57EBwmu/g8yl2AD88cj4A=
+
+Name: com/mentor/dms/contentprovider/sf/images/mainlogo_top.gif
+SHA-256-Digest: Z1PxHinXVA4B6ThmN2xy1WnH/lH9P2pmit7bcWwbK4w=
+
+Name: com/mentor/dms/contentprovider/sf/datamodel/GenerateDataModel.clas
+ s
+SHA-256-Digest: 29+igyR3Ahy5FlBfQUshpfu09LeGWkZpZgqXGC4CPp0=
+

@@ -1,0 +1,15 @@
+Cell Editor Version: 124.0.2527.6485
+
+
+
+Environment Variables:
+----------------------
+VALOR_ENV_FILE = "C:\MGCNoScan\Siemens\Valor\vNPI_2409\edir\env"
+HOMEDRIVE = "C:"
+HOMEPATH = "\Users\cargaz1z"
+MGC_HOME = "C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw"
+OS = "Windows_NT"
+PATH = "C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win32\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\jre\default\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;\server;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common3D\win64\_bin;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\wg\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\wg\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\_bin;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\EDM-Server\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common3D\win64\lib;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Puppet Labs\Puppet\bin;C:\Program Files\TortoiseSVN\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Tailscale\;C:\Program Files\Microsoft VS Code\bin;C:\Users\cargaz1z\AppData\Local\Microsoft\WindowsApps;"
+SDD_HOME = "C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME"
+TEMP = "C:\Users\cargaz1z\AppData\Local\Temp\2"
+TMP = "C:\Users\cargaz1z\AppData\Local\Temp\2"

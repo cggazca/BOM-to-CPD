@@ -1,0 +1,152 @@
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	07:50 AM Friday, February 28, 2025
+
+Processing Globals
+	Adding symbol gnd 
+	Adding symbol gnd_3lines 
+	Adding symbol gnd_analog 
+	Adding symbol gnd_digital 
+	Adding symbol gnd_earth 
+	Adding symbol gnd_general 
+	Adding symbol gnd_single_line 
+	Adding symbol gnd_small 
+	Adding symbol gnd_triangle 
+	Adding symbol power_triangle 
+	Adding symbol pwr_bar 
+	Adding symbol pwr_circle 
+	Adding symbol vcc_bar 
+	Adding symbol vcc_circle 
+DXLIB2LMC utility complete
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	12:12 PM Wednesday, March 05, 2025
+
+Processing Globals
+DXLIB2LMC utility complete
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	12:24 PM Wednesday, March 05, 2025
+
+Processing Globals
+DXLIB2LMC utility complete
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	04:36 PM Wednesday, March 05, 2025
+
+Processing Globals
+	Adding symbol gnd 
+	Adding symbol gnd_3lines 
+	Adding symbol gnd_analog 
+	Adding symbol gnd_digital 
+	Adding symbol gnd_earth 
+	Adding symbol gnd_general 
+	Adding symbol gnd_single_line 
+	Adding symbol gnd_small 
+	Adding symbol gnd_triangle 
+	Adding symbol power_triangle 
+	Adding symbol pwr_bar 
+	Adding symbol pwr_circle 
+	Adding symbol vcc_bar 
+	Adding symbol vcc_circle 
+DXLIB2LMC utility complete
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	04:53 PM Wednesday, March 05, 2025
+
+Processing Globals
+	Adding symbol gnd 
+	Adding symbol gnd_3lines 
+	Adding symbol gnd_analog 
+	Adding symbol gnd_digital 
+	Adding symbol gnd_earth 
+	Adding symbol gnd_general 
+	Adding symbol gnd_single_line 
+	Adding symbol gnd_small 
+	Adding symbol gnd_triangle 
+	Adding symbol power_triangle 
+	Adding symbol pwr_bar 
+	Adding symbol pwr_circle 
+	Adding symbol vcc_bar 
+	Adding symbol vcc_circle 
+DXLIB2LMC utility complete

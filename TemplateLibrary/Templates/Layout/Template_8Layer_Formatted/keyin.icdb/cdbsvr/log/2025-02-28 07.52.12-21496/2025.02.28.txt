@@ -1,0 +1,50 @@
+;;*****************************************************************************
+;; Unpublished work. Copyright 2025 Siemens
+;;
+;; This material contains trade secrets or otherwise confidential information
+;; owned by Siemens Industry Software Inc. or its affiliates (collectively,
+;; "SISW"), or its licensors. Access to and use of this information is strictly
+;; limited as set forth in the Customer's applicable agreements with SISW.
+;;*****************************************************************************
+[2025.02.28 07:52:12] [0000m.00s.167ms] [0] WELCOME
+[2025.02.28 07:52:12] [0000m.00s.167ms] [1] iCDB Client ver.3.242, 1TMAkS/K5diX+FZQBzeW7A, build:25213694 created 2024-08-20 08:05:30, sources stamp:1TMAkS/K5diX+FZQBzeW7A
+[2025.02.28 07:52:12] [0000m.00s.167ms] [1] Unpublished work. Copyright 2024 Siemens\r\n\r\nThis material contains trade secrets or otherwise confidential\r\ninformation owned by Siemens Industry Software Inc.\r\nor its affiliates (collectively, 'SISW'), or its licensors.\r\nAccess to and use of this information is strictly limited\r\nas set forth in the Customer's applicable agreements with SISW.
+[2025.02.28 07:52:12] [0000m.00s.167ms] [1] Base flow version [2409]
+[2025.02.28 07:52:12] [0000m.00s.167ms] [1] Install Id [2753288], Flow Id [Xpedition 2409], Full Flow Name [Xpedition 2409], Exact Access Date [2024/08/01]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] Machine [DI1USPNO0392WNB]  IP [127.0.0.1,192.168.68.66]  User [m3nnjl]  PID [21496]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] Operating system [Microsoft Windows 8 Enterprise Edition, 64-bit (build 9200)]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] Current working dir [D:\SiemensData\Automation\SVN\WatermarkCL]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] PATH [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common3D\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win32\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\jre\default\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\Program Files\ImageMagick-7.1.1-Q16-HDRI;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Zulu\zulu-8-jre\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\IcedTeaWeb\WebStart\bin;C:\MGCNoScan\Strawberry\c\bin;C:\MGCNoScan\Strawberry\perl\site\bin;C:\MGCNoScan\Strawberry\perl\bin;C:\Program Files\Amazon\SessionManagerPlugin\bin\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\PowerShell\7\;C:\Program Files\Java\jdk-15.0.2;C:\Users\m3nnjl\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\m3nnjl\AppData\Local\Programs\Python\Python311\;C:\Users\m3nnjl\AppData\Local\Microsoft\WindowsApps]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] SDD_HOME [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME] on file system [NTFS]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] SDD_PLATFORM [win64]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] WDIR [C:\WDIR\XENTP2409;C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\standard;]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] Local iCDB working dir [C:\WDIR\XENTP2409\iCDB] on file system [NTFS]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] Corporate iCDB working dir [C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts\iCDB] on file system [NTFS]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] IC: Project GUID [1927-c19a-484d-aa10-c8fb-1c72-9fb1-c760-1e54-20a1-2430-9fba]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] IC: Project path [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\Template_8Layer_Formatted\keyin.icdb] on file system [NTFS]
+[2025.02.28 07:52:12] [0000m.00s.168ms] [1] IC: Working in FULL access mode
+[2025.02.28 07:52:12] [0000m.00s.169ms] [0] Single file [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\Template_8Layer_Formatted\keyin.icdb\icdb.dat] size [199984 (195.3 kB)]
+[2025.02.28 07:52:12] [0000m.00s.169ms] [1] Single file [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\Template_8Layer_Formatted\keyin.icdb\icdb.dat] opened in read-write mode
+[2025.02.28 07:52:12] [0000m.00s.169ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.02.28 07:52:12] [0000m.00s.169ms] [0] Database GUARD OK: [199984]
+[2025.02.28 07:52:12] [0000m.00s.169ms] [1] IC: Opened project [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\Template_8Layer_Formatted\keyin.icdb] with session [49] in read only mode [0]
+[2025.02.28 07:52:12] [0000m.00s.169ms] [1] IC: Adding sub-client [CDBCommandLine] with ID [1] to project [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\Template_8Layer_Formatted\keyin.icdb] with session [49]
+[2025.02.28 07:52:12] [0000m.00s.169ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.02.28 07:52:12] [0000m.00s.169ms] [0] Database GUARD OK: [199984]
+[2025.02.28 07:52:12] [0000m.00s.169ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.02.28 07:52:12] [0000m.00s.169ms] [0] Database GUARD OK: [199984]
+[2025.02.28 07:52:12] [0000m.00s.170ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.02.28 07:52:12] [0000m.00s.170ms] [0] Database GUARD OK: [199984]
+[2025.02.28 07:52:12] [0000m.00s.170ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.02.28 07:52:12] [0000m.00s.170ms] [0] Database GUARD OK: [199984]
+[2025.02.28 07:52:12] [0000m.00s.170ms] [0] SingleFile: [8796-b0e6-643a-88ec] SFI version check [1009] [1009]
+[2025.02.28 07:52:12] [0000m.00s.171ms] [0] SingleFile: [8796-b0e6-643a-88ec] Database SFI header has been read in [1ms 530us]
+[2025.02.28 07:52:12] [0000m.00s.180ms] [1] IC: Adding sub-client [ConsDefLoaderPlugin] with ID [2] to project [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\Template_8Layer_Formatted\keyin.icdb] with session [49]
+[2025.02.28 07:52:12] [0000m.00s.181ms] [0] iCDB Database: Checking existence of constraint definitions
+[2025.02.28 07:52:12] [0000m.00s.181ms] [0] iCDB Database: Checking constraint definitions version
+[2025.02.28 07:52:13] [0000m.00s.237ms] [1] iCDB Database: Constraint definitions version [ce_ee.cns=7.10.78;user.cns=2344-c85e-f8d7-2d51-8578-263e-5782-6360-3de0-d890-b28d-c9a5,584c-0990-9241-4a14-fa39-9e65-b399-e660-5a44-2091-1430-9fba] up to date
+[2025.02.28 07:52:13] [0000m.00s.238ms] [1] IC: Removing sub-client [2] from project [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\Template_8Layer_Formatted\keyin.icdb] with session [49]
+[2025.02.28 07:52:13] [0000m.00s.243ms] [1] IC: Removing sub-client [1] from project [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\Template_8Layer_Formatted\keyin.icdb] with session [49]
+[2025.02.28 07:52:13] [0000m.00s.243ms] [1] IC: Closing project [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\Template_8Layer_Formatted\keyin.icdb] with session [49] for sub-client [1]
+[2025.02.28 07:52:13] [0000m.00s.243ms] [0] STOP
+[2025.02.28 07:52:13] [0000m.00s.243ms] [0] .

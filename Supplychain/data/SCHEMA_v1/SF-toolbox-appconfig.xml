@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <date format="yyyy-MM-dd HH:mm:ss z" /><object objectid="ContentProviderAppConfig:" noninputfields="true" class="036" catalog="TBABCPAA">
+    <!--Application Impl Java Class--><field id="036ccpappcfg_appimpl"></field><!--Enable Proxy--><field id="036ccpappcfg_enableproxy">No</field><!--Enable SSL Certificate--><field id="036ccpappcfg_enablesslcert">No</field><!--Proxy Host--><field id="036ccpappcfg_proxyhost"></field><!--Proxy Port--><field id="036ccpappcfg_proxyport"></field><!--SSL Cert Keystore Password--><field id="036ccpappcfg_sslkeypass"></field><!--Catalog ID--><field id="036obj_skn">TBABCPAA</field><!--Status--><field id="036obj_statu">A</field><!--Call name--><field id="036snr">ContentProviderAppConfig</field><!--Lib Spec--><field id="036tlbox_libspec"></field>
+  </object>
+</data>

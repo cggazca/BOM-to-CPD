@@ -1,0 +1,26 @@
+
+                                Library Services
+                                ----------------
+
+                        08:47 AM Thursday, March 06, 2025
+Job Name: C:\MGCNoScan\CL\TemplateLib_XPED_ENT\TemplateLibrary\TemplateLibrary.lmc
+
+
+
+Operation: Import Cells to Library (move)
+Source:    C:\MGCNoScan\CL\TemplateLib_XPED_ENT\TemplateLibrary\TemplateLibrary.lmc,
+           Cell partition 'Starpoints_Tiebars'
+Target:    C:\MGCNoScan\CL\TemplateLib_XPED_ENT\TemplateLibrary\TemplateLibrary.lmc,
+           Cell partition 'Starpoints and Tiebars'
+
+Cell 'STAR-2THRU' was moved because it didn't exist.
+Cell 'STAR-3THRU' was moved because it didn't exist.
+Cell 'STAR-4THRU' was moved because it didn't exist.
+Cell 'STAR-5THRU' was moved because it didn't exist.
+Cell 'TB_1' was deleted and a new one moved because you chose to accept it
+Cell 'TB_2' was deleted and a new one moved because you chose to accept it
+Cell 'TIEBAR_050_VIA' was moved because it didn't exist.
+
+
+Operation completed successfully.
+---------------------------------

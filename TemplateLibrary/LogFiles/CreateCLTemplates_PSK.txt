@@ -1,0 +1,454 @@
+
+                         PCB Design Data to Padstack Log
+                         -------------------------------
+
+                       07:50 AM Friday, February 28, 2025
+                                   Job Name: 
+
+
+Checking for file format errors...
+
+No file format errors found.
+
+
+Processing All Custom Drill Symbols...
+
+No Custom Drill Symbols found.
+
+
+Processing All Pads and Holes...
+
+    Current Units : TH
+
+    Processing Pad 'Round 32'
+    Processing Pad 'Round 26'
+    Processing Pad 'ANR42-26'
+    Processing Pad 'ANR46-30'
+
+    Current Units : MM
+
+    Processing Pad 'B1050X420'
+    Processing Pad 'B560X240OBS690X370'
+    Processing Pad 'B665X345'
+    Processing Pad 'B740X420'
+    Processing Pad 'B870X240OBS1000X370'
+    Processing Pad 'B975X345'
+    Processing Pad 'C025'
+    Processing Pad 'C030'
+    Processing Pad 'C040'
+    Processing Pad 'C045'
+    Processing Pad 'C049'
+    Processing Pad 'C050'
+    Processing Pad 'C055'
+    Processing Pad 'C060'
+    Processing Pad 'C065'
+    Processing Pad 'C070'
+    Processing Pad 'C075'
+    Processing Pad 'C080'
+    Processing Pad 'C085'
+    Processing Pad 'C090'
+    Processing Pad 'C100OBS480'
+    Processing Pad 'C105'
+    Processing Pad 'C125'
+    Processing Pad 'C220'
+    Processing Pad 'C220OBS340'
+    Processing Pad 'C240OBS370'
+    Processing Pad 'C255OBS455'
+    Processing Pad 'C260OBS400'
+    Processing Pad 'C285OBS430'
+    Processing Pad 'C300OBS450'
+    Processing Pad 'C300OBS505'
+    Processing Pad 'C315'
+    Processing Pad 'C345'
+    Processing Pad 'C375'
+    Processing Pad 'C380'
+    Processing Pad 'C390'
+    Processing Pad 'C400OBS600'
+    Processing Pad 'C405'
+    Processing Pad 'C420'
+    Processing Pad 'C425'
+    Processing Pad 'C450'
+    Processing Pad 'C455'
+    Processing Pad 'C500'
+    Processing Pad 'C500OBS690'
+    Processing Pad 'C505'
+    Processing Pad 'C575'
+    Processing Pad 'C650'
+    Processing Pad 'C665'
+    Processing Pad 'C740'
+
+    Current Units : TH
+
+    Processing Pad 'CIRCLE 12'
+    Processing Pad 'CIRCLE 17'
+
+    Current Units : MM
+
+    Processing Pad 'COMPLEX 0.396X2.196 A0.8696 S2'
+
+    Current Units : TH
+
+    Processing Pad 'DIAMOND'
+
+    Current Units : MM
+
+    Processing Pad 'Oblong 0.75mmx1.05mm'
+    Processing Pad 'Oblong 1.1mmx1.7mm'
+    Processing Pad 'Oblong 1mmx1.6mm'
+    Processing Pad 'Pad Rect Rnd 2.2 x 0.35'
+
+    Current Units : TH
+
+    Processing Pad 'RND26'
+    Processing Pad 'RND30'
+    Processing Pad 'RND34'
+    Processing Pad 'RND4_VP'
+
+    Current Units : MM
+
+    Processing Pad 'Rectangle 0.3mmx0.9mm'
+    Processing Pad 'Rectangle 0.4mmx1mm'
+    Processing Pad 'Rectangle 0.5x2.7'
+    Processing Pad 'Rectangle 0.6mmx2.2mm'
+    Processing Pad 'Rectangle 1.3mmx2mm'
+    Processing Pad 'Rectangle 1.3mmx3.4mm'
+    Processing Pad 'Rectangle 1.42mmx0.5mm'
+    Processing Pad 'Rectangle 1.4mmx2.1mm'
+    Processing Pad 'Rectangle 1.4mmx3.5mm'
+    Processing Pad 'Rectangle 1.52mmx0.6mm'
+    Processing Pad 'Rectangle 2.06mmx0.61mm'
+    Processing Pad 'Rectangle 2.06mmx0.63mm'
+    Processing Pad 'Rectangle 2.16mmx0.71mm'
+    Processing Pad 'Rectangle 2.16mmx0.73mm'
+    Processing Pad 'RndRec 0.4mmx0.6mm'
+    Processing Pad 'RndRec 0.5mmx0.7mm'
+    Processing Pad 'RndRec 0.5mmx0.9mm'
+    Processing Pad 'RndRec 0.62mmx0.62mm'
+    Processing Pad 'RndRec 0.66mmx0.9mm'
+    Processing Pad 'RndRec 0.6mmx1mm'
+    Processing Pad 'RndRec 0.72mmx0.72mm'
+    Processing Pad 'RndRec 0.76mmx0.3mm'
+    Processing Pad 'RndRec 0.76mmx1mm'
+    Processing Pad 'RndRec 0.85mmx0.95mm'
+    Processing Pad 'RndRec 0.86mmx0.4mm'
+    Processing Pad 'RndRec 0.95mmx1.05mm'
+    Processing Pad 'RndRec 1.07mmx1.45mm'
+    Processing Pad 'RndRec 1.15mmx1.8mm'
+    Processing Pad 'RndRec 1.17mmx1.55mm'
+    Processing Pad 'RndRec 1.1mmx1.45mm'
+    Processing Pad 'RndRec 1.25mmx1.9mm'
+    Processing Pad 'RndRec 1.2mmx1.55mm'
+    Processing Pad 'RndRec 1.42mmx0.5mm'
+    Processing Pad 'RndRec 1.52mmx0.6mm'
+    Processing Pad 'RndRec 2.06mmx0.61mm'
+    Processing Pad 'RndRec 2.06mmx0.63mm'
+    Processing Pad 'RndRec 2.16mmx0.71mm'
+    Processing Pad 'RndRec 2.16mmx0.73mm'
+    Processing Pad 'RndRec 2.35mmx3.28mm'
+    Processing Pad 'RndRec 2.45mmx3.38mm'
+    Processing Pad 'Round 0.13mm'
+    Processing Pad 'Round 0.2mm'
+    Processing Pad 'Round 0.325mm'
+    Processing Pad 'Round 0.475mm'
+    Processing Pad 'Round 0.6'
+    Processing Pad 'Round 0.65mm'
+    Processing Pad 'Round 0.75mm'
+    Processing Pad 'Round 1.14mm'
+    Processing Pad 'Round 1'
+    Processing Pad 'Round 2.4'
+    Processing Pad 'Round 2.7'
+    Processing Pad 'SU_FID_100_265OBS'
+    Processing Pad 'Square 2.1mm'
+    Processing Pad 'Square 2mm'
+    Processing Pad 'Thermal 1.14mm'
+    Processing Pad 'Thermal 1.96mm'
+    Processing Pad 'c480'
+
+    Current Units : TH
+
+    Processing Hole 'Rnd 19 +Tol 0 -Tol -3'
+    Processing Hole 'C12.000-PLATED'
+    Processing Hole 'C16.000-PLATED'
+    Processing Hole 'ROUND 10 P'
+
+    Current Units : MM
+
+    Processing Hole 'Rnd 0.10_UVP'
+    Processing Hole 'Rnd 0.12_UVP'
+    Processing Hole 'Rnd 0.15_UVP'
+    Processing Hole 'Rnd 0.20_VTP'
+    Processing Hole 'Rnd 0.25_VTP'
+    Processing Hole 'Rnd 0.30_VTP'
+    Processing Hole 'Rnd 0.3'
+    Processing Hole 'Rnd 0.35_VTP'
+    Processing Hole 'Rnd 0.40_VTP'
+    Processing Hole 'Rnd 0.4'
+    Processing Hole 'Rnd 0.50_VTP'
+    Processing Hole 'Rnd 0.5'
+    Processing Hole 'Rnd 0.65'
+    Processing Hole 'Rnd 0.75_VTP'
+    Processing Hole 'Rnd 2.4 Non-Plated'
+    Processing Hole 'Rnd 2.90N'
+    Processing Hole 'Rnd 3.20N'
+    Processing Hole 'Rnd 3.50N'
+    Processing Hole 'Rnd 3.55N'
+    Processing Hole 'Rnd 3.80N'
+    Processing Hole 'Rnd 4.00N'
+    Processing Hole 'Rnd 4.4 Non-Plated'
+    Processing Hole 'Rnd 4.55N'
+    Processing Hole 'Rnd 5.50N'
+    Processing Hole 'Rnd 6.38N'
+    Processing Hole 'Slot 0.6x1.2'
+    Processing Hole 'Slot 0.95x0.65'
+    Processing Hole 'Slot 6.40X3.20N'
+    Processing Hole 'Slot 9.50X3.20N'
+
+All Pads and Holes have been processed.
+
+
+Processing All Padstacks...
+
+    Current Units : TH
+
+    Processing Padstack '026R_012_PIN'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack '026VIA'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack '030R_016_PIN'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'Fiducial Round Cell 100'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : MM
+
+    Processing Padstack 'MB560X240D640X320N_OBS690X370'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'MB870X240D950X320N_OBS1000X370'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : IN
+
+    Processing Padstack 'MC100D380N'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : MM
+
+    Processing Padstack 'MC220D290N_SSM315_OBS340'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'MC240D320N_SSM345_OBS370'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'MC255D355N_SSM380_OBS405'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'MC260D350N_SSM375_OBS400'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'MC285D380N_SSM405_OBS430'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'MC300D400N_SSM425_OBS450'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'MC300D455N_SSM480_OBS505'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'MC400D550N_SSM575_OBS600'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'MC500D638N_SSM665_OBS690'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : IN
+
+    Processing Padstack 'Pad Rect Rnd 2.2x0.35'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : TH
+
+    Processing Padstack 'RND4_VP_PadOnly'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : IN
+
+    Processing Padstack 'TH_Round_2.4_Nonplated'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'TH_Round_4.4_Nonplated'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : MM
+
+    Processing Padstack 'VC025D010P_UVIA_NSM'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC025D010P_UVIA_NSM_Capped'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC025D010P_UVIA_NSM_Plugged'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC025D012P_UVIA_NSM'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC030D015P_UVIA_NSM'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC045D020P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC049D025P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC050D025P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC055D025P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC060D030P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC060D035P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC065D025P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC065D035P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC065D040P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC070D035P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC075D050P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC090D040P'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'VC105D075P'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : TH
+
+    Processing Padstack 'VIA1210_via'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : IN
+
+    Processing Padstack 'VIA_0.3_dia_0.6'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : TH
+
+    Processing Padstack 'VIA_0.5_QC'
+        Processing Technology Padstack '(Default)'
+
+
+    Current Units : MM
+
+    Processing Padstack 'c20m20'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'r130_200m140_210'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'r130_340m140_350'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'r142_50m152_60'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'r206_61m216_71'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'r206_63m216_73'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'r60_220r39_99'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr107_145m117_155r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr110_145m120_155r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr115_180m125_190r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr142_50m152_60r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr206_61m216_71r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr206_63m216_73r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr235_328m245_338r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr40_60m50_70r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr50_90m60_100r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr66_90m76_100r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr76_30m86_40r8'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rr85_95m95_105r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'rs62m72r10'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 's200m210'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'b100_160h60_120m110_170'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'c32hn65m75k141'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'c47hn65_95m75_105k141_174'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'c65h40m65_75'
+        Processing Technology Padstack '(Default)'
+
+    Processing Padstack 'r30_90m40_100'
+        Processing Technology Padstack '(Default)'
+
+
+All Padstacks have been processed.
+
+
+Overwriting existing PadstackDB file 'D:/MGCNoScan/Automation/WatermarkCL/Libraries/TemplateLibrary/EL - Enterprise library/TemplateLibrary/Layout/PadstackDB.psk'.
+
+PadstackDB file 'D:/MGCNoScan/Automation/WatermarkCL/Libraries/TemplateLibrary/EL - Enterprise library/TemplateLibrary/Layout/PadstackDB.psk' was created successfully.
+

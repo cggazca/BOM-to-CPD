@@ -1,0 +1,255 @@
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	07:50 AM Friday, February 28, 2025
+
+Processing builtin
+	Adding symbol Arrow_Blue 
+	Adding symbol Arrow_Green 
+	Adding symbol Arrow_Red 
+	Adding symbol espl1 
+	Adding symbol Hierarchical_Port_Analog 
+	Adding symbol Hierarchical_Port_BI 
+	Adding symbol Hierarchical_Port_IN 
+	Adding symbol Hierarchical_Port_OCL 
+	Adding symbol Hierarchical_Port_OEM 
+	Adding symbol Hierarchical_Port_OUT 
+	Adding symbol Hierarchical_Port_Tri 
+	Adding symbol Hier_bi 
+	Adding symbol Hier_in 
+	Adding symbol HIER_INPUT 
+	Adding symbol Hier_out 
+	Adding symbol HIER_OUTPUT 
+	Adding symbol Link_BI 
+	Adding symbol Link_IN 
+	Adding symbol Link_inter_bi 
+	Adding symbol Link_inter_in 
+	Adding symbol Link_inter_out 
+	Adding symbol Link_OUT 
+	Adding symbol nc 
+	Adding symbol No_Connect 
+	Adding symbol OFFPAGE_BIDIR 
+	Adding symbol OFFPAGE_INPUT 
+	Adding symbol OFFPAGE_OUTPUT 
+	Adding symbol PORT 
+	Adding symbol term 
+DXLIB2LMC utility complete
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	12:12 PM Wednesday, March 05, 2025
+
+Processing builtin
+	Adding symbol Arrow_Blue 
+	Adding symbol Arrow_Green 
+	Adding symbol Arrow_Red 
+	Adding symbol espl1 
+	Adding symbol Hierarchical_Port_Analog 
+	Adding symbol Hierarchical_Port_BI 
+	Adding symbol Hierarchical_Port_IN 
+	Adding symbol Hierarchical_Port_OCL 
+	Adding symbol Hierarchical_Port_OEM 
+	Adding symbol Hierarchical_Port_OUT 
+	Adding symbol Hierarchical_Port_Tri 
+	Adding symbol Hier_bi 
+	Adding symbol Hier_in 
+	Adding symbol HIER_INPUT 
+	Adding symbol Hier_out 
+	Adding symbol HIER_OUTPUT 
+	Adding symbol Link_BI 
+	Adding symbol Link_IN 
+	Adding symbol Link_inter_bi 
+	Adding symbol Link_inter_in 
+	Adding symbol Link_inter_out 
+	Adding symbol Link_OUT 
+	Adding symbol nc 
+	Adding symbol No_Connect 
+	Adding symbol OFFPAGE_BIDIR 
+	Adding symbol OFFPAGE_INPUT 
+	Adding symbol OFFPAGE_OUTPUT 
+	Adding symbol PORT 
+	Adding symbol term 
+DXLIB2LMC utility complete
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	12:24 PM Wednesday, March 05, 2025
+
+Processing builtin
+	Adding symbol Arrow_Blue 
+	Adding symbol Arrow_Green 
+	Adding symbol Arrow_Red 
+	Adding symbol espl1 
+	Adding symbol Hierarchical_Port_Analog 
+	Adding symbol Hierarchical_Port_BI 
+	Adding symbol Hierarchical_Port_IN 
+	Adding symbol Hierarchical_Port_OCL 
+	Adding symbol Hierarchical_Port_OEM 
+	Adding symbol Hierarchical_Port_OUT 
+	Adding symbol Hierarchical_Port_Tri 
+	Adding symbol Hier_bi 
+	Adding symbol Hier_in 
+	Adding symbol HIER_INPUT 
+	Adding symbol Hier_out 
+	Adding symbol HIER_OUTPUT 
+	Adding symbol Link_BI 
+	Adding symbol Link_IN 
+	Adding symbol Link_inter_bi 
+	Adding symbol Link_inter_in 
+	Adding symbol Link_inter_out 
+	Adding symbol Link_OUT 
+	Adding symbol nc 
+	Adding symbol No_Connect 
+	Adding symbol OFFPAGE_BIDIR 
+	Adding symbol OFFPAGE_INPUT 
+	Adding symbol OFFPAGE_OUTPUT 
+	Adding symbol PORT 
+	Adding symbol term 
+DXLIB2LMC utility complete
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	04:36 PM Wednesday, March 05, 2025
+
+Processing Builtin
+	Adding symbol Arrow_Blue 
+	Adding symbol Arrow_Green 
+	Adding symbol Arrow_Red 
+	Adding symbol espl1 
+	Adding symbol Hierarchical_Port_Analog 
+	Adding symbol Hierarchical_Port_BI 
+	Adding symbol Hierarchical_Port_IN 
+	Adding symbol Hierarchical_Port_OCL 
+	Adding symbol Hierarchical_Port_OEM 
+	Adding symbol Hierarchical_Port_OUT 
+	Adding symbol Hierarchical_Port_Tri 
+	Adding symbol Hier_bi 
+	Adding symbol Hier_in 
+	Adding symbol HIER_INPUT 
+	Adding symbol Hier_out 
+	Adding symbol HIER_OUTPUT 
+	Adding symbol Link_BI 
+	Adding symbol Link_IN 
+	Adding symbol Link_inter_bi 
+	Adding symbol Link_inter_in 
+	Adding symbol Link_inter_out 
+	Adding symbol Link_OUT 
+	Adding symbol nc 
+	Adding symbol No_Connect 
+	Adding symbol OFFPAGE_BIDIR 
+	Adding symbol OFFPAGE_INPUT 
+	Adding symbol OFFPAGE_OUTPUT 
+	Adding symbol PORT 
+	Adding symbol term 
+DXLIB2LMC utility complete
+
+
+
+	DXLIB2LMC  -  Add DX Symbol Information to LMC. Version 16.4.0.0
+	Unpublished work. Copyright 2024 Siemens
+
+
+
+This material contains trade secrets or otherwise confidential
+
+information owned by Siemens Industry Software Inc.
+
+or its affiliates (collectively, 'SISW'), or its licensors.
+
+Access to and use of this information is strictly limited
+
+as set forth in the Customer's applicable agreements with SISW.
+
+	04:53 PM Wednesday, March 05, 2025
+
+Processing Builtin
+	Adding symbol Arrow_Blue 
+	Adding symbol Arrow_Green 
+	Adding symbol Arrow_Red 
+	Adding symbol espl1 
+	Adding symbol Hierarchical_Port_Analog 
+	Adding symbol Hierarchical_Port_BI 
+	Adding symbol Hierarchical_Port_IN 
+	Adding symbol Hierarchical_Port_OCL 
+	Adding symbol Hierarchical_Port_OEM 
+	Adding symbol Hierarchical_Port_OUT 
+	Adding symbol Hierarchical_Port_Tri 
+	Adding symbol Hier_bi 
+	Adding symbol Hier_in 
+	Adding symbol HIER_INPUT 
+	Adding symbol Hier_out 
+	Adding symbol HIER_OUTPUT 
+	Adding symbol Link_BI 
+	Adding symbol Link_IN 
+	Adding symbol Link_inter_bi 
+	Adding symbol Link_inter_in 
+	Adding symbol Link_inter_out 
+	Adding symbol Link_OUT 
+	Adding symbol nc 
+	Adding symbol No_Connect 
+	Adding symbol OFFPAGE_BIDIR 
+	Adding symbol OFFPAGE_INPUT 
+	Adding symbol OFFPAGE_OUTPUT 
+	Adding symbol PORT 
+	Adding symbol term 
+DXLIB2LMC utility complete

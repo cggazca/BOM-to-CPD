@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <!-- Menu control by selected object -->
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="com.mentor.dms.contentprovider.client.SelectedClassPropertyTester"
+            id="com.mentor.dms.contentprovider.client.SelectedClassPropertyTester.menuenabled"
+            namespace="com.mentor.dms.contentprovider.client"
+            properties="menuenabled"
+            type="com.mentor.dms.platform.internal.context.ContextService"/>
+   </extension>
+
+</plugin>

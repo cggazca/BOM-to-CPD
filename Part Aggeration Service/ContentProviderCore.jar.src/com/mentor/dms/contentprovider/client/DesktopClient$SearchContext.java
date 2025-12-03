@@ -1,0 +1,11 @@
+package com.mentor.dms.contentprovider.client;
+
+public enum SearchContext {
+  DESIGNER, COMPONENT_ENGINEER, EXTERNAL_CONTENT_ASSIGNMENT;
+}
+
+
+/* Location:              C:\Users\z004ut2y\OneDrive - Siemens AG\Documents\01_Projects\Customers\Var Industries\varindustries_edm-eles-sample-dataset_2025-09-18_1349 (1)\Part Aggeration Service\ContentProviderCore.jar!\com\mentor\dms\contentprovider\client\DesktopClient$SearchContext.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

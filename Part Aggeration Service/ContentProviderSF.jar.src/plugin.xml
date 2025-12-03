@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <!-- Interceptor for ExternalContent-->
+   <extension
+         point="com.mentor.dms.ui.InterceptorFactory">
+      <interceptorfactory
+            class="com.mentor.dms.contentprovider.core.plugin.ExternalContentInterceptorFactory"
+            includedClasses="850"
+            priority="200">
+      </interceptorfactory>
+   </extension>
+   
+   <!-- Interceptor for ManufacturerPart -->
+   <extension
+         point="com.mentor.dms.ui.InterceptorFactory">
+      <interceptorfactory
+            class="com.mentor.dms.contentprovider.core.plugin.MPNInterceptorFactory"
+            includedClasses="60"
+            priority="200">
+      </interceptorfactory>
+   </extension>
+   
+   <!-- Menu control by selected object -->
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="com.mentor.dms.contentprovider.core.client.SelectedClassPropertyTester"
+            id="com.mentor.dms.contentprovider.core.client.SelectedClassPropertyTester.menuenabled"
+            namespace="com.mentor.dms.contentprovider.core.client"
+            properties="menuenabledcore"
+            type="com.mentor.dms.platform.internal.context.ContextService"/>
+   </extension>
+   
+   <!-- Popup for Search Result [Update External Content] -->
+   <extension
+         point="com.mentor.dms.platform.popupmenu">
+      <partcontribution
+            contextid="com.mentor.dms.dmsbrowser.queryresult"
+            id="com.mentor.dms.contentprovider.partcontribution1">
+         <action
+               class="com.mentor.dms.contentprovider.core.client.LoadFromContentProviderActionDelegate"
+               id="com.mentor.dms.contentprovider.client.LoadFromcontentprovider"
+               label="Update External Content..."
+               menubarPath="additions">
+            <enablement>
+                  <test
+                        forcePluginActivation="true"
+                        property="com.mentor.dms.contentprovider.core.client.menuenabledcore"
+                        value="ManufacturerPart">
+                  </test>
+            </enablement>
+         </action>
+      </partcontribution>
+   </extension>
+   
+	<!-- Popup for Search Result [Reconcile] -->
+   <extension
+         point="com.mentor.dms.platform.popupmenu">
+      <partcontribution
+            contextid="com.mentor.dms.dmsbrowser.queryresult"
+            id="com.mentor.dms.contentprovider.partcontribution2">
+         <action
+               class="com.mentor.dms.contentprovider.core.client.ReconcileActionDelegate"
+               id="com.mentor.dms.contentprovider.client.Reconcile"
+               label="Reconcile with Content Provider..."
+               menubarPath="additions">
+            <enablement>
+                  <test
+                        forcePluginActivation="true"
+                        property="com.mentor.dms.contentprovider.core.client.menuenabledcore"
+                        value="ManufacturerPart">
+                  </test>
+            </enablement>
+         </action>
+      </partcontribution>
+   </extension>
+   
+   <!-- Popup for Search Result [Update Components] -->
+   <extension
+         point="com.mentor.dms.platform.popupmenu">
+      <partcontribution
+            contextid="com.mentor.dms.dmsbrowser.queryresult"
+            id="com.mentor.dms.contentprovider.partcontribution3">
+         <action
+               class="com.mentor.dms.contentprovider.core.client.UpdateComponentsActionDelegate"
+               id="com.mentor.dms.contentprovider.client.UpdateComponents"
+               label="Update Components..."
+               menubarPath="additions">
+            <enablement>
+                  <test
+                        forcePluginActivation="true"
+                        property="com.mentor.dms.contentprovider.core.client.menuenabledcore"
+                        value="ManufacturerPart">
+                  </test>
+            </enablement>
+         </action>
+      </partcontribution>
+   </extension>
+
+   <!-- Menu Items -->
+   <extension
+         point="com.mentor.dms.ui.ActionSet">
+      <actionSet>
+        <menu
+          id="com.mentor.dms.contentprovider.core.plugin.contentprovider.cas"
+          label="Content Provider">
+        </menu>
+      
+        <!-- Content Provider Search -->
+        <action
+          class="com.mentor.dms.contentprovider.sf.PartSearchActionDelegate"
+          icon="com/mentor/dms/contentprovider/sf/images/supplyframe_small.png"
+          path="com.mentor.dms.contentprovider.core.plugin.contentprovider.cas"
+          label="Part Search...">
+         </action>
+         
+        <!-- Content Provider Preferences -->
+	 	<action
+          class="com.mentor.dms.contentprovider.sf.ui.UserPreferencesActionDelegate"
+          icon="com/mentor/dms/contentprovider/sf/images/preferences.gif"
+          path="com.mentor.dms.contentprovider.core.plugin.contentprovider.cas"
+          label="Preferences...">
+        </action>
+         
+        <!-- Account　Status -->
+<!--
+	 	<action
+          class="com.mentor.dms.contentprovider.sf.ui.AccountStatusActionDelegate"
+          icon="com/mentor/dms/contentprovider/sf/images/AccountStatus.png"
+          path="com.mentor.dms.contentprovider.core.plugin.contentprovider.cas"
+          label="SiliconExpert Part Search™ Account Status...">
+        </action>
+-->
+        
+        <!-- Manufacturers Search -->
+<!--
+        <action
+          class="com.mentor.dms.contentprovider.core.client.SearchManufacturersActionDelegate"
+          icon="com/mentor/dms/contentprovider/plugin/mfgsearchui/images/mfg.png"
+          path="com.mentor.dms.contentprovider.core.plugin.contentprovider.cas"
+          label="Search Manufacturers...">
+        </action>
+-->
+        
+      </actionSet>
+   </extension> 
+
+    <!-- Set Valid Value -->
+<!--
+   <extension
+         point="com.mentor.dms.ui.PopupMenu">
+      <partcontribution contextid="com.mentor.dms.ui.searchcharacteristics">
+         <action
+               class="com.mentor.dms.contentprovider.sf.ui.ActionSetValidValue"
+               icon="com/mentor/dms/contentprovider/sf/images/supplyframe_small.png"
+               label="Set Supplyframe Valid Value..."/>
+      </partcontribution>
+   </extension>
+-->
+ </plugin>

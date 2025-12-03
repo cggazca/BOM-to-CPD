@@ -1,0 +1,27 @@
+!*****************************************************************************
+! Unpublished work. Copyright 2019 Siemens
+!
+! This material contains trade secrets or otherwise confidential information
+! owned by Siemens Industry Software Inc. or its affiliates (collectively,
+! "SISW"), or its licensors. Access to and use of this information is strictly
+! limited as set forth in the Customer's applicable agreements with SISW.
+!*****************************************************************************
+
+.FILETYPE NC_DRILL_CHART_FILE
+.VERSION "VB99.0"
+.DATE "Wednesday, January 02, 2002"
+
+.Columns 
+ ..Symbol
+ ..Diameter
+ ..Tolerance
+ ..Plated
+ ..Quantity
+.FontName "vf_std"
+.FontSize 3175000
+.LineSpacing 5080000
+.PenWidth 76200
+.Format1 1
+.Format2 4
+.NegTol 76200
+.PosTol 76200

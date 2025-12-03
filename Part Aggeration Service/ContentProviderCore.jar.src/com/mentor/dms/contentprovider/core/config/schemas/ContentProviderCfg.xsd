@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:version="1.0" jaxb:extensionBindingPrefixes="xjc" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:appinfo>
+			<jaxb:schemaBindings>
+				<jaxb:nameXmlTransform>
+					<jaxb:typeName prefix="ConfigXML"/>
+					<jaxb:elementName prefix="ConfigXML"/>
+					<jaxb:modelGroupName prefix="ConfigXML"/>
+					<jaxb:anonymousTypeName prefix="ConfigXML"/>
+				</jaxb:nameXmlTransform>
+			</jaxb:schemaBindings>
+			
+			<jaxb:globalBindings>
+	    		<xjc:superClass name="com.mentor.dms.contentprovider.core.config.xml.BaseXMLClass" />
+			</jaxb:globalBindings>
+		</xs:appinfo>
+	</xs:annotation>
+			
+	<xs:element name="ContentProviderCfg">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PartClasses" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="ManufacturerPartCatalogs" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="ComponentCatalogs" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="Manufacturers" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute name="defaultInherit" type="xs:boolean" use="optional" default="true"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PartClasses">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="PartClass"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PartClass">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="Properties"/>
+			</xs:sequence>
+			<xs:attribute name="id" use="required"/>
+			<xs:attribute name="parentId"/>
+			<xs:attribute name="label"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Properties">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Property"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Property">
+		<xs:complexType>
+			<xs:attribute name="baseUnits"/>
+			<xs:attribute name="id" use="required"/>
+			<xs:attribute name="label" use="optional"/>
+			<xs:attribute name="idProperty" type="xs:boolean"/>
+			<xs:attribute name="searchable" type="xs:boolean"/>
+			<xs:attribute name="facet" type="xs:boolean"/>
+			<xs:attribute name="inherit" type="xs:boolean" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ManufacturerPartCatalogs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ManufacturerPartCatalog"/>
+			</xs:sequence>
+			<xs:attribute name="autoMapping" type="xs:boolean" use="optional" default="false"/>
+			<xs:attribute name="defaultSyncType" type="syncType" use="optional" default="DIRECT"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ManufacturerPartCatalog">
+		<xs:complexType>
+			<xs:all>
+				<xs:element minOccurs="1" maxOccurs="1" ref="ContentProviderMaps"/>
+			</xs:all>
+			<xs:attribute name="classDMN" use="required"/>
+			<xs:attribute name="label" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ContentProviderPropertyMaps">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ContentProviderPropertyMap"/>
+			</xs:sequence>
+			<xs:attribute name="defaultSyncType" type="syncType" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ContentProviderPropertyMap">
+		<xs:complexType>
+			<xs:attribute name="ccpId" type="xs:string" use="required"/>
+			<xs:attribute name="dmn" type="xs:string" use="optional"/>
+			<xs:attribute name="searchDMN" type="xs:string" use="optional"/>
+			<xs:attribute name="syncType" type="syncType" use="optional"/>
+			<xs:attribute name="inherit" type="xs:boolean" use="optional"/>
+			<xs:attribute name="label" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ComponentCatalogs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ComponentCatalog"/>
+			</xs:sequence>
+			<xs:attribute name="autoMapping" type="xs:boolean" default="false"/>
+			<xs:attribute name="defaultSyncType" type="syncType" use="optional" default="DIRECT"/>
+			<xs:attribute name="allowMoveParts" type="xs:boolean" use="optional" default="true"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ComponentCatalog">
+		<xs:complexType>
+			<xs:all>
+				<xs:element minOccurs="0" ref="ManufacturerPartMaps"/>
+				<xs:element minOccurs="0" ref="ContentProviderMaps"/>
+			</xs:all>
+			<xs:attribute name="classDMN" type="xs:string" use="required"/>
+			<xs:attribute name="allowMoveParts" type="xs:boolean" use="optional" default="true"/>
+			<xs:attribute name="label" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ManufacturerPartMaps">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ManufacturerPartMap"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ManufacturerPartMap">
+		<xs:complexType>
+			<xs:all>
+				<xs:element minOccurs="0" ref="ManufacturerPartPropertyMaps"/>
+			</xs:all>
+			<xs:attribute name="classDMN" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ManufacturerPartPropertyMaps">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ManufacturerPartPropertyMap"/>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ScriptedManufacturerPartPropertyMap"/>
+			</xs:choice>
+			<xs:attribute name="defaultSyncType" type="syncType" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ManufacturerPartPropertyMap">
+		<xs:complexType>
+			<xs:attribute name="compDMN" use="required" type="xs:string"/>
+			<xs:attribute name="mpnDMN" use="required" type="xs:string"/>
+			<xs:attribute name="syncType" type="syncType" use="optional"/>
+			<xs:attribute name="inherit" type="xs:boolean" use="optional"/>
+			<xs:attribute name="ignoreMissing" type="xs:boolean" use="optional"/>
+			<xs:attribute name="label" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ScriptedManufacturerPartPropertyMap">
+		<xs:complexType>
+			<xs:attribute name="mappingFunction" use="required" type="xs:string"/>
+			<xs:attribute name="syncType" type="syncType" use="optional"/>
+			<xs:attribute name="inherit" type="xs:boolean" use="optional"/>
+			<xs:attribute name="ignoreMissing" type="xs:boolean" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ContentProviderMaps">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="ContentProviderMap"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ContentProviderMap">
+		<xs:complexType>
+			<xs:all>
+				<xs:element minOccurs="0" ref="ContentProviderPropertyMaps"/>
+			</xs:all>
+			<xs:attribute name="ccpId" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="syncType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DIRECT"/>
+			<xs:enumeration value="SYNC"/>
+			<xs:enumeration value="IGNORE"/>
+			<xs:enumeration value="CREATEONLY"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Manufacturers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ManufacturerPropertyMaps"/>
+			</xs:sequence>
+			<xs:attribute name="ccpMfgName" use="required" type="xs:string"/>
+			<xs:attribute name="ccpMfgId" use="optional" type="xs:string"/>
+			<xs:attribute name="ccpId" use="optional" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+		<xs:element name="ManufacturerPropertyMaps">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="ManufacturerPropertyMap"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+		<xs:element name="ManufacturerPropertyMap">
+		<xs:complexType>
+			<xs:attribute name="dmn" use="required" type="xs:string"/>
+			<xs:attribute name="ccpId" use="required" type="xs:string"/>
+			<xs:attribute name="fieldType" type="mfgFieldType" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="mfgFieldType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OBJECT_ID"/>
+			<xs:enumeration value="STATUS"/>
+			<xs:enumeration value="SHORT_NAME"/>
+			<xs:enumeration value="LONG_NAME"/>
+			<xs:enumeration value="MFG_CODE"/>
+			<xs:enumeration value="CAGE_CODE"/>
+			<xs:enumeration value="DUNS_NUMBER"/>
+			<xs:enumeration value="ADDRESS"/>
+			<xs:enumeration value="ADDRESS_LINE1"/>
+			<xs:enumeration value="ADDRESS_LINE2"/>
+			<xs:enumeration value="ADDRESS_LINE3"/>
+			<xs:enumeration value="CITY"/>
+			<xs:enumeration value="REGION_STATE"/>
+			<xs:enumeration value="PHONE_NUMBER"/>
+			<xs:enumeration value="COUNTRY_CODE"/>
+			<xs:enumeration value="FAX_NUMBER"/>
+			<xs:enumeration value="EMAIL_ADDRESS"/>
+			<xs:enumeration value="INTERNET_ADDRESS"/>
+			<xs:enumeration value="ZIPCODE"/>
+			<xs:enumeration value="NOTES"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

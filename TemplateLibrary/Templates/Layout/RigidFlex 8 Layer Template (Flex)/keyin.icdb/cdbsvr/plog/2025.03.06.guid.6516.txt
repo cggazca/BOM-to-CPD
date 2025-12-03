@@ -1,0 +1,91 @@
+[2025.03.06 11:06:04] [0000m.00s.168ms] [0] WELCOME
+[2025.03.06 11:06:04] [0000m.00s.169ms] [1] iCDB Database ver.3.242, 1TMAkS/K5diX+FZQBzeW7A, build:25213694 created 2024-08-20 08:05:30, sources stamp:1TMAkS/K5diX+FZQBzeW7A
+[2025.03.06 11:06:04] [0000m.00s.169ms] [1] Unpublished work. Copyright 2024 Siemens\r\n\r\nThis material contains trade secrets or otherwise confidential\r\ninformation owned by Siemens Industry Software Inc.\r\nor its affiliates (collectively, 'SISW'), or its licensors.\r\nAccess to and use of this information is strictly limited\r\nas set forth in the Customer's applicable agreements with SISW.
+[2025.03.06 11:06:04] [0000m.00s.170ms] [1] Base flow version [2409]
+[2025.03.06 11:06:04] [0000m.00s.170ms] [1] Install Id [2753288], Flow Id [Xpedition 2409], Full Flow Name [Xpedition 2409], Exact Access Date [2024/08/01]
+[2025.03.06 11:06:04] [0000m.00s.170ms] [1] Machine [ORW-CAR2409-W22]  IP [10.252.95.38,100.125.112.106,127.0.0.1]  User [cargaz1z]  PID [6516]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [1] Operating system [Microsoft Windows Server 2012 Standard Edition, 64-bit (build 9200)]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [1] Current working dir [C:\MGCNoScan\CL\WatermarkCL]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [1] PATH [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common3D\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win32\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\jre\default\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\EDM-Server\win64\lib;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Puppet Labs\Puppet\bin;C:\Program Files\TortoiseSVN\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Tailscale\;C:\Program Files\Microsoft VS Code\bin;C:\Users\cargaz1z\AppData\Local\Microsoft\WindowsApps;]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [1] SDD_HOME [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [1] SDD_PLATFORM [win64]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [1] WDIR [C:\WDIR\XENTP2409;C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts;C:\MGCNoScan\AATK_2184;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\standard;C:\MGCNoScan\Siemens\HL2409\SDD_HOME\hlsa\cross-probe\2409_scripts]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [1] Local iCDB working dir [C:\WDIR\XENTP2409\iCDB] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [1] Corporate iCDB working dir [C:\MGCNoScan\AATK_2184\iCDB] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [1] Corporate iCDB working dir [C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts\iCDB] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] WARNING: Database [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\RigidFlex 8 Layer Template (Flex)\keyin.icdb\icdb.dat] was manually copied
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] File change time:        [2025-03-06 11.05.39]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] File modification time:  [2025-02-28 06.18.54]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] Last change time:        [2025-02-28 05.51.48]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] Last database open information:
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] Time:             [2025-02-28 05.51.48]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] Location:         [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\EL - Enterprise library\TemplateLibrary\Templates\Layout\RigidFlex 8 Layer Template (Flex)\keyin.icdb\icdb.dat]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] Machine:          [DI1USPNO0392WNB]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] User:             [m3nnjl]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] PID:              [14756]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] Application:      [iCDB Client]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] Operating system: [Microsoft Windows 8 Enterprise Edition, 64-bit (build 9200)]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] WARNING: Regenerating database GUID
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] Previous database GUID [3062-ffdb-eac3-d0ef-47fb-1c7a-7fb1-c760-5d02-20a1-2430-9fba]
+[2025.03.06 11:06:04] [0000m.00s.171ms] [3] Current database GUID  [e1d1-c293-a63c-25e3-c12f-9c72-22f9-c760-9dfb-baf4-2a65-e68c]
+[2025.03.06 11:06:04] [0000m.00s.172ms] [0] .
+[2025.03.06 11:06:04] [0000m.00s.177ms] [0] WELCOME
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] iCDB Database ver.3.242, 1TMAkS/K5diX+FZQBzeW7A, build:25213694 created 2024-08-20 08:05:30, sources stamp:1TMAkS/K5diX+FZQBzeW7A
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] Unpublished work. Copyright 2024 Siemens\r\n\r\nThis material contains trade secrets or otherwise confidential\r\ninformation owned by Siemens Industry Software Inc.\r\nor its affiliates (collectively, 'SISW'), or its licensors.\r\nAccess to and use of this information is strictly limited\r\nas set forth in the Customer's applicable agreements with SISW.
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] Base flow version [2409]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] Install Id [2753288], Flow Id [Xpedition 2409], Full Flow Name [Xpedition 2409], Exact Access Date [2024/08/01]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] Machine [ORW-CAR2409-W22]  IP [10.252.95.38,100.125.112.106,127.0.0.1]  User [cargaz1z]  PID [6516]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] Operating system [Microsoft Windows Server 2012 Standard Edition, 64-bit (build 9200)]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] Current working dir [C:\MGCNoScan\CL\WatermarkCL]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] PATH [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common3D\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win32\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\jre\default\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\EDM-Server\win64\lib;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Puppet Labs\Puppet\bin;C:\Program Files\TortoiseSVN\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Tailscale\;C:\Program Files\Microsoft VS Code\bin;C:\Users\cargaz1z\AppData\Local\Microsoft\WindowsApps;]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] SDD_HOME [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] SDD_PLATFORM [win64]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] WDIR [C:\WDIR\XENTP2409;C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts;C:\MGCNoScan\AATK_2184;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\standard;C:\MGCNoScan\Siemens\HL2409\SDD_HOME\hlsa\cross-probe\2409_scripts]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] Local iCDB working dir [C:\WDIR\XENTP2409\iCDB] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] Corporate iCDB working dir [C:\MGCNoScan\AATK_2184\iCDB] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.180ms] [1] Corporate iCDB working dir [C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts\iCDB] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] File change time:        [2025-03-06 11.06.04]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] File modification time:  [2025-03-06 11.06.04]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Last change time:        [2025-03-06 11.06.04]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Last database open information:
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Time:             [2025-02-28 05.51.48]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Location:         [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\EL - Enterprise library\TemplateLibrary\Templates\Layout\RigidFlex 8 Layer Template (Flex)\keyin.icdb\icdb.dat]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Machine:          [DI1USPNO0392WNB]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] User:             [m3nnjl]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] PID:              [14756]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Application:      [iCDB Client]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Operating system: [Microsoft Windows 8 Enterprise Edition, 64-bit (build 9200)]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Database GUID must be regenerated
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Previous database GUID [e1d1-c293-a63c-25e3-c12f-9c72-22f9-c760-9dfb-baf4-2a65-e68c]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [3] Current database GUID  [0865-5acd-beb6-4361-c12f-9c72-22f9-c760-9dfb-baf4-2a65-e68c]
+[2025.03.06 11:06:04] [0000m.00s.181ms] [0] .
+[2025.03.06 11:06:04] [0000m.00s.188ms] [0] WELCOME
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] iCDB Database ver.3.242, 1TMAkS/K5diX+FZQBzeW7A, build:25213694 created 2024-08-20 08:05:30, sources stamp:1TMAkS/K5diX+FZQBzeW7A
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] Unpublished work. Copyright 2024 Siemens\r\n\r\nThis material contains trade secrets or otherwise confidential\r\ninformation owned by Siemens Industry Software Inc.\r\nor its affiliates (collectively, 'SISW'), or its licensors.\r\nAccess to and use of this information is strictly limited\r\nas set forth in the Customer's applicable agreements with SISW.
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] Base flow version [2409]
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] Install Id [2753288], Flow Id [Xpedition 2409], Full Flow Name [Xpedition 2409], Exact Access Date [2024/08/01]
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] Machine [ORW-CAR2409-W22]  IP [10.252.95.38,100.125.112.106,127.0.0.1]  User [cargaz1z]  PID [6516]
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] Operating system [Microsoft Windows Server 2012 Standard Edition, 64-bit (build 9200)]
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] Current working dir [C:\MGCNoScan\CL\WatermarkCL]
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] PATH [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common3D\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win32\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\jre\default\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\EDM-Server\win64\lib;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Puppet Labs\Puppet\bin;C:\Program Files\TortoiseSVN\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Tailscale\;C:\Program Files\Microsoft VS Code\bin;C:\Users\cargaz1z\AppData\Local\Microsoft\WindowsApps;]
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] SDD_HOME [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] SDD_PLATFORM [win64]
+[2025.03.06 11:06:04] [0000m.00s.188ms] [1] WDIR [C:\WDIR\XENTP2409;C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts;C:\MGCNoScan\AATK_2184;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\standard;C:\MGCNoScan\Siemens\HL2409\SDD_HOME\hlsa\cross-probe\2409_scripts]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [1] Local iCDB working dir [C:\WDIR\XENTP2409\iCDB] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [1] Corporate iCDB working dir [C:\MGCNoScan\AATK_2184\iCDB] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [1] Corporate iCDB working dir [C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts\iCDB] on file system [NTFS]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] File change time:        [2025-03-06 11.06.04]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] File modification time:  [2025-03-06 11.06.04]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Last change time:        [2025-03-06 11.06.04]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Last database open information:
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Time:             [2025-02-28 05.51.48]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Location:         [D:\MGCNoScan\Automation\WatermarkCL\Libraries\TemplateLibrary\EL - Enterprise library\TemplateLibrary\Templates\Layout\RigidFlex 8 Layer Template (Flex)\keyin.icdb\icdb.dat]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Machine:          [DI1USPNO0392WNB]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] User:             [m3nnjl]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] PID:              [14756]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Application:      [iCDB Client]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Operating system: [Microsoft Windows 8 Enterprise Edition, 64-bit (build 9200)]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Database GUID must be regenerated
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Previous database GUID [0865-5acd-beb6-4361-c12f-9c72-22f9-c760-9dfb-baf4-2a65-e68c]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [3] Current database GUID  [73af-858e-2eb7-002a-c12f-9c72-22f9-c760-9dfb-baf4-2a65-e68c]
+[2025.03.06 11:06:04] [0000m.00s.189ms] [0] .

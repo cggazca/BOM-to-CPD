@@ -1,0 +1,172 @@
+
+.TABLE te_obk 5.1
+#----+--------+-------------+--------+---------+---------+---------+-------------+-----------+------------+--------+--------+--------+--------+--------+--------+--------+---------+----------+----------------+--------------+------------+------------------+---------------+---------------------+-------------------+-----------------+-----------------------+
+#Sts | Cls No | Domain Name | Helpid | Ordnum  | Grpnum  | Cat key | Status      | Tablename | Tablespace | X-kor  | Y-kor  | Width  | Height | sX-kor | sY-kor | sWidth | sHeight | Ok Macro | After Ok Makro | Cancel Makro | Open Makro | After Open Makro | Java Ok Makro | Java after Ok Makro | Java Cancel Makro | Java Open Makro | Java After Open Makro |
+#----+--------+-------------+--------+---------+---------+---------+-------------+-----------+------------+--------+--------+--------+--------+--------+--------+--------+---------+----------+----------------+--------------+------------+------------------+---------------+---------------------+-------------------+-----------------+-----------------------+
+#----+--------+-------------+--------+---------+---------+---------+-------------+-----------+------------+--------+--------+--------+--------+--------+--------+--------+---------+----------+----------------+--------------+------------+------------------+---------------+---------------------+-------------------+-----------------+-----------------------+
+.END 
+
+.TABLE tr_obk_label 5.1
+#-------+------+------------+-----------+------------+
+#Cls No | Lang | Class Name | Menu Name | Menu Group |
+#-------+------+------------+-----------+------------+
+#-------+------+------------+-----------+------------+
+.END 
+
+.TABLE tl_obk_gui 5.1
+#-------+--------+--------+------+-------+------+--------+--------+--------+--------+--------+
+#Cls No | Index  | Type   | Lang | Group | Text | X-kor  | Y-kor  | Width  | Height | Disp   |
+#-------+--------+--------+------+-------+------+--------+--------+--------+--------+--------+
+#-------+--------+--------+------+-------+------+--------+--------+--------+--------+--------+
+.END 
+
+.TABLE te_cls_merk 5.1
+#----+--------+---------+------------------------------------------------+---------------------+-------------------+--------------------------------+--------+--------+--------+--------+--------------------------+--------------+---------------+-----------------------------------------------------------------------------------+-------------+--------+--------+---------+---------+---------+---------+---------+---------+---------+--------+---------+--------+--------+-------------+---------+----------------------+-------------------------------+-----------------------------+-----------+
+#Sts | Cls No | Ref.cls | Charact. key                                   | Domain Name         | Tablename         | Columnname                     | Type   | c.Type | Len    | Precis | Unit                     | accesspath   | Default Value | java Method                                                                       | Status A    | Inputx | Inputy | Iallign | Iheight | Itxtlen | Searchx | Searchy | Sallign | Stxtlen | Listnr | Parlist | Sortnr | Dispnr | Status B    | Comment | Reference designator | Specific reference designator | Freeze reference designator | Sortalias |
+#----+--------+---------+------------------------------------------------+---------------------+-------------------+--------------------------------+--------+--------+--------+--------+--------------------------+--------------+---------------+-----------------------------------------------------------------------------------+-------------+--------+--------+---------+---------+---------+---------+---------+---------+---------+--------+---------+--------+--------+-------------+---------+----------------------+-------------------------------+-----------------------------+-----------+
+#----+--------+---------+------------------------------------------------+---------------------+-------------------+--------------------------------+--------+--------+--------+--------+--------------------------+--------------+---------------+-----------------------------------------------------------------------------------+-------------+--------+--------+---------+---------+---------+---------+---------+---------+---------+--------+---------+--------+--------+-------------+---------+----------------------+-------------------------------+-----------------------------+-----------+
+.END 
+
+.TABLE tr_merk_lab 5.1
+#-----------------------------------------------+------+-------------------+--------------------------------------------------+--------------------------------+--------------------------------+--------------------------------------------------+
+#Charact. key                                   | Lang | Group             | Input mask text                                  | Search mask text               | Tooltip short                  | Tooltip long                                     |
+#-----------------------------------------------+------+-------------------+--------------------------------------------------+--------------------------------+--------------------------------+--------------------------------------------------+
+#-----------------------------------------------+------+-------------------+--------------------------------------------------+--------------------------------+--------------------------------+--------------------------------------------------+
+.END 
+
+.TABLE te_glb_rastw 5.1
+#-------------+--------------+-------------+---------+-----------+---------+---------------------+------------+-----+-----+
+#Charact. key | Option Value | Option Text | Cat key | Option id | Sortnum | Ref. Characteristic | Ref. Value | lvl | Sts |
+#-------------+--------------+-------------+---------+-----------+---------+---------------------+------------+-----+-----+
+#-------------+--------------+-------------+---------+-----------+---------+---------------------+------------+-----+-----+
+.END 
+
+.TABLE reg_pattern 5.1
+#------------+-------------+------------------------+----------------+
+#Pattern Key | DMS Pattern | Look at Reg Expression | Reg Expression |
+#------------+-------------+------------------------+----------------+
+#------------+-------------+------------------------+----------------+
+.END 
+
+.TABLE te_prop_merk 5.1
+#-------------+------------+------------+--------+------------+--------+--------+--------+--------+--------+------------+---------+-------------+------------+
+#Charact. key | X-kor      | Y-kor      | Font   | Asp.ratio  | Justif | Mirror | Hidden | Fixed  | Colour | Thickness  | Meaning | Orientation | Height     |
+#-------------+------------+------------+--------+------------+--------+--------+--------+--------+--------+------------+---------+-------------+------------+
+#-------------+------------+------------+--------+------------+--------+--------+--------+--------+--------+------------+---------+-------------+------------+
+.END 
+
+.TABLE te_skn 5.1
+#----+--------+---------+------------+-------------+-------------+---------+--------+
+#Sts | Cls No | Cat key | Parent Key | Domain Name | Status      | Objcode | Objinc |
+#----+--------+---------+------------+-------------+-------------+---------+--------+
+#----+--------+---------+------------+-------------+-------------+---------+--------+
+.END 
+
+.TABLE te_bnk 5.1
+#--------+------+--------------------------------+---------------------------------+---------------------------------+--------+
+#Cat key | Lang | Short Text                     | Text                            | Long Text                       | Hotkey |
+#--------+------+--------------------------------+---------------------------------+---------------------------------+--------+
+#--------+------+--------------------------------+---------------------------------+---------------------------------+--------+
+.END 
+
+.TABLE tr_smt 5.1
+#---------------------------------------------+---------------------------------------+---------+---------------------+--------+--------+--------+-------------+-------------+---------------+--------+--------+
+#Line Key                                     | Charact. key                          | Cat key | Group key           | Grpnum | Len    | Ordnum | Status A    | Status B    | Default Value | Sortnr | Dispnr |
+#---------------------------------------------+---------------------------------------+---------+---------------------+--------+--------+--------+-------------+-------------+---------------+--------+--------+
+ AAZA:001SFCountryOfOrigin                    | 001SFCountryOfOrigin                  | AAZA    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZA:001SFYTEOL                              | 001SFYTEOL                            | AAZA    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZAAA:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZAAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZAAA:001SFYTEOL                            | 001SFYTEOL                            | AAZAAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZAAB:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZAAB  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZAAB:001SFYTEOL                            | 001SFYTEOL                            | AAZAAB  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZC:001SFCountryOfOrigin                    | 001SFCountryOfOrigin                  | AAZC    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZC:001SFYTEOL                              | 001SFYTEOL                            | AAZC    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZCAA:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZCAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZCAA:001SFYTEOL                            | 001SFYTEOL                            | AAZCAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZCAB:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZCAB  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZCAB:001SFOperatingFrequencyMax_1          | 001SFOperatingFrequencyMax_1          | AAZCAB  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZCAB:001SFYTEOL                            | 001SFYTEOL                            | AAZCAB  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZCAC:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZCAC  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZCAC:001SFYTEOL                            | 001SFYTEOL                            | AAZCAC  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZCAD:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZCAD  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZCAD:001SFYTEOL                            | 001SFYTEOL                            | AAZCAD  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZD:001SFCountryOfOrigin                    | 001SFCountryOfOrigin                  | AAZD    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZD:001SFYTEOL                              | 001SFYTEOL                            | AAZD    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZDAA:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZDAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZDAA:001SFYTEOL                            | 001SFYTEOL                            | AAZDAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZE:001SFCountryOfOrigin                    | 001SFCountryOfOrigin                  | AAZE    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZE:001SFYTEOL                              | 001SFYTEOL                            | AAZE    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAA:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZEAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAA:001SFYTEOL                            | 001SFYTEOL                            | AAZEAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAB:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZEAB  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAB:001SFYTEOL                            | 001SFYTEOL                            | AAZEAB  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAC:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZEAC  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAC:001SFYTEOL                            | 001SFYTEOL                            | AAZEAC  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAD:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZEAD  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAD:001SFYTEOL                            | 001SFYTEOL                            | AAZEAD  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAE:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZEAE  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAE:001SFYTEOL                            | 001SFYTEOL                            | AAZEAE  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAF:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZEAF  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAF:001SFYTEOL                            | 001SFYTEOL                            | AAZEAF  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAG:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZEAG  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAG:001SFYTEOL                            | 001SFYTEOL                            | AAZEAG  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAH:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZEAH  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZEAH:001SFYTEOL                            | 001SFYTEOL                            | AAZEAH  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZF:001SFCountryOfOrigin                    | 001SFCountryOfOrigin                  | AAZF    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZF:001SFYTEOL                              | 001SFYTEOL                            | AAZF    | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAA:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAA:001SFYTEOL                            | 001SFYTEOL                            | AAZFAA  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAB:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAB  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAB:001SFYTEOL                            | 001SFYTEOL                            | AAZFAB  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAC:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAC  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAC:001SFYTEOL                            | 001SFYTEOL                            | AAZFAC  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAD:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAD  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAD:001SFYTEOL                            | 001SFYTEOL                            | AAZFAD  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAE:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAE  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAE:001SFYTEOL                            | 001SFYTEOL                            | AAZFAE  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAF:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAF  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAF:001SFYTEOL                            | 001SFYTEOL                            | AAZFAF  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAG:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAG  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAG:001SFYTEOL                            | 001SFYTEOL                            | AAZFAG  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAH:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAH  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAH:001SFYTEOL                            | 001SFYTEOL                            | AAZFAH  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAI:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAI  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAI:001SFYTEOL                            | 001SFYTEOL                            | AAZFAI  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAJ:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAJ  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAJ:001SFYTEOL                            | 001SFYTEOL                            | AAZFAJ  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAK:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAK  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAK:001SFYTEOL                            | 001SFYTEOL                            | AAZFAK  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAL:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAL  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAL:001SFYTEOL                            | 001SFYTEOL                            | AAZFAL  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAM:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAM  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAM:001SFYTEOL                            | 001SFYTEOL                            | AAZFAM  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAN:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAN  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAN:001SFYTEOL                            | 001SFYTEOL                            | AAZFAN  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAO:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAO  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAO:001SFYTEOL                            | 001SFYTEOL                            | AAZFAO  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAP:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAP  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAP:001SFYTEOL                            | 001SFYTEOL                            | AAZFAP  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAQ:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAQ  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAQ:001SFYTEOL                            | 001SFYTEOL                            | AAZFAQ  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAR:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAR  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAR:001SFYTEOL                            | 001SFYTEOL                            | AAZFAR  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAS:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAS  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAS:001SFYTEOL                            | 001SFYTEOL                            | AAZFAS  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAT:001SFCountryOfOrigin                  | 001SFCountryOfOrigin                  | AAZFAT  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+ AAZFAT:001SFYTEOL                            | 001SFYTEOL                            | AAZFAT  | Supplyframe Details | 0      | 0      | 0      | 0x00000000  | 0x00000000  |               | 0      | 100    |
+#---------------------------------------------+---------------------------------------+---------+---------------------+--------+--------+--------+-------------+-------------+---------------+--------+--------+
+.END 
+
+.TABLE te_bundle 5.1
+#-------+------+---------+------+-----------+----------+------------+----------+-----------+
+#Objkey | Name | Version | Mode | StartMode | Blobpath | BlobStatus | BlobUser | BlobDatum |
+#-------+------+---------+------+-----------+----------+------------+----------+-----------+
+#-------+------+---------+------+-----------+----------+------------+----------+-----------+
+.END 
+
+.TABLE te_blobconfig 5.1
+#-------+----------+-----------+--------+---------+---------+---------------+-------------+-------------+
+#Objkey | FilePath | TableName | KeyCol | BlobCol | PathCol | BlobStatusCol | BlobUserCol | BlobDateCol |
+#-------+----------+-----------+--------+---------+---------+---------------+-------------+-------------+
+#-------+----------+-----------+--------+---------+---------+---------------+-------------+-------------+
+.END 

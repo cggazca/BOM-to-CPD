@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <date format="yyyy-MM-dd HH:mm:ss z" /><object objectid="SEDA (Write/EraseCycles)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Write/Erase Cycles</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Write/EraseCycles)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (bits)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">bits</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Kbits</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (bits)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (byte)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">byte</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">kbyte</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (byte)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (A2/s)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">A2/s</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (A2/s)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (bit)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">bit</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (bit)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (dBrnC)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">dBrnC</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (dBrnC)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (V/us)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">V/us</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (V/us)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (MHz/V)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">MHz/V</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (MHz/V)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mV/mW)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mV/mW</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mV/mW)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mV/V)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mV/V</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mV/V)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (VA)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">VA</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (VA)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (dBc/Hz)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">dBc/Hz</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (dBc/Hz)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (u)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">u"</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (u)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Cel)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Cel</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Cel)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (arcmin)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">arcmin</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (arcmin)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (J)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mJ</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">J</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (J)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (bps)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">bps</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">kbps</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Mbps</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (bps)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (F/m)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">F/m</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (F/m)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (V/mV)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">V/mV</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (V/mV)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (ohm)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">m</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn"></field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">k</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">M</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (ohm)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (V-us)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">V-us</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (V-us)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (V/s)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">V/s</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (V/s)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (words)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">words</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (words)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (dB)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">dB</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (dB)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (N)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">N</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (N)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (MP/cm2)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">MP/cm2</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (MP/cm2)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (fps)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">fps</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (fps)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (V/lx.s)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">V/lx.s</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (V/lx.s)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (rpm)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">rpm</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (rpm)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (V/W)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">V/W</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (V/W)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (h)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">h</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (h)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (cd)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">cd</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (cd)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Cycle(s))" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Cycle(s)</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Cycle(s))</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (dBm/Hz)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">dBm/Hz</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (dBm/Hz)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Seconds)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-9</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">ns</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-6</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">us</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">ms</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">s</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Seconds)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mV/G)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mV/G</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mV/G)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mmH2O)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mmH2O</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mmH2O)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (AWG)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">AWG</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (AWG)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Psi)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Psi</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Psi)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mV/V/mm)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mV/V/mm</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mV/V/mm)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (dBm)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">dBm</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (dBm)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Minute)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Minute</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Minute)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (deg)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">deg</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (deg)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (CFM)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">CFM</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (CFM)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (ppm/Cel)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">ppm/C</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (ppm/Cel)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Ah)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Ah</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Ah)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (A/W)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">A/W</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (A/W)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Pixel)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Pixel</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Pixel)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mV/Cel)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mV/C</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mV/Cel)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mph)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mph</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mph)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mm2)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mm2</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mm2)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (AT)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">AT</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (AT)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (nA)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">pA</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">nA</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">uA</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (nA)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (nm)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">pm</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">nm</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">um</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mm</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (nm)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (ppm)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">ppm</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (ppm)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (dBc)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">dBc</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (dBc)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (rps)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">rps</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (rps)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mT)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mT</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mT)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Vrms)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Vrms</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Vrms)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (%/V)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">%/V</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (%/V)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (cm(Hz1/2)/W)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">cm Hz^1/2 w^-1</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (cm(Hz1/2)/W)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">0</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (A)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-6</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">uA</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mA</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">A</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (A)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (F)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-12</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">pF</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-9</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">nF</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-6</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">uF</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mF</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">F</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (F)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (mm)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">um</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mm</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">m</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (mm)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (g)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mg</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">g</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">kg</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (g)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (H)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-9</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">nH</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-6</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">uH</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mH</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">H</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (H)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Hz)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">Hz</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">kHz</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">MHz</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0E9</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">GHz</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Hz)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (%)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">%</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (%)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (inch)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">in</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (inch)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (K)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">K</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (K)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (V)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-6</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">uV</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mV</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">V</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">kV</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (V)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (Watt)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0E-6</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">uW</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">0.001</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">mW</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">W</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">kW</field>
+    </list><!--Unit Definition--><list id="086liste">
+      <!--Range multiplier--><field id="086l_grenz">1000000.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">MW</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (Watt)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object><object objectid="SEDA (cels)" noninputfields="true" class="086">
+    <!--Unit Definition--><list id="086liste" clear="true">
+      <!--Range multiplier--><field id="086l_grenz">1.0</field><!--Range minimum--><field id="086range_minimum"></field><!--Range name--><field id="086l_benenn">C</field>
+    </list><!--Unit Key--><field id="086obj_id">SEDA (cels)</field><!--Format--><field id="086kommaflag">Y</field><!--Min.Trailing Zeros--><field id="086zeroflag">1</field><!--Case Sensitive--><field id="086casesense">Y</field><!--Smt-Len--><field id="086smt_len">9</field><!--Smt-Per--><field id="086smt_per">3</field><!--Smt-Type--><field id="086smt_typ">2</field>
+  </object>
+</data>

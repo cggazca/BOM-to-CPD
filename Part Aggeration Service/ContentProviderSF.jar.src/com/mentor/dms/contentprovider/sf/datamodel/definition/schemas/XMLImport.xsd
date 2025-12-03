@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="data" type="dms-elements" />
+	<xsd:complexType name="dms-elements">
+		<xsd:choice maxOccurs="unbounded" minOccurs="1">
+			<xsd:element name="object" type="object-type" maxOccurs="unbounded"
+				minOccurs="0">
+			</xsd:element>
+			<xsd:element name="delete" type="delete-type" maxOccurs="unbounded"
+				minOccurs="0">
+			</xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="object-type">
+		<xsd:choice maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="list" type="list-type" />
+			<xsd:element name="field" type="field-type" />
+		</xsd:choice>
+		<xsd:attribute name="class" type="xsd:string" use="required" />
+		<xsd:attribute name="objectid" type="xsd:string" use="required" />
+		<xsd:attribute name="catalog" type="xsd:string" use="optional" />
+		<xsd:attribute name="delete" type="xsd:boolean" use="optional" />
+		<xsd:attribute name="graphic" type="xsd:string" use="optional" />
+		<xsd:attribute name="emptyfields" type="xsd:boolean"
+			use="optional" />
+		<xsd:attribute name="noninputfields" type="xsd:boolean"
+			use="optional" />
+		<xsd:attribute name="defaultvalues" type="xsd:boolean"
+			use="optional" />
+		<xsd:attribute name="unit" type="xsd:boolean" use="optional" />
+		<xsd:attribute name="broken_ref" type="xsd:boolean" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="delete-type">
+		<xsd:attribute name="class" type="xsd:int" use="required" />
+		<xsd:attribute name="catalog" type="xsd:string" use="optional" />
+		<xsd:attribute name="objectid" type="xsd:string" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="field-type">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="id" type="xsd:string" use="required">
+				</xsd:attribute>
+				<xsd:attribute name="multirefclass" type="xsd:string"
+					use="optional">
+				</xsd:attribute>
+				<xsd:attribute name="null" type="xsd:boolean" use="optional">
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="list-type">
+		<xsd:complexContent>
+			<xsd:extension base="set-of-fields">
+				<xsd:attribute name="id" type="xsd:string" use="required">
+				</xsd:attribute>
+				<xsd:attribute name="clear" type="xsd:boolean" use="optional" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="set-of-fields">
+		<xsd:choice maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="field" type="field-type" maxOccurs="unbounded"
+				minOccurs="0">
+			</xsd:element>
+			<xsd:element name="list" type="list-type" />
+		</xsd:choice>
+	</xsd:complexType>
+</xsd:schema>

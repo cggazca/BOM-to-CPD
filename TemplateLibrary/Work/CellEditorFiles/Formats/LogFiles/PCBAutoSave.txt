@@ -1,0 +1,14 @@
+
+                                Autosave Log File
+                                -----------------
+
+                       03:47 PM Wednesday, March 05, 2025
+Job Name: C:\MGCNoScan\CL\TemplateLib_XPED_ENT\TemplateLibrary\Work\CellEditorFiles\Formats\Fab_AGP_EdgeConnDetail.pcb
+
+
+                               Autosave log closed
+                               -------------------
+
+                       03:49 PM Wednesday, March 05, 2025
+Job Name: C:\MGCNoScan\CL\TemplateLib_XPED_ENT\TemplateLibrary\Work\CellEditorFiles\Formats\Fab_AGP_EdgeConnDetail.pcb
+

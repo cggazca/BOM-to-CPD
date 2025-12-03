@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:version="1.0" jaxb:extensionBindingPrefixes="xjc">
+
+	<xs:annotation>
+		<xs:appinfo>
+			<jaxb:schemaBindings>
+				<jaxb:nameXmlTransform>
+					<jaxb:typeName prefix="DataModelCfg"/>
+					<jaxb:elementName prefix="DataModelCfg"/>
+					<jaxb:modelGroupName prefix="DataModelCfg"/>
+					<jaxb:anonymousTypeName prefix="DataModelCfg"/>
+				</jaxb:nameXmlTransform>
+			</jaxb:schemaBindings>
+		</xs:appinfo>
+	</xs:annotation>
+
+  <xs:element name="DataModelConfiguration">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="ExcludeProperties" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="PropertyLengthOverrides" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="RedirectPartClasses" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ExcludePartClasses" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="TopLevelScriptedMappings" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="DoubleMappings" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ScriptedMappings" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="PartClassUnits" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="UnitsMappings" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="SampleParts" minOccurs="0" maxOccurs="1"/>
+      </xs:all>
+	  <xs:attribute name="ccpVersion" use="required" type="xs:string"/>
+	  <xs:attribute name="releaseDate" use="required" type="xs:string"/>
+	  <xs:attribute name="componentSearch" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcludeProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Property"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Property">
+    <xs:complexType>
+      <xs:attribute name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PropertyLengthOverrides">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="PropertyLengthOverride"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PropertyLengthOverride">
+    <xs:complexType>
+      <xs:attribute name="id" use="required"/>
+      <xs:attribute name="length" use="required" type="xs:int" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RedirectPartClasses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="RedirectPartClass"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcludePartClasses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="PartClass"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TopLevelScriptedMappings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TopLevelScriptedMapping"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TopLevelScriptedMapping">
+    <xs:complexType>
+      <xs:attribute name="mappingFunction" use="required"/>
+      <xs:attribute name="inherit" type="xs:boolean" use="optional" default="true"/>
+      <xs:attribute name="ignoreMissing" type="xs:boolean" use="optional" default="true"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoubleMappings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="DoubleMapping"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoubleMapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PartClasses"/>
+      </xs:sequence>
+      <xs:attribute name="property" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScriptedMappings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ScriptedMapping"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScriptedMapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Arguments"/>
+        <xs:element ref="PartClasses"/>
+      </xs:sequence>
+      <xs:attribute name="functionName" use="required" type="xs:NCName"/>
+      <xs:attribute name="property" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Arguments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="MPNArgument"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="StringArgument"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MPNArgument">
+    <xs:complexType>
+      <xs:attribute name="value" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StringArgument">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartClasses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="PartClass"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RedirectPartClass">
+    <xs:complexType>
+      <xs:attribute name="fromPath"/>
+      <xs:attribute name="toPath"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartClass">
+    <xs:complexType>
+      <xs:attribute name="path"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartClassUnits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="PartClassUnit"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartClassUnit">
+    <xs:complexType>
+      <xs:attribute name="property" use="optional"/>
+      <xs:attribute name="fromUnit" use="optional"/>
+      <xs:attribute name="toUnit" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitsMappings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="UnitsMapping"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitsMapping">
+    <xs:complexType>
+      <xs:attribute name="property" use="optional"/>
+      <xs:attribute name="fromUnit" use="optional"/>
+      <xs:attribute name="toUnit" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SampleParts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SamplePart"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SamplePart">
+    <xs:complexType>
+      <xs:attribute name="path" use="required"/>
+      <xs:attribute name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

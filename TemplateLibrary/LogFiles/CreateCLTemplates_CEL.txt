@@ -1,0 +1,86 @@
+
+                       PCB Design Data to Cell Library Log
+                       -----------------------------------
+
+                       07:50 AM Friday, February 28, 2025
+Job Name: D:/MGCNoScan/Automation/WatermarkCL/Libraries/TemplateLibrary/EL - Enterprise library/TemplateLibrary/TemplateLibrary.lmc
+
+
+
+Current Units : MM
+
+Processing cell 'AirFlow_Sign1'
+Processing cell 'AirFlow_Sign2'
+Processing cell 'Assembly_Number'
+
+Current Units : TH
+
+Processing cell 'Fab_AGP_EdgeConnDetail'
+Processing cell 'Fab_FilmTitle'
+Processing cell 'Fab_Format_D_Sheet1'
+Processing cell 'Fab_Format_D_Sheet2'
+Processing cell 'Fab_Format_D_Sheet3_MP'
+Processing cell 'Fab_Format_E_Sheet1'
+Processing cell 'Fab_Format_E_Sheet2'
+Processing cell 'Fab_Format_E_Sheet3_MP'
+Processing cell 'Fab_Notes'
+Processing cell 'Fab_Notes_Triangle'
+Processing cell 'Fab_PCIE_EdgeConnDetail'
+
+Current Units : MM
+
+Processing cell 'Fab_PCIE_MINI_EdgeConnDetail'
+
+Current Units : TH
+
+Processing cell 'Fab_PCI_EdgeConnDetail'
+Processing cell 'Fab_Section_A'
+Processing cell 'Fab_Stack10'
+Processing cell 'Fab_Stack12'
+Processing cell 'Fab_Stack14'
+Processing cell 'Fab_Stack16'
+Processing cell 'Fab_Stack18'
+Processing cell 'Fab_Stack20'
+Processing cell 'Fab_Stack2'
+Processing cell 'Fab_Stack22'
+Processing cell 'Fab_Stack24'
+Processing cell 'Fab_Stack36'
+Processing cell 'Fab_Stack4'
+Processing cell 'Fab_Stack6'
+Processing cell 'Fab_Stack8'
+Processing cell 'Fab_V_Score'
+
+Current Units : MM
+
+Processing cell 'Rev_Number'
+Processing cell 'Serial_Number'
+
+Successfully converted 33 cells.
+Overwriting existing CellDB file 'D:/MGCNoScan/Automation/WatermarkCL/Libraries/TemplateLibrary/EL - Enterprise library/TemplateLibrary/CellDBLibs/Formats.cel'.
+
+CellDB file 'D:/MGCNoScan/Automation/WatermarkCL/Libraries/TemplateLibrary/EL - Enterprise library/TemplateLibrary/CellDBLibs/Formats.cel' was created successfully.
+
+
+                       PCB Design Data to Cell Library Log
+                       -----------------------------------
+
+                       07:50 AM Friday, February 28, 2025
+Job Name: D:/MGCNoScan/Automation/WatermarkCL/Libraries/TemplateLibrary/EL - Enterprise library/TemplateLibrary/TemplateLibrary.lmc
+
+
+
+Current Units : TH
+
+Processing cell 'TB_1'
+Processing cell 'TB_2'
+Processing cell 'STAR-2THRU'
+Processing cell 'STAR-3THRU'
+Processing cell 'STAR-4THRU'
+Processing cell 'STAR-5THRU'
+Processing cell 'TIEBAR_050_VIA'
+
+Successfully converted 7 cells.
+Overwriting existing CellDB file 'D:/MGCNoScan/Automation/WatermarkCL/Libraries/TemplateLibrary/EL - Enterprise library/TemplateLibrary/CellDBLibs/Starpoints_Tiebars.cel'.
+
+CellDB file 'D:/MGCNoScan/Automation/WatermarkCL/Libraries/TemplateLibrary/EL - Enterprise library/TemplateLibrary/CellDBLibs/Starpoints_Tiebars.cel' was created successfully.
+

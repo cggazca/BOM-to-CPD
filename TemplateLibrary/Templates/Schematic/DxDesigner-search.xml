@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DxDesigner_Configuration_file version="1.2" name="DxDesigner.xml"/>
+  <Search>
+    <Layouts version="1">
+      <flow name="EE">
+        <Templates>
+          <layout name="Design - All" original_name="Design - All" datasource="@Design" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Object Type" width="120" sorting="0" group="1" order="0" filter="" filter_type="NONE"/>
+            <column name="Name" width="100" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Path" width="160" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Other" width="400" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Design - Parts" original_name="Design - Parts" datasource="@Design" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Object Type" width="120" sorting="0" group="1" order="0" filter="Component" filter_type="EXACT"/>
+            <column name="Part Number" width="120" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Part Name" width="120" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Description" width="200" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Value" width="120" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="Ref Designator" width="120" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+            <column name="Symbol Name" width="120" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+            <column name="Path" width="240" sorting="0" group="0" order="6" filter="" filter_type="NONE"/>
+            <column name="Global Signal Name" width="120" sorting="0" group="0" order="7" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Design - Nets" original_name="Design - Nets" datasource="@Design" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Object Type" width="120" sorting="0" group="1" order="0" filter="Net" filter_type="EXACT"/>
+            <column name="Name" width="240" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Path" width="240" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Other" width="400" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Library - Symbols" original_name="Library - Symbols" datasource="@Symbols @Local Symbols @PL Symbols" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Partition" width="120" sorting="0" group="1" order="0" filter="" filter_type="NONE"/>
+            <column name="Symbol" width="120" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Part Number" width="120" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Part Name" width="120" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Part Label" width="120" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="Value" width="120" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+            <column name="Other" width="400" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Library - Parts" original_name="Library - Parts" datasource="@Parametric Data @PL Parametric Data @PL Parts" group_bar="1" hide_empty_columns="1" show_matched_columns="0">
+            <column name="Partition" width="120" sorting="0" group="1" order="0" filter="" filter_type="NONE"/>
+            <column name="Part Number" width="120" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Cell" width="120" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+            <column name="Value" width="120" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Cell Name" width="120" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+            <column name="DatasheetLink" width="120" sorting="0" group="0" order="7" filter="" filter_type="NONE"/>
+            <column name="Description" width="213" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Manufacturer Name" width="120" sorting="1" group="0" order="6" filter="" filter_type="NONE"/>
+            <column name="Manufacturer Part Number" width="120" sorting="0" group="0" order="8" filter="" filter_type="NONE"/>
+            <column name="Rated Power" width="120" sorting="0" group="0" order="9" filter="" filter_type="NONE"/>
+            <column name="Rated Voltage" width="120" sorting="0" group="0" order="10" filter="" filter_type="NONE"/>
+            <column name="Symbol (CL)" width="170" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="Tolerance" width="120" sorting="0" group="0" order="11" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="General" original_name="General" datasource="@Design @Local Symbols @Parts @Parametric Data @PL Parametric Data @xDM Library Parametric Data @Symbols @Managed Blocks" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Partition" width="120" sorting="0" group="1" order="0" filter="" filter_type="NONE"/>
+            <column name="Part Number" width="120" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Symbol" width="120" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Part Name" width="120" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Part Label" width="120" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="Value" width="120" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+            <column name="Other" width="400" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Managed Blocks" original_name="Managed Blocks" datasource="@Managed Blocks" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Partition" width="120" sorting="0" group="1" order="0" filter="" filter_type="NONE"/>
+            <column name="Name" width="300" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="State" width="100" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Type" width="100" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Obsolete" width="100" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="ECO Requested" width="100" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Verification" original_name="Verification" type="ANNOTATE" datasource="@Parametric Data" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <layout name="" original_name="" type="VERIFY" datasource="@Design" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+              <column name="Verification Status" width="130" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+              <column name="Details" width="70" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+              <column name="Symbol Name" width="100" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+              <column name="Name" width="100" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+              <column name="Ref Designator" width="100" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+              <column name="Path" width="160" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+            </layout>
+          </layout>
+          <layout name="Supply Chain" original_name="Supply Chain" type="SUPPLYCHAIN" datasource="@Supply Chain" group_bar="0" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Manufacturer Name" width="150" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Manufacturer Part Number" width="150" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Manufacturer Datasheet" width="125" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Ref Des" width="120" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="Part Count" width="65" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+            <column name="Supplier Datasheet" width="120" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+            <column name="Purchase URL" width="120" sorting="0" group="0" order="6" filter="" filter_type="NONE"/>
+            <column name="SupplierPN" width="210" sorting="0" group="0" order="7" filter="" filter_type="NONE"/>
+            <column name="Supplier" width="120" sorting="0" group="0" order="8" filter="" filter_type="NONE"/>
+            <column name="Description" width="150" sorting="0" group="0" order="9" filter="" filter_type="NONE"/>
+            <column name="Unit Stock" width="75" sorting="0" group="0" order="10" filter="" filter_type="NONE"/>
+            <column name="ROHS" width="85" sorting="0" group="0" order="11" filter="" filter_type="NONE"/>
+            <column name="Lifecycle" width="70" sorting="0" group="0" order="12" filter="" filter_type="NONE"/>
+            <column name="Supplier Price" width="85" sorting="0" group="0" order="13" filter="" filter_type="NONE"/>
+            <column name="Min order QTY" width="80" sorting="0" group="0" order="14" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Part Suppliers" original_name="Part Suppliers" type="PARTSSUPPLIERS" datasource="@Part Suppliers" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Actual Manufacturer" width="150" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Actual ManufacturerPN" width="150" sorting="0" group="1" order="0" filter="" filter_type="NONE"/>
+            <column name="SupplierPN" width="210" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Supplier" width="120" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Supplier Datasheet" width="120" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="Description" width="150" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+            <column name="Packaging Type" width="120" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+            <column name="Supplier Price" width="85" sorting="0" group="0" order="6" filter="" filter_type="NONE"/>
+            <column name="Part Count" width="65" sorting="0" group="0" order="7" filter="" filter_type="NONE"/>
+            <column name="Unit Stock" width="75" sorting="0" group="0" order="8" filter="" filter_type="NONE"/>
+            <column name="Min order QTY" width="80" sorting="0" group="0" order="9" filter="" filter_type="NONE"/>
+            <column name="ROHS" width="85" sorting="0" group="0" order="10" filter="" filter_type="NONE"/>
+            <column name="Lifecycle" width="70" sorting="0" group="0" order="11" filter="" filter_type="NONE"/>
+          </layout>
+        </Templates>
+        <RecentTabs>
+          <layout name="Design - All" original_name="Design - All" datasource="@Design" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Object Type" width="120" sorting="0" group="1" order="0" filter="" filter_type="NONE"/>
+            <column name="Name" width="100" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Path" width="160" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Other" width="400" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Design - Parts" original_name="Design - Parts" datasource="@Design" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Object Type" width="120" sorting="0" group="1" order="0" filter="Component" filter_type="EXACT"/>
+            <column name="Part Number" width="120" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Part Name" width="120" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Description" width="200" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Value" width="120" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="Ref Designator" width="120" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+            <column name="Symbol Name" width="120" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+            <column name="Path" width="240" sorting="0" group="0" order="6" filter="" filter_type="NONE"/>
+            <column name="Global Signal Name" width="120" sorting="0" group="0" order="7" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Design - Nets" original_name="Design - Nets" datasource="@Design" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Object Type" width="120" sorting="0" group="1" order="0" filter="Net" filter_type="EXACT"/>
+            <column name="Name" width="240" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Path" width="240" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Other" width="400" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Library - Symbols" original_name="Library - Symbols" datasource="@Symbols @Local Symbols @PL Symbols" group_bar="1" hide_empty_columns="0" show_matched_columns="0">
+            <column name="Partition" width="120" sorting="0" group="1" order="0" filter="" filter_type="NONE"/>
+            <column name="Symbol" width="120" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Part Number" width="120" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Part Name" width="120" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Part Label" width="120" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="Value" width="120" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+            <column name="Other" width="400" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+          </layout>
+          <layout name="Library - Parts" original_name="Library - Parts" datasource="@Parametric Data @PL Parametric Data @PL Parts" group_bar="1" hide_empty_columns="1" show_matched_columns="0" active="1">
+            <column name="Partition" width="120" sorting="0" group="1" order="0" filter="" filter_type="NONE"/>
+            <column name="Part Number" width="120" sorting="0" group="0" order="0" filter="" filter_type="NONE"/>
+            <column name="Cell" width="120" sorting="0" group="0" order="4" filter="" filter_type="NONE"/>
+            <column name="Value" width="120" sorting="0" group="0" order="2" filter="" filter_type="NONE"/>
+            <column name="Cell Name" width="120" sorting="0" group="0" order="5" filter="" filter_type="NONE"/>
+            <column name="DatasheetLink" width="120" sorting="0" group="0" order="7" filter="" filter_type="NONE"/>
+            <column name="Description" width="213" sorting="0" group="0" order="1" filter="" filter_type="NONE"/>
+            <column name="Manufacturer Name" width="120" sorting="1" group="0" order="6" filter="" filter_type="NONE"/>
+            <column name="Manufacturer Part Number" width="120" sorting="0" group="0" order="8" filter="" filter_type="NONE"/>
+            <column name="Rated Power" width="120" sorting="0" group="0" order="9" filter="" filter_type="NONE"/>
+            <column name="Rated Voltage" width="120" sorting="0" group="0" order="10" filter="" filter_type="NONE"/>
+            <column name="Symbol (CL)" width="170" sorting="0" group="0" order="3" filter="" filter_type="NONE"/>
+            <column name="Tolerance" width="120" sorting="0" group="0" order="11" filter="" filter_type="NONE"/>
+          </layout>
+        </RecentTabs>
+      </flow>
+    </Layouts>
+  </Search>
+</DxDesigner_Configuration_file>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <date format="yyyy-MM-dd HH:mm:ss z" /><object objectid="Supplyframe:" noninputfields="true" class="036" catalog="TBABCPAB">
+    <!--Roles--><field id="036ccpcfg_roles">{0, 1, 2, 3, 4, 5}</field><!--Catalog ID--><field id="036obj_skn">TBABCPAB</field><!--Status--><field id="036obj_statu">A</field><!--Call name--><field id="036snr">Supplyframe</field><!--Lib Spec--><field id="036tlbox_libspec"></field><!--MetaDataMap--><list id="036metamap" clear="true">
+      <!--Key--><field id="036map_key">AUTH_SCOPE</field><!--Value--><field id="036map_value">sws.icarus.api.read</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">CREATE_MFG_PART_USERS</field><!--Value--><field id="036map_value">Librarians</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">ENRICHER_PROVIDER_ID</field><!--Value--><field id="036map_value">33</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">PROVIDER_ID</field><!--Value--><field id="036map_value">SF</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">PROVIDER_IMPLEMENTATION</field><!--Value--><field id="036map_value">com.mentor.dms.contentprovider.sf.ContentProviderImpl</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">PROVIDER_NAME</field><!--Value--><field id="036map_value">Supplyframe</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">PROVIDER_SEARCH_TAB_ORDER</field><!--Value--><field id="036map_value">1</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">SEARCH_PROVIDER_ID</field><!--Value--><field id="036map_value">44</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">AUTH_TOKEN_URL</field><!--Value--><field id="036map_value">https://samauth.us-east-1.sws.siemens.com/token</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">ICARUS_SERVER</field><!--Value--><field id="036map_value">pas.partquest.com</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">SEARCH_PROVIDER_VERSION</field><!--Value--><field id="036map_value">2</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">ENRICHER_PROVIDER_VERSION</field><!--Value--><field id="036map_value">1</field>
+    </list><!--MetaDataMap--><list id="036metamap">
+      <!--Key--><field id="036map_key">SEARCH_API_VERSION</field><!--Value--><field id="036map_value">v2</field>
+    </list>
+  </object>
+</data>

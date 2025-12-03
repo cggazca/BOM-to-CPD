@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:version="1.0" jaxb:extensionBindingPrefixes="xjc">
+
+	<xs:annotation>
+		<xs:appinfo>
+			<jaxb:schemaBindings>
+				<jaxb:nameXmlTransform>
+					<jaxb:typeName prefix="SetRepMPNCfg"/>
+					<jaxb:elementName prefix="SetRepMPNCfg"/>
+					<jaxb:modelGroupName prefix="SetRepMPNCfg"/>
+					<jaxb:anonymousTypeName prefix="SetRepMPNCfg"/>
+				</jaxb:nameXmlTransform>
+			</jaxb:schemaBindings>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:element name="SetRepMPNCfg">
+		<xs:complexType>
+			<xs:all minOccurs="1">
+				<xs:element ref="ComponentRestrictions" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="ComponentAMLRestrictions" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="ManufacturerPartRestrictions" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="FavoredManufacturerPart" minOccurs="1" maxOccurs="1"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="BaseFieldType">
+		<xs:attribute name="dmn" use="required"/>
+		<xs:attribute name="amlProperty" use="optional" type="xs:boolean" default="false"/>
+	</xs:complexType>
+
+	<xs:complexType name="BaseFieldDataType">
+		<xs:complexContent>
+			<xs:extension base="BaseFieldType">
+				<xs:sequence>
+					<xs:element ref="Values" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attribute name="dataType" use="optional" type="DataType" default="DEFAULT"/>
+				<xs:attribute name="dateFormat" use="optional" type="xs:string"/>
+				<xs:attribute name="regex" use="optional" type="xs:string"/>
+				<xs:attribute name="filter" use="optional" type="xs:string"/>
+				<xs:attribute name="textFormat" use="optional" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="ComponentRestrictions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Restriction" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ignoreChildComps" use="optional" type="xs:boolean" default="true"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ComponentAMLRestrictions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Restriction" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ManufacturerPartRestrictions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Restriction" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Restriction">
+		<xs:complexType>
+			<xs:attribute name="dmn" use="required"/>
+			<xs:attribute name="value" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="FavoredManufacturerPart">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="SelectionCriteria" minOccurs="1" maxOccurs="1"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="SelectionCriteria">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="PrioritySelectionCriteria" type="PrioritySelectionCriteriaType"/>
+				<xs:element name="AggregationSelectionCriteria" type="AggregationSelectionCriteriaType"/>
+				<xs:element name="CustomSelectionCriteria" type="CustomSelectionCriteriaType"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="PrioritySelectionCriteriaType">
+		<xs:complexContent>
+			<xs:extension base="BaseFieldType">
+				<xs:sequence>
+					<xs:element ref="PriorityValues"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="PriorityValues">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PriorityValue" type="PriorityValueType" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="PriorityValueType">
+		<xs:complexContent>
+			<xs:extension base="BaseValueType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="Values">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Value" type="RollupValueType" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="BaseValueType">
+		<xs:attribute name="value" use="required"/>
+		<xs:attribute name="regex" use="optional" type="xs:boolean" default="false"/>
+	</xs:complexType>
+
+	<xs:complexType name="RollupValueType">
+		<xs:complexContent>
+			<xs:extension base="BaseValueType">
+				<xs:attribute name="compValue" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="LookupValueType" type="xs:string"/>
+
+	<xs:complexType name="AggregationSelectionCriteriaType">
+		<xs:complexContent>
+			<xs:extension base="BaseFieldDataType">
+				<xs:attribute name="aggregationType" use="required" type="SelectionCriteriaAggregationType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CustomSelectionCriteriaType">
+		<xs:complexContent>
+			<xs:extension base="BaseFieldType">
+				<xs:attribute name="compare" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AggregationRollupFieldType">
+		<xs:complexContent>
+			<xs:extension base="BaseFieldType">
+				<xs:attribute name="aggregationType" use="required" type="RollupAggregationType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="DataType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DEFAULT"/>
+			<xs:enumeration value="INTEGER"/>
+			<xs:enumeration value="DOUBLE"/>
+			<xs:enumeration value="DATE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RollupAggregationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AVG"/>
+			<xs:enumeration value="COUNT"/>
+			<xs:enumeration value="MAX"/>
+			<xs:enumeration value="MIN"/>
+			<xs:enumeration value="SUM"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SelectionCriteriaAggregationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MAX"/>
+			<xs:enumeration value="MIN"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

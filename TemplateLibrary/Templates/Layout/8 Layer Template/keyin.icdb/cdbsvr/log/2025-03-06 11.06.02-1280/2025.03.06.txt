@@ -1,0 +1,62 @@
+[2025.03.06 11:06:02] [0000m.00s.132ms] [0] WELCOME
+[2025.03.06 11:06:02] [0000m.00s.133ms] [1] iCDB Client ver.3.242, 1TMAkS/K5diX+FZQBzeW7A, build:25213694 created 2024-08-20 08:05:30, sources stamp:1TMAkS/K5diX+FZQBzeW7A
+[2025.03.06 11:06:02] [0000m.00s.133ms] [1] Unpublished work. Copyright 2024 Siemens\r\n\r\nThis material contains trade secrets or otherwise confidential\r\ninformation owned by Siemens Industry Software Inc.\r\nor its affiliates (collectively, 'SISW'), or its licensors.\r\nAccess to and use of this information is strictly limited\r\nas set forth in the Customer's applicable agreements with SISW.
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] Base flow version [2409]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] Install Id [2753288], Flow Id [Xpedition 2409], Full Flow Name [Xpedition 2409], Exact Access Date [2024/08/01]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] Machine [ORW-CAR2409-W22]  IP [10.252.95.38,100.125.112.106,127.0.0.1]  User [cargaz1z]  PID [1280]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] Operating system [Microsoft Windows Server 2012 Standard Edition, 64-bit (build 9200)]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] Current working dir [C:\MGCNoScan\CL\WatermarkCL]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] PATH [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common3D\win64\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win32\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\jre\default\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\common\win64\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\bin;C:\MGCNoScan\Siemens\XENTP2409\MGC_HOME.ixw\lib;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\EDM-Server\win64\lib;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Puppet Labs\Puppet\bin;C:\Program Files\TortoiseSVN\bin;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Tailscale\;C:\Program Files\Microsoft VS Code\bin;C:\Users\cargaz1z\AppData\Local\Microsoft\WindowsApps;]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] SDD_HOME [C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME] on file system [NTFS]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] SDD_PLATFORM [win64]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] WDIR [C:\WDIR\XENTP2409;C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts;C:\MGCNoScan\AATK_2184;C:\MGCNoScan\Siemens\XENTP2409\SDD_HOME\standard;C:\MGCNoScan\Siemens\HL2409\SDD_HOME\hlsa\cross-probe\2409_scripts]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] Local iCDB working dir [C:\WDIR\XENTP2409\iCDB] on file system [NTFS]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] Corporate iCDB working dir [C:\MGCNoScan\AATK_2184\iCDB] on file system [NTFS]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] Corporate iCDB working dir [C:\MGCNoScan\CL\LIB_EBSD\Templates\Scripts\iCDB] on file system [NTFS]
+[2025.03.06 11:06:02] [0000m.00s.134ms] [1] IC: Project GUID [1ff0-05d4-024b-87ec-a12f-9c70-22f9-c760-507c-baf4-2a65-e68c]
+[2025.03.06 11:06:02] [0000m.00s.135ms] [1] IC: Project path [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb] on file system [NTFS]
+[2025.03.06 11:06:02] [0000m.00s.135ms] [1] IC: Working in FULL access mode
+[2025.03.06 11:06:02] [0000m.00s.136ms] [0] Single file [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb\icdb.dat] size [107312 (104.8 kB)]
+[2025.03.06 11:06:02] [0000m.00s.136ms] [1] Single file [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb\icdb.dat] opened in read-write mode
+[2025.03.06 11:06:02] [0000m.00s.136ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.03.06 11:06:02] [0000m.00s.136ms] [0] Database GUARD OK: [107312]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [1] IC: Opened project [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb] with session [72] in read only mode [0]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [1] IC: Adding sub-client [CDBCommandLine] with ID [1] to project [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb] with session [72]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [0] Database GUARD OK: [107312]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [0] Database GUARD OK: [107312]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [0] Database GUARD OK: [107312]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [0] Database GUARD OK: [107312]
+[2025.03.06 11:06:02] [0000m.00s.137ms] [0] SingleFile: [2baa-25de-3d1c-d5df] SFI version check [1009] [1009]
+[2025.03.06 11:06:02] [0000m.00s.138ms] [0] SingleFile: [2baa-25de-3d1c-d5df] Database SFI header has been read in [756us]
+[2025.03.06 11:06:02] [0000m.00s.148ms] [1] IC: Adding sub-client [ConsDefLoaderPlugin] with ID [2] to project [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb] with session [72]
+[2025.03.06 11:06:02] [0000m.00s.152ms] [0] iCDB Database: Checking existence of constraint definitions
+[2025.03.06 11:06:02] [0000m.00s.152ms] [0] iCDB Database: Checking constraint definitions version
+[2025.03.06 11:06:02] [0000m.00s.257ms] [0] iCDB Database: Creating database content backup before upgrade
+[2025.03.06 11:06:02] [0000m.00s.257ms] [0] StorageLocal: Database backup: project [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb]
+[2025.03.06 11:06:02] [0000m.00s.263ms] [0] StorageLocal: Database backup: DONE
+[2025.03.06 11:06:02] [0000m.00s.266ms] [0] iCDB Database: Database content backed up to [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb\cdbback\2025-03-06 11.06.02-1280.zip] of size [28 287 bytes (27.6 kB)]  in [8ms 802us]
+[2025.03.06 11:06:02] [0000m.00s.269ms] [0] iCDB Database: Upgrading constraint definitions from version [ce_ee.cns=7.10.78;user.cns=2344-c85e-f8d7-2d51-8578-263e-5782-6360-3de0-d890-b28d-c9a5,584c-0990-9241-4a14-fa39-9e65-b399-e660-5a44-2091-1430-9fba]
+[2025.03.06 11:06:02] [0000m.00s.271ms] [0] iCDB Database: Loading snapshot [1:PCB] version [4500]
+[2025.03.06 11:06:02] [0000m.00s.277ms] [0] iCDB Database: Snapshot [1:PCB] loaded in [5ms 277us]
+[2025.03.06 11:06:02] [0000m.00s.277ms] [0] iCDB Database: Upgrading constraint definitions for snapshot [1:PCB]
+[2025.03.06 11:06:02] [0000m.00s.280ms] [0] iCDB Database: Constraint definitions for snapshot [1:PCB] upgraded in [3ms 549us]
+[2025.03.06 11:06:02] [0000m.00s.280ms] [0] iCDB Database: Saving snapshot [1:PCB]
+[2025.03.06 11:06:02] [0000m.00s.281ms] [0] iCDB Database: Snapshot [1:PCB] saved in [31us]
+[2025.03.06 11:06:02] [0000m.00s.282ms] [1] CRC<1> equalize: S=1 I=1 IC=0 C=1
+[2025.03.06 11:06:02] [0000m.00s.282ms] [0] iCDB Database: Loading snapshot [2:PCB_Layout_Temp] version [4500]
+[2025.03.06 11:06:02] [0000m.00s.284ms] [0] iCDB Database: Snapshot [2:PCB_Layout_Temp] loaded in [1ms 889us]
+[2025.03.06 11:06:02] [0000m.00s.284ms] [0] iCDB Database: Upgrading constraint definitions for snapshot [2:PCB_Layout_Temp]
+[2025.03.06 11:06:02] [0000m.00s.287ms] [0] iCDB Database: Constraint definitions for snapshot [2:PCB_Layout_Temp] upgraded in [2ms 125us]
+[2025.03.06 11:06:02] [0000m.00s.287ms] [0] iCDB Database: Saving snapshot [2:PCB_Layout_Temp]
+[2025.03.06 11:06:02] [0000m.00s.287ms] [0] iCDB Database: Snapshot [2:PCB_Layout_Temp] saved in [24us]
+[2025.03.06 11:06:02] [0000m.00s.288ms] [1] CRC<1> equalize: S=2 I=1 IC=0 C=1
+[2025.03.06 11:06:02] [0000m.00s.289ms] [0] iCDB Database: Constraint definitions upgraded to version [ce_ee.cns=7.10.78;user.cns=2344-c85e-f8d7-2d51-8578-263e-5782-6360-3de0-d890-b28d-c9a5,75ef-dfee-109a-bd7e-62bc-ca7c-2bcc-a760-bb0e-aa94-bd65-e68c,cdc9-0281-1497-cb20-1808-0677-8080-6760-69e4-581f-f25c-bc69,e66d-b785-fb16-bdca-d236-b663-336b-6660-b746-d84f-7f4c-bc69]
+[2025.03.06 11:06:02] [0000m.00s.291ms] [1] IC: Removing sub-client [2] from project [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb] with session [72]
+[2025.03.06 11:06:02] [0000m.00s.297ms] [1] IC: Removing sub-client [1] from project [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb] with session [72]
+[2025.03.06 11:06:02] [0000m.00s.297ms] [1] IC: Closing project [C:\MGCNoScan\CL\TemplateLibs\XPEDL - Xpedition Standard or Advanced library\TemplateLibrary\Templates\Layout\8 Layer Template\keyin.icdb] with session [72] for sub-client [1]
+[2025.03.06 11:06:02] [0000m.00s.297ms] [0] STOP
+[2025.03.06 11:06:02] [0000m.00s.297ms] [0] .

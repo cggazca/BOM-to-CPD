@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:version="1.0" jaxb:extensionBindingPrefixes="xjc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="DataModelUpgrade">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UpgradeDirectives"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpgradeDirectives" type="UpgradeDirectiveType">
+	</xs:element>
+
+	<xs:element name="MergeCatalog">
+		<xs:complexType>
+			<xs:attribute name="fromPath" use="required"/>
+			<xs:attribute name="toPath" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RenameCatalog">
+		<xs:complexType>
+			<xs:attribute name="domainModelName" use="required"/>
+			<xs:attribute name="toName" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteCatalog">
+		<xs:complexType>
+			<xs:attribute name="domainModelName" use="required"/>
+			<xs:attribute name="name" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AddCatalog">
+		<xs:complexType>
+			<xs:attribute name="domainModelName" use="required"/>
+			<xs:attribute name="name"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RenameProperty">
+		<xs:complexType>
+			<xs:attribute name="domainModelName" use="required"/>
+			<xs:attribute name="toName" use="required"/>
+			<xs:attribute name="appliesTo">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="ManufacturerPart"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteProperty">
+		<xs:complexType>
+			<xs:attribute name="catalogDMN" use="required"/>
+			<xs:attribute name="domainModelName" use="required"/>
+			<xs:attribute name="name" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteAllProperty">
+		<xs:complexType>
+			<xs:attribute name="domainModelName" use="required"/>
+			<xs:attribute name="name" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="BaseUpgradeDirectiveType" abstract="true">
+		<xs:sequence></xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="UpgradeDirectiveType">
+		<xs:complexContent>
+			<xs:extension base="BaseUpgradeDirectiveType">
+				<xs:choice maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:appinfo>
+							<jaxb:property name="UpgradeDirectives"/>
+						</xs:appinfo>
+					</xs:annotation>
+					<xs:element ref="MergeCatalog" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="RenameCatalog" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="DeleteCatalog" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="AddCatalog" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="RenameProperty" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="DeleteProperty" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="DeleteAllProperty" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:choice>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
