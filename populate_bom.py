@@ -11,6 +11,7 @@ Usage:
 
 import os
 import sys
+import re
 import sqlite3
 import json
 import time
@@ -21,6 +22,13 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple, Any
 import pandas as pd
 import requests
+
+# Match type constants (matching the reference implementation)
+MATCH_TYPE_FOUND = "Found"
+MATCH_TYPE_MULTIPLE = "Multiple"
+MATCH_TYPE_NEED_REVIEW = "NeedReview"
+MATCH_TYPE_NONE = "None"
+MATCH_TYPE_ERROR = "Error"
 
 from dbc_parser import DBCParser
 from property_mapping import (
@@ -38,12 +46,16 @@ from property_mapping import (
     get_dbc_field_mapping,
 )
 
-# Set up logging
+# Set up logging - use DEBUG to see category detection details
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+# Reduce verbosity of requests library
+logging.getLogger("urllib3").setLevel(logging.WARNING)
+logging.getLogger("requests").setLevel(logging.WARNING)
 
 
 class PASClient:
@@ -209,36 +221,93 @@ class PASClient:
         mpn_upper = mpn.upper()
 
         # Diode patterns
-        if any(mpn_upper.startswith(p) for p in ['1N', '1SS', 'BAV', 'BAT', 'BAS', 'BZT', 'BZX', 'SMAJ', 'SMBJ']):
+        if any(mpn_upper.startswith(p) for p in ['1N', '1SS', 'BAV', 'BAT', 'BAS', 'BZT', 'BZX', 'SMAJ', 'SMBJ', 'SS1', 'SS2', 'SS3', 'ES1', 'ES2']):
             return 'Diodes'
 
         # Transistor patterns
-        if any(mpn_upper.startswith(p) for p in ['2N', '2SC', '2SA', 'BC', 'BSS', 'BSZ', 'IRF', 'FD', 'SI', 'AO', 'DMN', 'DMP']):
+        if any(mpn_upper.startswith(p) for p in ['2N', '2SC', '2SA', 'BC', 'BSS', 'BSZ', 'IRF', 'FD', 'SI', 'AO', 'DMN', 'DMP', 'MMBT', 'MMBF', 'FDN', 'FDS', 'NTR', 'NTS']):
             return 'Transistors'
 
-        # Resistor patterns
-        if any(mpn_upper.startswith(p) for p in ['RC', 'ERJ', 'CRCW', 'MCR', 'RK', 'CR', 'CRE']):
+        # Resistor patterns (expanded)
+        if any(mpn_upper.startswith(p) for p in ['RC', 'ERJ', 'CRCW', 'MCR', 'RK', 'CR', 'CRE', 'RES', 'RM', 'RN', 'RR', 'RT', 'YAG', 'WSL', 'CSR', 'ERA']):
             return 'Resistors'
 
-        # Capacitor patterns
-        if any(mpn_upper.startswith(p) for p in ['GRM', 'C0G', 'CL', 'EEE', 'EEF', 'UWT', 'VJ', 'CC']):
+        # Capacitor patterns (expanded)
+        if any(mpn_upper.startswith(p) for p in ['GRM', 'C0G', 'CL', 'EEE', 'EEF', 'UWT', 'VJ', 'CC', 'CAP', 'TDK', 'EMK', 'LMK', 'TMK', 'GCM', 'JMK', 'KGM']):
             return 'Capacitors'
 
-        # Inductor patterns
-        if any(mpn_upper.startswith(p) for p in ['LQH', 'LQM', 'BLM', 'MLZ', 'NR', 'SRN']):
+        # Inductor patterns (expanded)
+        if any(mpn_upper.startswith(p) for p in ['LQH', 'LQM', 'BLM', 'MLZ', 'NR', 'SRN', 'IND', 'SRP', 'SRR', 'MSS', 'XFL', 'XAL', 'IHLP']):
             return 'Inductors'
 
-        # Connector patterns (numeric part numbers often)
-        if any(mpn_upper.startswith(p) for p in ['PBC', 'PPTC', 'TSW', 'FH', 'DF']):
+        # Connector patterns (expanded)
+        if any(mpn_upper.startswith(p) for p in ['PBC', 'PPTC', 'TSW', 'FH', 'DF', 'JAE', 'MF', 'ZX', 'BM', 'SM', 'USB', 'HDMI']):
             return 'Connectors'
 
-        # Crystal/Oscillator patterns
-        if any(mpn_upper.startswith(p) for p in ['ABM', 'ABS', 'ECS', 'FA-']):
+        # Crystal/Oscillator patterns (expanded)
+        if any(mpn_upper.startswith(p) for p in ['ABM', 'ABS', 'ECS', 'FA-', 'NX', 'TSX', 'FC', 'HC49', 'XTAL', 'LFXTAL']):
             return 'Crystals Resonators'
 
-        # LED patterns
-        if any(mpn_upper.startswith(p) for p in ['LTST', 'SML', 'APT', 'CLV']):
+        # LED patterns (expanded)
+        if any(mpn_upper.startswith(p) for p in ['LTST', 'SML', 'APT', 'CLV', 'LED', 'HSMC', 'HSMG', 'HSMR', 'HSMA', 'LG', 'LR', 'LY', 'LP']):
             return 'Optoelectronics'
+
+        # IC patterns
+        if any(mpn_upper.startswith(p) for p in ['SN74', 'CD4', '74HC', '74LS', '74AHC', '74LVC']):
+            return 'Logic'
+
+        # Microcontroller patterns
+        if any(mpn_upper.startswith(p) for p in ['PIC', 'ATMEGA', 'ATTINY', 'STM32', 'MKL', 'MK', 'LPC', 'SAM', 'EFM32', 'NRF']):
+            return 'Microcontrollers and Processors'
+
+        # Power IC patterns
+        if any(mpn_upper.startswith(p) for p in ['LM78', 'LM79', 'LM317', 'LDO', 'MIC', 'TPS', 'LTC', 'ADP', 'REG', 'NCV', 'AP']):
+            return 'Power Circuits'
+
+        # Op-amp/Amplifier patterns
+        if any(mpn_upper.startswith(p) for p in ['LM', 'TL', 'OP', 'OPA', 'AD8', 'MCP6', 'LMV', 'NCS']):
+            return 'Amplifier Circuits'
+
+        # Circuit protection patterns
+        if any(mpn_upper.startswith(p) for p in ['SMBJ', 'SMAJ', 'TVS', 'ESD', 'PESD', 'PRTR', 'PTC', 'MF-']):
+            return 'Circuit Protection'
+
+        return None
+
+    def _infer_category_from_properties(self, properties: Dict[str, Any]) -> Optional[str]:
+        """
+        Infer component category from PAS properties returned
+
+        If certain properties are present, we can infer the category:
+        - Resistance property -> Resistors
+        - Capacitance property -> Capacitors
+        - Inductance property -> Inductors
+        - Diode Type property -> Diodes
+        - etc.
+        """
+        from property_mapping import (
+            PAS_RESISTOR_RESISTANCE, PAS_CAPACITOR_CAPACITANCE, PAS_INDUCTOR_INDUCTANCE,
+            PAS_DIODE_TYPE, PAS_TRANSISTOR_VCE_MAX, PAS_TRANSISTOR_VDS_MIN,
+            PAS_CONNECTOR_TYPE, PAS_LED_COLOR, PAS_OPERATING_FREQ_NOM
+        )
+
+        # Check for category-specific properties
+        if PAS_RESISTOR_RESISTANCE in properties:
+            return 'Resistors'
+        if PAS_CAPACITOR_CAPACITANCE in properties:
+            return 'Capacitors'
+        if PAS_INDUCTOR_INDUCTANCE in properties:
+            return 'Inductors'
+        if PAS_DIODE_TYPE in properties:
+            return 'Diodes'
+        if PAS_TRANSISTOR_VCE_MAX in properties or PAS_TRANSISTOR_VDS_MIN in properties:
+            return 'Transistors'
+        if PAS_CONNECTOR_TYPE in properties:
+            return 'Connectors'
+        if PAS_LED_COLOR in properties:
+            return 'Optoelectronics'
+        if PAS_OPERATING_FREQ_NOM in properties:
+            return 'Crystals Resonators'
 
         return None
 
@@ -348,22 +417,13 @@ class PASClient:
                 parts = result['result']['results']
                 total_count = result['result'].get('totalCount', len(parts))
 
-                # Find best match
-                best_match = None
-                for part_data in parts:
-                    part = part_data.get('searchProviderPart', {})
-                    found_mpn = part.get('manufacturerPartNumber', '')
-                    found_mfr = part.get('manufacturerName', '')
+                # Apply SearchAndAssign matching algorithm
+                match_result, match_type = self._apply_searchandassign_matching(
+                    manufacturer_pn, manufacturer, parts
+                )
+                best_match = match_result.get('best_match')
 
-                    # Exact match check
-                    if found_mpn.upper() == manufacturer_pn.upper():
-                        if not manufacturer or manufacturer.upper() in found_mfr.upper():
-                            best_match = part_data
-                            break
-
-                # If no exact match, take first result
-                if not best_match and parts:
-                    best_match = parts[0]
+                logger.debug(f"SearchAndAssign result: {match_type} with {len(match_result.get('matches', []))} matches")
 
                 # Extract category from best match
                 category = None
@@ -372,6 +432,7 @@ class PASClient:
                     description = part.get('description', '')
                     part_class = part.get('partClassName', '')
                     mpn = part.get('manufacturerPartNumber', '')
+                    properties = part.get('properties', {}).get('succeeded', {})
 
                     # Get partClassId from PAS response
                     part_class_id = part.get('partClassId', '')
@@ -379,23 +440,59 @@ class PASClient:
                     # Try to get part class name from PAS API
                     part_class_name = self.get_part_class_name(part_class_id) if part_class_id else ''
 
-                    # Try multiple methods to determine category
-                    # 1. From PAS part class name
-                    category = get_category_from_description(part_class_name, '') if part_class_name else None
+                    desc_preview = description[:50] if description else '(none)'
+                    logger.debug(f"  Category detection for {mpn}:")
+                    logger.debug(f"    Description: '{desc_preview}...'")
+                    logger.debug(f"    PartClassId: '{part_class_id}' -> PartClassName: '{part_class_name}'")
+                    logger.debug(f"    Response partClassName: '{part_class}'")
+                    logger.debug(f"    Properties count: {len(properties)}")
 
-                    # 2. From description if available
+                    # Try multiple methods to determine category
+                    # 1. From PAS part class name (most reliable if available)
+                    if part_class_name:
+                        category = get_category_from_description(part_class_name, '')
+                        if category:
+                            logger.info(f"  -> Category from part class API: {category}")
+
+                    # 2. From partClassName field in response
+                    if not category and part_class:
+                        category = get_category_from_description(part_class, '')
+                        if category:
+                            logger.info(f"  -> Category from partClassName field: {category}")
+
+                    # 3. From description if available
                     if not category and description:
                         category = get_category_from_description(description, '')
+                        if category:
+                            logger.info(f"  -> Category from description: {category}")
 
-                    # 3. From MPN patterns as fallback
+                    # 4. From PAS properties (new method)
+                    if not category and properties:
+                        category = self._infer_category_from_properties(properties)
+                        if category:
+                            logger.info(f"  -> Category from PAS properties: {category}")
+
+                    # 5. From MPN patterns as fallback
                     if not category:
                         category = self._infer_category_from_mpn(mpn)
+                        if category:
+                            logger.info(f"  -> Category from MPN pattern: {category}")
+
+                    # 6. From company PN prefix as last resort
+                    if not category:
+                        category = self._infer_category_from_company_pn(manufacturer_pn)
+                        if category:
+                            logger.info(f"  -> Category from company PN: {category}")
+
+                    if not category:
+                        logger.warning(f"  -> No category detected for {mpn} - will use Uncategorized")
 
                 return {
                     'found': True,
                     'parts': parts,
                     'best_match': best_match,
                     'category': category,
+                    'match_type': match_type,
                     'total_count': total_count
                 }
             else:
@@ -404,6 +501,7 @@ class PASClient:
                     'parts': [],
                     'best_match': None,
                     'category': None,
+                    'match_type': MATCH_TYPE_NONE,
                     'total_count': 0
                 }
 
@@ -414,11 +512,12 @@ class PASClient:
                 'parts': [],
                 'best_match': None,
                 'category': None,
+                'match_type': MATCH_TYPE_ERROR,
                 'error': str(e)
             }
 
     def search_part_with_outputs(self, manufacturer_pn: str, manufacturer: str,
-                                  outputs: List[str]) -> Dict[str, Any]:
+                                  outputs: List[str], part_class_id: str = "76f2225d") -> Dict[str, Any]:
         """
         Search for a part with specific output properties
 
@@ -426,6 +525,7 @@ class PASClient:
             manufacturer_pn: Manufacturer part number
             manufacturer: Manufacturer name
             outputs: List of property IDs to include in response
+            part_class_id: Part class ID to search within (default: Root)
 
         Returns:
             Same format as search_part
@@ -460,7 +560,7 @@ class PASClient:
 
         request_body = {
             "searchParameters": {
-                "partClassId": "76f2225d",
+                "partClassId": part_class_id,
                 "customParameters": {},
                 "outputs": outputs,  # Use category-specific outputs
                 "sort": [],
@@ -502,6 +602,179 @@ class PASClient:
         except Exception as e:
             logger.debug(f"Enhanced search failed for {manufacturer_pn}: {e}")
             return {'found': False, 'parts': [], 'best_match': None, 'error': str(e)}
+
+    def get_property_definition(self, property_id: str) -> Optional[Dict[str, Any]]:
+        """
+        Get property definition from PAS API to validate a property ID
+
+        Args:
+            property_id: 8-character hex property ID
+
+        Returns:
+            Property definition dict with name, etc. or None if invalid
+        """
+        self._ensure_authenticated()
+
+        url = f"{self.config['api_url']}/v3/properties/{property_id}"
+
+        try:
+            response = self.session.get(url, timeout=10)
+            if response.status_code == 200:
+                return response.json()
+            else:
+                logger.debug(f"Property {property_id} not found: {response.status_code}")
+                return None
+        except Exception as e:
+            logger.debug(f"Error fetching property {property_id}: {e}")
+            return None
+
+    def _apply_searchandassign_matching(self, edm_pn: str, edm_mfg: str, parts: List[Dict]) -> Tuple[Dict, str]:
+        """
+        Apply the SearchAndAssign matching algorithm from Java code
+
+        Matching tiers:
+        1. Exact match: PartNumber AND ManufacturerName both exact
+        2. Partial manufacturer match: PartNumber exact, ManufacturerName contains
+        3. Alphanumeric-only match: Strip special chars, compare alphanumeric only
+        4. Leading zero suppression: Remove leading zeros and compare
+        5. PartNumber-only search: If manufacturer empty/unknown
+
+        Args:
+            edm_pn: EDM/BOM part number
+            edm_mfg: EDM/BOM manufacturer name
+            parts: List of part data from PAS API
+
+        Returns:
+            Tuple of (result_dict, match_type)
+        """
+        pattern = re.compile(r'[^A-Za-z0-9]')
+        matches = []
+
+        # ========== STEP 1: Search with Manufacturer (if provided) ==========
+        if edm_mfg and edm_mfg not in ['', 'Unknown']:
+            # 1a. Exact match on BOTH PartNumber AND ManufacturerName
+            for part_data in parts:
+                part = part_data.get('searchProviderPart', {})
+                pas_pn = part.get('manufacturerPartNumber', '')
+                pas_mfg = part.get('manufacturerName', '')
+                if pas_pn == edm_pn and pas_mfg == edm_mfg:
+                    matches.append(part_data)
+
+            if len(matches) > 1:
+                return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_MULTIPLE
+            elif len(matches) == 1:
+                return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_FOUND
+
+            # 1b. Partial match on ManufacturerName (exact PN, manufacturer contains)
+            matches.clear()
+            for part_data in parts:
+                part = part_data.get('searchProviderPart', {})
+                pas_pn = part.get('manufacturerPartNumber', '')
+                pas_mfg = part.get('manufacturerName', '')
+                if pas_pn == edm_pn and edm_mfg.upper() in pas_mfg.upper():
+                    matches.append(part_data)
+
+            if len(matches) > 1:
+                return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_MULTIPLE
+            elif len(matches) == 1:
+                return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_FOUND
+
+            # 1c. Alphanumeric-only match
+            matches.clear()
+            edm_pn_alpha = pattern.sub('', edm_pn).upper()
+            for part_data in parts:
+                part = part_data.get('searchProviderPart', {})
+                pas_pn = part.get('manufacturerPartNumber', '')
+                pas_mfg = part.get('manufacturerName', '')
+                pas_pn_alpha = pattern.sub('', pas_pn).upper()
+                if pas_pn_alpha == edm_pn_alpha and (pas_mfg.upper() == edm_mfg.upper() or edm_mfg.upper() in pas_mfg.upper()):
+                    matches.append(part_data)
+
+            if len(matches) >= 1:
+                return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_FOUND
+
+            # 1d. Leading zero suppression
+            edm_pn_no_zeros = edm_pn_alpha.lstrip('0')
+            for part_data in parts:
+                part = part_data.get('searchProviderPart', {})
+                pas_pn = part.get('manufacturerPartNumber', '')
+                pas_mfg = part.get('manufacturerName', '')
+                pas_pn_alpha = pattern.sub('', pas_pn).upper()
+                pas_pn_no_zeros = pas_pn_alpha.lstrip('0')
+                if pas_pn_no_zeros == edm_pn_no_zeros and (pas_mfg.upper() == edm_mfg.upper() or edm_mfg.upper() in pas_mfg.upper()):
+                    matches.append(part_data)
+
+            if len(matches) >= 1:
+                return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_FOUND
+
+        # ========== STEP 2: Search by PartNumber only ==========
+        # Triggered if: manufacturer is empty/Unknown OR no matches found in Step 1
+        matches.clear()
+
+        if not parts:
+            return {'matches': [], 'best_match': None}, MATCH_TYPE_NONE
+
+        # Special case: If exactly 1 result from PAS search
+        if len(parts) == 1:
+            return {'matches': parts, 'best_match': parts[0]}, MATCH_TYPE_NEED_REVIEW
+
+        # Multiple results - try to narrow down by PartNumber
+        # 2a. Exact PartNumber match
+        for part_data in parts:
+            part = part_data.get('searchProviderPart', {})
+            pas_pn = part.get('manufacturerPartNumber', '')
+            if pas_pn == edm_pn:
+                matches.append(part_data)
+
+        if len(matches) == 1:
+            return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_NEED_REVIEW
+        elif len(matches) > 1:
+            return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_MULTIPLE
+
+        # 2b. Case-insensitive exact match
+        for part_data in parts:
+            part = part_data.get('searchProviderPart', {})
+            pas_pn = part.get('manufacturerPartNumber', '')
+            if pas_pn.upper() == edm_pn.upper():
+                matches.append(part_data)
+
+        if len(matches) == 1:
+            return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_NEED_REVIEW
+        elif len(matches) > 1:
+            return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_MULTIPLE
+
+        # 2c. Alphanumeric-only match
+        edm_pn_alpha = pattern.sub('', edm_pn).upper()
+        for part_data in parts:
+            part = part_data.get('searchProviderPart', {})
+            pas_pn = part.get('manufacturerPartNumber', '')
+            pas_pn_alpha = pattern.sub('', pas_pn).upper()
+            if pas_pn_alpha == edm_pn_alpha:
+                matches.append(part_data)
+
+        if len(matches) == 1:
+            return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_NEED_REVIEW
+        elif len(matches) > 1:
+            return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_FOUND
+
+        # 2d. Leading zero suppression
+        edm_pn_no_zeros = edm_pn_alpha.lstrip('0')
+        for part_data in parts:
+            part = part_data.get('searchProviderPart', {})
+            pas_pn = part.get('manufacturerPartNumber', '')
+            pas_pn_alpha = pattern.sub('', pas_pn).upper()
+            pas_pn_no_zeros = pas_pn_alpha.lstrip('0')
+            if pas_pn_no_zeros == edm_pn_no_zeros:
+                matches.append(part_data)
+
+        if len(matches) >= 1:
+            return {'matches': matches, 'best_match': matches[0]}, MATCH_TYPE_FOUND
+
+        # No matches found - return all as multiple for review
+        if parts:
+            return {'matches': parts, 'best_match': parts[0]}, MATCH_TYPE_MULTIPLE
+
+        return {'matches': [], 'best_match': None}, MATCH_TYPE_NONE
 
 
 class BOMParser:
@@ -685,6 +958,21 @@ class CPDUpdater:
         self._next_obj_id = max_id + 1
         return self._next_obj_id
 
+    def ensure_uncategorized_table(self):
+        """Ensure the Uncategorized table exists"""
+        table_name = "Uncategorized"
+        if not self.table_exists(table_name):
+            logger.info(f"Creating table: {table_name}")
+            self.conn.execute(f'''
+                CREATE TABLE "{table_name}" (
+                    "obj_id" INTEGER PRIMARY KEY,
+                    "Part Number" TEXT,
+                    "Manufacturer Part Number" TEXT,
+                    "Manufacturer Name" TEXT
+                )
+            ''')
+            self.conn.commit()
+
     def insert_or_update_part(self, table_name: str, part_data: Dict[str, Any]) -> bool:
         """
         Insert or update a part in the specified table
@@ -717,8 +1005,9 @@ class CPDUpdater:
             obj_id = existing.get('obj_id')
             if obj_id:
                 set_clause = ', '.join([f'"{k}" = ?' for k in valid_data.keys()])
-                values = list(valid_data.values()) + [obj_id]
-
+                values = list(valid_data.values())
+                values.append(obj_id)
+                
                 self.conn.execute(
                     f'UPDATE "{table_name}" SET {set_clause} WHERE obj_id = ?',
                     values
@@ -941,6 +1230,10 @@ def main():
 
     cpd_updater = CPDUpdater(cpd_file, dbc_parser)
     cpd_updater.connect()
+    
+    # Ensure Uncategorized table exists
+    if not args.dry_run:
+        cpd_updater.ensure_uncategorized_table()
 
     # Create backup unless dry run
     if not args.dry_run:
@@ -955,6 +1248,7 @@ def main():
         'inserted': 0,
         'errors': 0,
         'skipped': 0,
+        'uncategorized': 0,
         'by_category': {}
     }
 
@@ -989,15 +1283,21 @@ def main():
                 # Extract part data with category-specific mappings
                 part_data = extract_part_data(pas_result, company_pn, category)
 
-                # TODO: Enhanced search disabled - outputs may need validation
+                # Enhanced search enabled - use partClassId from first result
                 # If category supports enhanced outputs, do a second search
-                # if category in DBC_CATEGORY_FIELD_MAPPINGS:
-                #     enhanced_result = pas_client.search_part_with_outputs(
-                #         mpn, manufacturer, get_category_outputs(category)
-                #     )
-                #     if enhanced_result.get('found'):
-                #         part_data = extract_part_data(enhanced_result, company_pn, category)
-                #         logger.debug(f"  -> Enhanced data extracted for {category}")
+                if category in DBC_CATEGORY_FIELD_MAPPINGS:
+                    # Get partClassId from the best match of the first search
+                    part_class_id = "76f2225d" # Default to root
+                    if pas_result.get('best_match'):
+                        part = pas_result['best_match'].get('searchProviderPart', {})
+                        part_class_id = part.get('partClassId', "76f2225d")
+                    
+                    enhanced_result = pas_client.search_part_with_outputs(
+                        mpn, manufacturer, get_category_outputs(category), part_class_id
+                    )
+                    if enhanced_result.get('found'):
+                        part_data = extract_part_data(enhanced_result, company_pn, category)
+                        logger.debug(f"  -> Enhanced data extracted for {category}")
 
                 if not args.dry_run:
                     # Insert/update in CPD
@@ -1014,6 +1314,24 @@ def main():
             else:
                 results['skipped'] += 1
                 logger.warning(f"  -> Found but could not determine category")
+                
+                # Add to Uncategorized
+                if not args.dry_run:
+                    uncat_data = {
+                        'Part Number': company_pn,
+                        'Manufacturer Part Number': mpn,
+                        'Manufacturer Name': manufacturer
+                    }
+                    success = cpd_updater.insert_or_update_part("Uncategorized", uncat_data)
+                    if success:
+                        results['uncategorized'] += 1
+                        logger.info(f"  -> Added to Uncategorized table")
+                    else:
+                        logger.warning(f"  -> Failed to add to Uncategorized table")
+                else:
+                    logger.info(f"  -> [DRY RUN] Would add to Uncategorized table")
+                    results['uncategorized'] += 1
+
         else:
             results['not_found'] += 1
             if pas_result.get('error'):
@@ -1021,6 +1339,23 @@ def main():
                 logger.warning(f"  -> Error: {pas_result['error']}")
             else:
                 logger.info(f"  -> Not found in PAS")
+            
+            # Add to Uncategorized
+            if not args.dry_run:
+                uncat_data = {
+                    'Part Number': company_pn,
+                    'Manufacturer Part Number': mpn,
+                    'Manufacturer Name': manufacturer
+                }
+                success = cpd_updater.insert_or_update_part("Uncategorized", uncat_data)
+                if success:
+                    results['uncategorized'] += 1
+                    logger.info(f"  -> Added to Uncategorized table")
+                else:
+                    logger.warning(f"  -> Failed to add to Uncategorized table")
+            else:
+                logger.info(f"  -> [DRY RUN] Would add to Uncategorized table")
+                results['uncategorized'] += 1
 
         # Rate limiting
         time.sleep(0.5)

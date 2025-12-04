@@ -20,7 +20,8 @@ PAS_PROPERTY_MANUFACTURER_PN = "d8ac8dcc"    # Manufacturer Part Number
 PAS_PROPERTY_DESCRIPTION = "bf4dd752"        # Description
 
 # Search and display properties (from ContentProviderImpl.java)
-PAS_PROPERTY_ROOT_CLASS = "76f2225d"         # Root Part Class ID
+# NOTE: This is a PartClass ID, not a Property ID - used as root class for searches
+PAS_PROPERTY_ROOT_CLASS = "76f2225d"         # Root Part Class ID (PartClass, not Property)
 
 # URL properties
 PAS_PROPERTY_DATASHEET_URL = "750a45c8"      # Current Datasheet URL (from search)
@@ -36,6 +37,8 @@ PAS_PROPERTY_MILITARY_SPEC = "d8739de6"      # Military Spec (boolean)
 
 # ============================================================================
 # SUPPLY CHAIN ENRICHER PROPERTIES (ID: 33, Version: 1)
+# NOTE: These IDs are from the Supply Chain Enricher API, a different data
+# source than SF-Mapping.xml. They are NOT validated against SF-Mapping.xml.
 # ============================================================================
 
 # Distributor information
@@ -144,100 +147,107 @@ PAS_PACKAGE_HEIGHT = "971228a0"                    # Package Height (mm)
 PAS_PACKAGE_LENGTH = "5208b061"                    # Package Length (mm)
 PAS_PACKAGE_WIDTH = "611aade2"                     # Package Width (mm)
 
+# Amplifier Circuits properties
+PAS_AMPLIFIER_TYPE = "474b4835"                    # Amplifier Type
+PAS_SUPPLY_CURRENT_MAX = "f116f878"                # Supply Current-Max
+
+# Batteries properties
+PAS_BATTERY_TYPE = "a4e02877"                      # Battery Type
+PAS_BATTERY_CAPACITY = "5059372f"                  # Capacity
+PAS_BATTERY_VOLTAGE = "06599e52"                   # Voltage
+
+# Circuit Protection properties
+PAS_CIRCUIT_PROTECTION_TYPE = "fff77a46"           # Circuit Protection Type
+PAS_RATED_CURRENT = "e063701a"                     # Rated Current
+PAS_RATED_VOLTAGE = "94d49b8e"                     # Rated Voltage
+
+# Connectors properties
+PAS_CONNECTOR_TYPE = "e16282e3"                    # Connector Type
+PAS_CONTACT_GENDER = "e316e092"                    # Contact Gender
+PAS_TERMINAL_PITCH = "2dca650b"                    # Terminal Pitch
+PAS_NUMBER_OF_CONTACTS = "8de1ba26"                # Number of Contacts
+
+# Converters properties
+PAS_SUPPLY_VOLTAGE_NOM = "75983154"                # Supply Voltage-Nom
+
+# Fiber Optics properties
+PAS_WAVELENGTH_NOM = "0403a469"                    # Operating Wavelength-Nom
+PAS_RETURN_LOSS_MIN = "9e1e344d"                   # Return Loss-Min
+
+# Logic properties
+PAS_LOGIC_FAMILY = "8d1499eb"                      # Family
+PAS_PACKAGE_CODE = "5ecbef41"                      # Package Code
+PAS_SUPPLY_VOLTAGE_NOM_VSUP = "d79a8633"           # Supply Voltage-Nom (Vsup)
+
+# Memory properties
+PAS_ACCESS_TIME_MAX = "595f0735"                   # Access Time-Max
+PAS_MEMORY_DENSITY = "26b42a33"                    # Memory Density
+PAS_ORGANIZATION = "ec1c1ae1"                      # Organization
+
+# Microcontrollers properties
+PAS_CLOCK_FREQ_MAX = "34e10088"                    # Clock Frequency-Max
+
+# Optoelectronics properties
+PAS_MOUNTING_FEATURE = "e65bcdfa"                  # Mounting Feature
+PAS_LED_COLOR = "23496e05"                         # Color
+PAS_FORWARD_CURRENT_MAX = "dbc7f810"               # Forward Current-Max (shared with diodes)
+
+# Programmable Logic properties
+PAS_NUM_INPUTS = "2c942d1f"                        # Number of Inputs
+PAS_NUM_LOGIC_CELLS = "24850c16"                   # Number of Logic Cells
+PAS_PROG_LOGIC_TYPE = "d54517cd"                   # Programmable Logic Type
+
+# RC Networks properties
+PAS_FIRST_ELEMENT_RESISTANCE = "eede0dd3"          # First Element Resistance
+PAS_RESISTANCE_TOLERANCE = "459136f7"              # Resistance Tolerance
+
+# RF and Microwave properties
+PAS_OPERATING_FREQ_MAX = "874a45ae"                # Operating Frequency-Max
+
+# Relays properties
+PAS_COIL_POWER = "91881978"                        # Coil Power
+PAS_COIL_RESISTANCE = "3fc17f2b"                   # Coil Resistance
+PAS_COIL_VOLTAGE_NOM = "fa3c024d"                  # Coil Voltage-Nom
+PAS_RELAY_ACTION = "937f7884"                      # Relay Action
+
+# Sockets properties
+PAS_CONTACT_MATERIAL = "11308640"                  # Contact Material
+PAS_CURRENT_RATING = "8fbde602"                    # Current Rating
+
+# Switches properties
+PAS_CONTACT_CURRENT_DC_MAX = "2387d394"            # Contact Current(DC)-Max
+PAS_CONTACT_VOLTAGE_DC_MAX = "968c17fb"            # Contact Voltage(DC)-Max
+PAS_ELECTRICAL_LIFE = "617a5543"                   # Electrical Life
+
+# Telecommunication properties
+PAS_TECHNOLOGY = "02eb50f4"                        # Technology
+
+# Terminal Blocks properties
+PAS_MOUNTING_TYPE = "1ecd9a1d"                     # Mounting Type
+
+# Crystals/Oscillators properties
+PAS_OPERATING_FREQ_NOM = "05451e38"                # Operating Frequency-Nom
+PAS_FREQ_STABILITY = "abd360dc"                    # Frequency Stability
+
+# Inductor Type property
+PAS_INDUCTOR_TYPE = "23e173ff"                     # Inductor Type
+
 
 # ============================================================================
 # PROPERTY ID TO NAME MAPPINGS
 # ============================================================================
+# NOTE: The primary source for property ID mappings is SF-Mapping.xml
+# (loaded via load_sf_mapping_properties()). This minimal fallback is only
+# used if SF-Mapping.xml is not available.
 
 PROPERTY_ID_TO_NAME = {
-    # Core properties
+    # Minimal core properties fallback (in case SF-Mapping.xml is not found)
     "e1aa6f26": "Part ID",
     "6230417e": "Manufacturer Name",
     "d8ac8dcc": "Manufacturer Part Number",
     "bf4dd752": "Description",
-    "76f2225d": "Root Part Class ID",
     "750a45c8": "Current Datasheet Url",
-    "2a2b1476": "Findchips URL",
     "e5434e21": "Part Life Cycle Code",
-    "a189d244": "Status Code",
-    "d8739de6": "Military Spec",
-
-    # Resistor properties
-    "ccea073f": "Resistance",
-    "a257f04d": "Tolerance",
-    "b734f175": "Rated Power Dissipation (P)",
-    "0f30e63e": "Working Voltage",
-    "a823a726": "Resistor Type",
-
-    # Capacitor properties
-    "efb047cd": "Capacitance",
-    "12377564": "Rated (DC) Voltage (URdc)",
-    "05436dcc": "Positive Tolerance",
-    "748f6c85": "Negative Tolerance",
-    "c1501836": "Capacitor Type",
-    "49249462": "Dielectric Material",
-
-    # Inductor properties
-    "f7ae1e75": "Inductance-Nom (L)",
-    "fc931903": "Rated Current-Max",
-    "ec01669a": "DC Resistance",
-
-    # Diode properties
-    "68ddced3": "Diode Type",
-    "55daf8f5": "Configuration",
-    "d1a37148": "Power Dissipation-Max",
-    "a7269fc5": "Reference Voltage-Nom",
-    "c4a98aa2": "Forward Voltage-Max (VF)",
-    "dbc7f810": "Forward Current-Max",
-    "1aa66be0": "Reverse Voltage-Max",
-    "72b02506": "Breakdown Voltage-Nom",
-
-    # Transistor properties
-    "5e887a5f": "Collector-Emitter Voltage-Max",
-    "b4fef04d": "Collector Current-Max (IC)",
-    "baf6f251": "Power Dissipation-Max (Abs)",
-    "1c5e34bb": "Power Dissipation Ambient-Max",
-    "7ee81777": "DS Breakdown Voltage-Min",
-    "3b360da1": "Drain Current-Max (Abs) (ID)",
-    "5bb59154": "Drain-source On Resistance-Max",
-    "82b890fd": "DC Current Gain-Min (hFE)",
-
-    # Packaging properties
-    "6f96199e": "Size Code",
-    "a4677781": "Case/Size Code",
-    "04593027": "Surface Mount",
-    "1265b003": "Package Style",
-    "673e3550": "Package Description",
-    "971228a0": "Package Height",
-    "5208b061": "Package Length",
-    "611aade2": "Package Width",
-
-    # Supply chain properties
-    "951ed6a7": "Distributor Id",
-    "339c3014": "Distributor Name",
-    "8f6be867": "Distributor Part Number",
-    "08c82fa6": "Distributor Authorized Status",
-    "9df8ff36": "Manufacturer Name (Supply)",
-    "41e14b24": "RoHS Compliance",
-    "8f6f3508": "Stock",
-    "3708193e": "Stock Indicator",
-    "a376c2e6": "Minimum Order Quantity",
-    "1a54a21c": "Container Type",
-    "5702a948": "Price Breakdown",
-    "a0ecfd70": "Estimated Pricing",
-    "24538207": "Datasheet URL",
-    "db80a0d0": "Buy Now URL",
-    "fdd91810": "Last Updated",
-
-    # Alternates
-    "f5724997": "FFF Equivalent",
-    "9c89c3f1": "Functional Equivalent",
-    "33786d02": "Similar Alternates",
-    "06a09139": "Direct Alternates",
-
-    # Documents
-    "5ebee733": "Environmental Documents",
-    "a6e23430": "Notice Documents",
 }
 
 
@@ -255,11 +265,11 @@ DBC_COMMON_FIELDS = {
 }
 
 # Category-specific DBC field to PAS property ID mappings
+# Covers all 36 DBC categories with their parametric fields
 DBC_CATEGORY_FIELD_MAPPINGS = {
+    # Passive Components
     "Resistors": {
-        # Common fields
         **DBC_COMMON_FIELDS,
-        # Parametric fields
         "Value": PAS_RESISTOR_RESISTANCE,                    # Resistance -> Value
         "Tolerance": PAS_RESISTOR_TOLERANCE,
         "Rated Power Dissipation (P)": PAS_RESISTOR_POWER,
@@ -275,17 +285,34 @@ DBC_CATEGORY_FIELD_MAPPINGS = {
     "Inductors": {
         **DBC_COMMON_FIELDS,
         "Value": PAS_INDUCTOR_INDUCTANCE,                    # Inductance -> Value
+        "Inductor Type": PAS_INDUCTOR_TYPE,
         "Tolerance": PAS_INDUCTOR_TOLERANCE,
         "Rated Current-Max": PAS_INDUCTOR_CURRENT,
         "DC Resistance": PAS_INDUCTOR_DC_RESISTANCE,
         "Size Code": PAS_INDUCTOR_SIZE_CODE,
     },
+    "RC Networks": {
+        **DBC_COMMON_FIELDS,
+        "Capacitance": PAS_CAPACITOR_CAPACITANCE,
+        "First Element Resistance": PAS_FIRST_ELEMENT_RESISTANCE,
+        "Rated (DC) Voltage (URdc)": PAS_CAPACITOR_VOLTAGE,
+        "Rated Power Dissipation (P)": PAS_RESISTOR_POWER,
+        "Resistance Tolerance": PAS_RESISTANCE_TOLERANCE,
+    },
+    "Filters": {
+        **DBC_COMMON_FIELDS,
+        "Rated Current": PAS_RATED_CURRENT,
+    },
+
+    # Semiconductors
     "Diodes": {
         **DBC_COMMON_FIELDS,
         "Diode Type": PAS_DIODE_TYPE,
         "Configuration": PAS_DIODE_CONFIGURATION,
         "Power Dissipation-Max": PAS_DIODE_POWER,
         "Reference Voltage-Nom": PAS_DIODE_REF_VOLTAGE,
+        "Forward Voltage-Max (VF)": PAS_DIODE_FORWARD_VOLTAGE,
+        "Forward Current-Max": PAS_DIODE_FORWARD_CURRENT,
     },
     "Transistors": {
         **DBC_COMMON_FIELDS,
@@ -293,6 +320,173 @@ DBC_CATEGORY_FIELD_MAPPINGS = {
         "Collector Current-Max (IC)": PAS_TRANSISTOR_IC_MAX,
         "Power Dissipation-Max (Abs)": PAS_TRANSISTOR_POWER,
         "DC Current Gain-Min (hFE)": PAS_TRANSISTOR_HFE_MIN,
+        "Configuration": PAS_DIODE_CONFIGURATION,
+        "Number of Terminals": "a90098b3",
+    },
+
+    # ICs - Analog
+    "Amplifier Circuits": {
+        **DBC_COMMON_FIELDS,
+        "Amplifier Type": PAS_AMPLIFIER_TYPE,
+        "Supply Current-Max": PAS_SUPPLY_CURRENT_MAX,
+    },
+    "Converters": {
+        **DBC_COMMON_FIELDS,
+        "Supply Voltage-Nom": PAS_SUPPLY_VOLTAGE_NOM,
+    },
+    "Power Circuits": {
+        **DBC_COMMON_FIELDS,
+        "Supply Voltage-Nom": PAS_SUPPLY_VOLTAGE_NOM,
+    },
+    "Signal Circuits": {
+        **DBC_COMMON_FIELDS,
+        "Supply Voltage-Nom (Vsup)": PAS_SUPPLY_VOLTAGE_NOM_VSUP,
+    },
+
+    # ICs - Digital
+    "Logic": {
+        **DBC_COMMON_FIELDS,
+        "Family": PAS_LOGIC_FAMILY,
+        "Package Code": PAS_PACKAGE_CODE,
+        "Supply Voltage-Nom (Vsup)": PAS_SUPPLY_VOLTAGE_NOM_VSUP,
+    },
+    "Memory": {
+        **DBC_COMMON_FIELDS,
+        "Access Time-Max": PAS_ACCESS_TIME_MAX,
+        "Memory Density": PAS_MEMORY_DENSITY,
+        "Organization": PAS_ORGANIZATION,
+        "Supply Voltage-Nom (Vsup)": PAS_SUPPLY_VOLTAGE_NOM_VSUP,
+    },
+    "Microcontrollers and Processors": {
+        **DBC_COMMON_FIELDS,
+        "Clock Frequency-Max": PAS_CLOCK_FREQ_MAX,
+        "Supply Voltage-Nom": PAS_SUPPLY_VOLTAGE_NOM,
+    },
+    "Programmable Logic": {
+        **DBC_COMMON_FIELDS,
+        "Number of Inputs": PAS_NUM_INPUTS,
+        "Number of Logic Cells": PAS_NUM_LOGIC_CELLS,
+        "Programmable Logic Type": PAS_PROG_LOGIC_TYPE,
+        "Supply Voltage-Nom": PAS_SUPPLY_VOLTAGE_NOM,
+    },
+    "Drivers And Interfaces": {
+        **DBC_COMMON_FIELDS,
+        "Supply Voltage-Nom": PAS_SUPPLY_VOLTAGE_NOM,
+    },
+
+    # Connectors and Interconnects
+    "Connectors": {
+        **DBC_COMMON_FIELDS,
+        "Connector Type": PAS_CONNECTOR_TYPE,
+        "Contact Gender": PAS_CONTACT_GENDER,
+        "Terminal Pitch": PAS_TERMINAL_PITCH,
+        "Total Number of Contacts": PAS_NUMBER_OF_CONTACTS,
+    },
+    "Connector Support": {
+        **DBC_COMMON_FIELDS,
+        "Rated Voltage": PAS_RATED_VOLTAGE,
+    },
+    "Sockets": {
+        **DBC_COMMON_FIELDS,
+        "Contact Material": PAS_CONTACT_MATERIAL,
+        "Current Rating": PAS_CURRENT_RATING,
+        "Number of Contacts": PAS_NUMBER_OF_CONTACTS,
+        "Terminal Pitch": PAS_TERMINAL_PITCH,
+    },
+    "Terminal Blocks": {
+        **DBC_COMMON_FIELDS,
+        "Mounting Type": PAS_MOUNTING_TYPE,
+        "Rated Current": PAS_RATED_CURRENT,
+        "Rated Voltage": PAS_RATED_VOLTAGE,
+    },
+
+    # Electromechanical
+    "Relays": {
+        **DBC_COMMON_FIELDS,
+        "Coil Power": PAS_COIL_POWER,
+        "Coil Resistance": PAS_COIL_RESISTANCE,
+        "Coil Voltage-Nom": PAS_COIL_VOLTAGE_NOM,
+        "Relay Action": PAS_RELAY_ACTION,
+    },
+    "Switches": {
+        **DBC_COMMON_FIELDS,
+        "Contact Current(DC)-Max": PAS_CONTACT_CURRENT_DC_MAX,
+        "Contact Voltage(DC)-Max": PAS_CONTACT_VOLTAGE_DC_MAX,
+        "Electrical Life": PAS_ELECTRICAL_LIFE,
+    },
+
+    # Protection
+    "Circuit Protection": {
+        **DBC_COMMON_FIELDS,
+        "Circuit Protection Type": PAS_CIRCUIT_PROTECTION_TYPE,
+        "Rated Current": PAS_RATED_CURRENT,
+        "Rated Voltage": PAS_RATED_VOLTAGE,
+    },
+
+    # Timing/Frequency
+    "Crystals Resonators": {
+        **DBC_COMMON_FIELDS,
+        "Operating Frequency-Nom": PAS_OPERATING_FREQ_NOM,
+        "Frequency Stability": PAS_FREQ_STABILITY,
+    },
+    "Oscillators": {
+        **DBC_COMMON_FIELDS,
+        "Operating Frequency-Nom": PAS_OPERATING_FREQ_NOM,
+        "Supply Voltage-Nom": PAS_SUPPLY_VOLTAGE_NOM,
+    },
+
+    # Optoelectronics
+    "Optoelectronics": {
+        **DBC_COMMON_FIELDS,
+        "Mounting Feature": PAS_MOUNTING_FEATURE,
+        "Color": PAS_LED_COLOR,
+        "Forward Current-Max": PAS_FORWARD_CURRENT_MAX,
+    },
+    "Fiber Optics": {
+        **DBC_COMMON_FIELDS,
+        "Operating Wavelength-Nom": PAS_WAVELENGTH_NOM,
+        "Return Loss-Min": PAS_RETURN_LOSS_MIN,
+        "Supply Voltage-Nom": PAS_SUPPLY_VOLTAGE_NOM,
+    },
+
+    # Power and Energy
+    "Batteries": {
+        **DBC_COMMON_FIELDS,
+        "Battery Type": PAS_BATTERY_TYPE,
+        "Capacity": PAS_BATTERY_CAPACITY,
+        "Voltage": PAS_BATTERY_VOLTAGE,
+    },
+    "Transformers": {
+        **DBC_COMMON_FIELDS,
+        # Most transformer fields don't have direct PAS mappings
+    },
+
+    # RF and Specialty
+    "RF and Microwave": {
+        **DBC_COMMON_FIELDS,
+        "Operating Frequency-Max": PAS_OPERATING_FREQ_MAX,
+    },
+    "Telecommunication Circuits": {
+        **DBC_COMMON_FIELDS,
+        "Supply Voltage-Nom": PAS_SUPPLY_VOLTAGE_NOM,
+        "Technology": PAS_TECHNOLOGY,
+    },
+
+    # Other categories with minimal parametric data
+    "Consumer Circuits": {
+        **DBC_COMMON_FIELDS,
+    },
+    "Sensors Transducers": {
+        **DBC_COMMON_FIELDS,
+    },
+    "Trigger Devices": {
+        **DBC_COMMON_FIELDS,
+    },
+    "Thermal Support Devices": {
+        **DBC_COMMON_FIELDS,
+    },
+    "Mechanical": {
+        **DBC_COMMON_FIELDS,
     },
 }
 
@@ -358,6 +552,15 @@ PAS_CLASS_TO_DBC_CATEGORY = {
     "boost": "Power Circuits",
     "power supply": "Power Circuits",
     "pmic": "Power Circuits",
+    "power management": "Power Circuits",
+    "switching regulator": "Power Circuits",
+    "linear regulator": "Power Circuits",
+    "bus controller": "Drivers And Interfaces",
+    "usb controller": "Drivers And Interfaces",
+    "usb-c": "Drivers And Interfaces",
+    "i2c": "Drivers And Interfaces",
+    "spi": "Drivers And Interfaces",
+    "uart": "Drivers And Interfaces",
 
     # Connectors
     "connector": "Connectors",
@@ -382,6 +585,8 @@ PAS_CLASS_TO_DBC_CATEGORY = {
     "esd": "Circuit Protection",
     "varistor": "Circuit Protection",
     "surge": "Circuit Protection",
+    "transient suppressor": "Circuit Protection",
+    "suppressor": "Circuit Protection",
 
     # Other
     "crystal": "Crystals Resonators",
@@ -453,56 +658,11 @@ def get_category_outputs(category: str) -> list:
     # Start with default outputs
     outputs = get_default_outputs()
 
-    # Add category-specific outputs
-    if category == "Resistors":
-        outputs.extend([
-            PAS_RESISTOR_RESISTANCE,
-            PAS_RESISTOR_TOLERANCE,
-            PAS_RESISTOR_POWER,
-            PAS_RESISTOR_VOLTAGE,
-            PAS_RESISTOR_TYPE,
-            PAS_RESISTOR_SIZE_CODE,
-        ])
-    elif category == "Capacitors":
-        outputs.extend([
-            PAS_CAPACITOR_CAPACITANCE,
-            PAS_CAPACITOR_VOLTAGE,
-            PAS_CAPACITOR_POS_TOLERANCE,
-            PAS_CAPACITOR_NEG_TOLERANCE,
-            PAS_CAPACITOR_TYPE,
-            PAS_CAPACITOR_DIELECTRIC,
-            PAS_CAPACITOR_SIZE_CODE,
-        ])
-    elif category == "Inductors":
-        outputs.extend([
-            PAS_INDUCTOR_INDUCTANCE,
-            PAS_INDUCTOR_CURRENT,
-            PAS_INDUCTOR_DC_RESISTANCE,
-            PAS_INDUCTOR_TOLERANCE,
-            PAS_INDUCTOR_SIZE_CODE,
-        ])
-    elif category == "Diodes":
-        outputs.extend([
-            PAS_DIODE_TYPE,
-            PAS_DIODE_CONFIGURATION,
-            PAS_DIODE_POWER,
-            PAS_DIODE_REF_VOLTAGE,
-            PAS_DIODE_FORWARD_VOLTAGE,
-            PAS_DIODE_FORWARD_CURRENT,
-            PAS_DIODE_REVERSE_VOLTAGE,
-            PAS_DIODE_BREAKDOWN_VOLTAGE,
-        ])
-    elif category == "Transistors":
-        outputs.extend([
-            PAS_TRANSISTOR_VCE_MAX,
-            PAS_TRANSISTOR_IC_MAX,
-            PAS_TRANSISTOR_POWER,
-            PAS_TRANSISTOR_POWER_AMBIENT,
-            PAS_TRANSISTOR_VDS_MIN,
-            PAS_TRANSISTOR_ID_MAX,
-            PAS_TRANSISTOR_RDS_ON,
-            PAS_TRANSISTOR_HFE_MIN,
-        ])
+    # Add category-specific outputs from the mapping
+    if category in DBC_CATEGORY_FIELD_MAPPINGS:
+        for field_name, prop_id in DBC_CATEGORY_FIELD_MAPPINGS[category].items():
+            if prop_id not in outputs:
+                outputs.append(prop_id)
 
     # Remove duplicates while preserving order
     seen = set()
@@ -550,3 +710,97 @@ def get_supply_chain_outputs() -> list:
         PAS_SUPPLY_LAST_UPDATED,
         PAS_SUPPLY_PRICE_BREAKDOWN,
     ]
+
+
+# ============================================================================
+# SF-MAPPING.XML PARSER - Load complete property ID mappings
+# ============================================================================
+
+import xml.etree.ElementTree as ET
+import os
+
+# Cache for SF-Mapping data
+_sf_mapping_cache = None
+
+
+def load_sf_mapping_properties(sf_mapping_path: str = None) -> dict:
+    """
+    Parse SF-Mapping.xml to extract all property ID to label mappings.
+
+    This is the PRIMARY source for property ID mappings.
+    Falls back to minimal PROPERTY_ID_TO_NAME only if SF-Mapping.xml is unavailable.
+
+    Args:
+        sf_mapping_path: Path to SF-Mapping.xml file. If None, uses default location.
+
+    Returns:
+        Dictionary mapping property IDs to their labels
+    """
+    global _sf_mapping_cache
+
+    if _sf_mapping_cache is not None:
+        return _sf_mapping_cache
+
+    if sf_mapping_path is None:
+        # Default path relative to this module
+        module_dir = os.path.dirname(os.path.abspath(__file__))
+        sf_mapping_path = os.path.join(
+            module_dir, "Supplychain", "data", "SCHEMA_v2", "SF-Mapping", "SF-Mapping.xml"
+        )
+
+    if not os.path.exists(sf_mapping_path):
+        # Return minimal fallback if SF-Mapping.xml not found
+        _sf_mapping_cache = PROPERTY_ID_TO_NAME.copy()
+        return _sf_mapping_cache
+
+    try:
+        # Parse the XML file - this is the primary source
+        tree = ET.parse(sf_mapping_path)
+        root = tree.getroot()
+
+        property_map = {}
+
+        # Find all Property elements with id and label attributes
+        for prop in root.iter('Property'):
+            prop_id = prop.get('id')
+            label = prop.get('label')
+            if prop_id and label:
+                # Store unique id -> label mapping (first occurrence wins)
+                if prop_id not in property_map:
+                    property_map[prop_id] = label
+
+        _sf_mapping_cache = property_map
+        return property_map
+
+    except Exception as e:
+        # On error, return minimal fallback
+        print(f"Warning: Could not parse SF-Mapping.xml: {e}")
+        _sf_mapping_cache = PROPERTY_ID_TO_NAME.copy()
+        return _sf_mapping_cache
+
+
+def get_property_name(property_id: str) -> str:
+    """
+    Get the human-readable name for a property ID.
+
+    Uses SF-Mapping.xml as the primary source.
+
+    Args:
+        property_id: 8-character hex property ID
+
+    Returns:
+        Property name or "Unknown" if not found
+    """
+    props = load_sf_mapping_properties()
+    return props.get(property_id, "Unknown")
+
+
+def get_all_property_mappings() -> dict:
+    """
+    Get all known property ID to name mappings from both
+    static definitions and SF-Mapping.xml.
+
+    Returns:
+        Dictionary mapping property IDs to their labels
+    """
+    return load_sf_mapping_properties()
