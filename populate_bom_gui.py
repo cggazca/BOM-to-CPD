@@ -9,8 +9,11 @@ import os
 import sys
 import json
 import logging
+import sqlite3
 from datetime import datetime
 from typing import Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
@@ -254,6 +257,8 @@ class MappingViewerDialog(QDialog):
                 QMessageBox.critical(self, "Export Error", f"Failed to export:\n{str(e)}")
 
 
+
+
 class WorkerThread(QThread):
     """Background thread for processing BOM"""
 
@@ -271,6 +276,32 @@ class WorkerThread(QThread):
 
     def cancel(self):
         self._is_cancelled = True
+
+    def _capture_cpd_snapshot(self, cpd_path: str) -> dict:
+        """Capture current row counts for all tables in the CPD database"""
+        snapshot = {}
+        try:
+            conn = sqlite3.connect(cpd_path)
+            cursor = conn.cursor()
+
+            # Get all table names (excluding SQLite internal tables)
+            cursor.execute("""
+                SELECT name FROM sqlite_master
+                WHERE type='table' AND name NOT LIKE 'sqlite_%'
+            """)
+            tables = [row[0] for row in cursor.fetchall()]
+
+            # Count rows in each table
+            for table in tables:
+                cursor.execute(f'SELECT COUNT(*) FROM "{table}"')
+                count = cursor.fetchone()[0]
+                if count > 0:  # Only include non-empty tables
+                    snapshot[table] = count
+
+            conn.close()
+        except Exception as e:
+            self.log_message.emit(f"Warning: Could not capture snapshot: {e}")
+        return snapshot
 
     def run(self):
         try:
@@ -305,12 +336,17 @@ class WorkerThread(QThread):
 
         # Initialize CPD updater
         cpd_updater = None
+        before_snapshot = {}
         if not config['dry_run']:
             cpd_updater = CPDUpdater(config['cpd_file'], dbc_parser)
             cpd_updater.connect()
             cpd_updater.ensure_uncategorized_table()
             cpd_updater.backup()
             self.log_message.emit("Created database backup")
+
+            # Capture "before" snapshot of all tables
+            before_snapshot = self._capture_cpd_snapshot(config['cpd_file'])
+            self.log_message.emit(f"Captured baseline: {sum(before_snapshot.values())} records in {len(before_snapshot)} tables")
 
         # Track results
         results = {
@@ -321,15 +357,22 @@ class WorkerThread(QThread):
             'inserted': 0,
             'errors': 0,
             'uncategorized': 0,
-            'by_category': {}
+            'skipped_duplicates': 0,
+            'inserted_by_category': {},  # New rows added per category
+            'updated_by_category': {},   # Existing rows updated per category
+            'unpopulated_columns': {},   # Track columns that didn't get populated per category
         }
 
-        # Process each part
-        total = len(parts)
-        for i, part in enumerate(parts):
+        # Track MPNs already processed this session to avoid duplicates
+        processed_mpns = set()
+        # Thread-safe locks
+        results_lock = threading.Lock()
+        processed_mpns_lock = threading.Lock()
+
+        # Helper function to process a single part
+        def process_single_part(i, part):
             if self._is_cancelled:
-                self.log_message.emit("Processing cancelled by user")
-                break
+                return None
 
             company_pn = part['company_pn']
             manufacturer = part['manufacturer']
@@ -337,14 +380,17 @@ class WorkerThread(QThread):
 
             self.progress.emit(i + 1, total)
             self.log_message.emit(f"[{i+1}/{total}] {company_pn}: {manufacturer} / {mpn}")
-            results['processed'] += 1
+            
+            with results_lock:
+                results['processed'] += 1
 
             # Search PAS
             try:
                 pas_result = pas_client.search_part(mpn, manufacturer)
             except Exception as e:
                 self.log_message.emit(f"  ERROR: {str(e)}")
-                results['errors'] += 1
+                with results_lock:
+                    results['errors'] += 1
                 self.part_processed.emit({
                     'company_pn': company_pn,
                     'mpn': mpn,
@@ -354,18 +400,19 @@ class WorkerThread(QThread):
                     'match_type': 'Error',
                     'message': str(e)
                 })
-                continue
+                return None
 
             if pas_result.get('found'):
-                results['found'] += 1
+                with results_lock:
+                    results['found'] += 1
 
                 # Use category from PAS search result (already detected with full algorithm)
                 category = pas_result.get('category')
                 if not category:
                     category = "Uncategorized"
-                    results['uncategorized'] += 1
+                    with results_lock:
+                        results['uncategorized'] += 1
 
-                results['by_category'][category] = results['by_category'].get(category, 0) + 1
 
                 # Get matched MPN and Manufacturer from PAS result
                 best_match = pas_result.get('best_match', {})
@@ -414,16 +461,53 @@ class WorkerThread(QThread):
                 if total_count > 1:
                     match_details += f" ({total_count} total)"
 
+                # Track unpopulated columns for this category
+                if category in DBC_CATEGORY_FIELD_MAPPINGS:
+                    expected_fields = set(DBC_CATEGORY_FIELD_MAPPINGS[category].keys())
+                    populated_fields = set(part_data.keys())
+                    unpopulated = expected_fields - populated_fields
+                    if unpopulated:
+                        with results_lock:
+                            if category not in results['unpopulated_columns']:
+                                results['unpopulated_columns'][category] = {}
+                            for field in unpopulated:
+                                results['unpopulated_columns'][category][field] = results['unpopulated_columns'][category].get(field, 0) + 1
+
                 # Insert data into database
                 if not config['dry_run'] and cpd_updater:
-                    if cpd_updater.insert_or_update_part(category, part_data):
-                        results['inserted'] += 1
-                        self.log_message.emit(f"  Inserted/Updated in {category}")
+                    # Check if we already processed this MPN in this session
+                    with processed_mpns_lock:
+                        already_processed = matched_mpn in processed_mpns
+                        if not already_processed:
+                            processed_mpns.add(matched_mpn)
+                    
+                    if already_processed:
+                        with results_lock:
+                            results['skipped_duplicates'] += 1
+                        self.log_message.emit(f"  Skipped (duplicate MPN already processed)")
                     else:
-                        results['errors'] += 1
-                        self.log_message.emit(f"  Failed to insert")
+                        # Check if part exists in DB for update vs insert tracking
+                        existing_part = cpd_updater.find_part_by_mpn(category, matched_mpn)
+                        was_update = existing_part is not None
 
-                self.part_processed.emit({
+                        if cpd_updater.insert_or_update_part(category, part_data):
+                            with results_lock:
+                                if was_update:
+                                    results['updated'] += 1
+                                    results['updated_by_category'][category] = results['updated_by_category'].get(category, 0) + 1
+                                else:
+                                    results['inserted'] += 1
+                                    results['inserted_by_category'][category] = results['inserted_by_category'].get(category, 0) + 1
+                            if was_update:
+                                self.log_message.emit(f"  Updated in {category}")
+                            else:
+                                self.log_message.emit(f"  Inserted in {category}")
+                        else:
+                            with results_lock:
+                                results['errors'] += 1
+                            self.log_message.emit(f"  Failed to insert")
+
+                return {
                     'company_pn': company_pn,
                     'mpn': mpn,
                     'manufacturer': manufacturer,
@@ -431,13 +515,14 @@ class WorkerThread(QThread):
                     'category': category,
                     'match_type': match_type,
                     'message': match_details
-                })
+                }
             else:
-                results['not_found'] += 1
+                with results_lock:
+                    results['not_found'] += 1
                 total_count = pas_result.get('total_count', 0)
                 self.log_message.emit(f"  Not found in PAS (searched {total_count} results)")
 
-                self.part_processed.emit({
+                return {
                     'company_pn': company_pn,
                     'mpn': mpn,
                     'manufacturer': manufacturer,
@@ -445,11 +530,51 @@ class WorkerThread(QThread):
                     'category': '',
                     'match_type': 'None',
                     'message': f'No match ({total_count} searched)'
-                })
+                }
+
+        # Process parts in parallel with 40 workers
+        total = len(parts)
+        self.log_message.emit(f"\nStarting parallel processing with 40 workers...")
+        
+        with ThreadPoolExecutor(max_workers=40) as executor:
+            # Submit all tasks
+            future_to_part = {executor.submit(process_single_part, i, p): i for i, p in enumerate(parts)}
+            
+            # Process completed tasks
+            for future in as_completed(future_to_part):
+                if self._is_cancelled:
+                    self.log_message.emit("Processing cancelled by user")
+                    executor.shutdown(wait=False, cancel_futures=True)
+                    break
+                
+                try:
+                    result = future.result()
+                    if result:
+                        self.part_processed.emit(result)
+                except Exception as e:
+                    self.log_message.emit(f"  ERROR in worker thread: {str(e)}")
+                    with results_lock:
+                        results['errors'] += 1
 
         # Cleanup
         if cpd_updater:
             cpd_updater.close()
+
+            # Capture "after" snapshot
+            after_snapshot = self._capture_cpd_snapshot(config['cpd_file'])
+            self.log_message.emit(f"Final state: {sum(after_snapshot.values())} records in {len(after_snapshot)} tables")
+
+        # Log unpopulated columns summary
+        if results['unpopulated_columns']:
+            self.log_message.emit("\n" + "="*60)
+            self.log_message.emit("UNPOPULATED COLUMNS REPORT")
+            self.log_message.emit("="*60)
+            for category, fields in sorted(results['unpopulated_columns'].items()):
+                self.log_message.emit(f"\nCategory: {category}")
+                for field, count in sorted(fields.items(), key=lambda x: x[1], reverse=True):
+                    self.log_message.emit(f"  {field}: {count} parts missing this data")
+        else:
+            self.log_message.emit("\nAll expected columns were populated successfully!")
 
         self.finished.emit(results)
 
@@ -958,7 +1083,7 @@ class BOMPopulatorGUI(QMainWindow):
         self.run_btn.setEnabled(True)
         self.cancel_btn.setEnabled(False)
 
-        # Show summary
+        # Show summary in log
         summary = f"""
 Processing Complete!
 
@@ -966,27 +1091,29 @@ Results:
   Processed: {results['processed']}
   Found: {results['found']}
   Not Found: {results['not_found']}
-  Inserted/Updated: {results.get('inserted', 0)}
+  Inserted: {results.get('inserted', 0)}
+  Updated: {results.get('updated', 0)}
+  Skipped (duplicates): {results.get('skipped_duplicates', 0)}
   Errors: {results['errors']}
   Uncategorized: {results['uncategorized']}
 
-Categories:
+Database Changes by Category:
 """
-        for cat, count in sorted(results.get('by_category', {}).items()):
-            summary += f"  {cat}: {count}\n"
+        # Collect all categories
+        all_cats = set(results.get('inserted_by_category', {}).keys()) | set(results.get('updated_by_category', {}).keys())
+        for cat in sorted(all_cats):
+            inserted = results.get('inserted_by_category', {}).get(cat, 0)
+            updated = results.get('updated_by_category', {}).get(cat, 0)
+            if inserted > 0 and updated > 0:
+                summary += f"  {cat}: {inserted} inserted, {updated} updated\n"
+            elif inserted > 0:
+                summary += f"  {cat}: {inserted} inserted\n"
+            elif updated > 0:
+                summary += f"  {cat}: {updated} updated\n"
 
         self._on_log_message(summary)
         self.status_bar.showMessage(
-            f"Complete: {results['found']} found, {results['not_found']} not found, {results['errors']} errors"
-        )
-
-        # Show completion dialog
-        QMessageBox.information(
-            self, "Processing Complete",
-            f"Processed {results['processed']} parts.\n\n"
-            f"Found: {results['found']}\n"
-            f"Not Found: {results['not_found']}\n"
-            f"Errors: {results['errors']}"
+            f"Complete: {results['found']} found, {results.get('inserted', 0)} inserted, {results.get('updated', 0)} updated"
         )
 
     def _on_error(self, error_msg: str):
