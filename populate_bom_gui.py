@@ -327,12 +327,20 @@ class WorkerThread(QThread):
             parts = parts[:config['limit']]
             self.log_message.emit(f"Limited to first {config['limit']} parts")
 
-        # Initialize PAS client
+        # Initialize PAS client (shared across all workers)
+        # Pre-authenticate to get a shared token before parallel processing
         pas_client = PASClient(
             client_id=config.get('client_id'),
             client_secret=config.get('client_secret'),
             bearer_token=config.get('token')
         )
+        # Pre-fetch token to avoid all workers requesting simultaneously
+        if not config.get('token'):
+            try:
+                pas_client._get_access_token()
+                self.log_message.emit("Pre-authenticated with PAS API")
+            except Exception as e:
+                self.log_message.emit(f"Warning: Pre-authentication failed: {e}")
 
         # Initialize CPD updater
         cpd_updater = None
@@ -532,11 +540,12 @@ class WorkerThread(QThread):
                     'message': f'No match ({total_count} searched)'
                 }
 
-        # Process parts in parallel with 40 workers
+        # Process parts in parallel with 15 workers (balance between speed and rate limits)
         total = len(parts)
-        self.log_message.emit(f"\nStarting parallel processing with 40 workers...")
+        max_workers = 15
+        self.log_message.emit(f"\nStarting parallel processing with {max_workers} workers...")
         
-        with ThreadPoolExecutor(max_workers=40) as executor:
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
             # Submit all tasks
             future_to_part = {executor.submit(process_single_part, i, p): i for i, p in enumerate(parts)}
             
