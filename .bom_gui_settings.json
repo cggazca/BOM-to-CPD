@@ -1,0 +1,8 @@
+{
+  "client_id": "TtC6_9BSzXPzsFg0Iolj9",
+  "client_secret": "UCubdl2a9hyc2pklk9X088f6QMitneY_My-3lUnnbrUnJGYO6Ltj7bCFk9_ffpgBbjt5_nWaKF1ZxPFOk-HcjA",
+  "auth_method": 1,
+  "bom_file": "C:/Users/z004ut2y/Downloads/LAN969x_24-port_EVB.xlsx",
+  "cpd_file": "C:\\Users\\z004ut2y\\OneDrive - Siemens AG\\Documents\\01_Projects\\Scripts\\PopulateBOM\\TemplateLibrary\\TemplateLibrary.cpd",
+  "dbc_file": "C:\\Users\\z004ut2y\\OneDrive - Siemens AG\\Documents\\01_Projects\\Scripts\\PopulateBOM\\TemplateLibrary\\TemplateLibrary.dbc"
+}

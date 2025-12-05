@@ -901,6 +901,10 @@ class CPDUpdater:
         cursor = self.conn.execute(f'PRAGMA table_info("{table_name}")')
         return [row[1] for row in cursor.fetchall()]
 
+    def part_exists(self, table_name: str, mpn: str) -> bool:
+        """Check if a part exists in a table by Manufacturer Part Number"""
+        return self.find_part_by_mpn(table_name, mpn) is not None
+
     def find_part_by_mpn(self, table_name: str, mpn: str) -> Optional[Dict]:
         """Find a part in a table by Manufacturer Part Number"""
         if not self.table_exists(table_name):

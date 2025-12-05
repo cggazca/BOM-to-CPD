@@ -1,0 +1,38 @@
+
+Checking Category: Resistors (Part: Vishay CRCW040210K0FKED)
+  Part Class ID: daeb4916
+  Testing 13 properties...
+.............
+  Result: 13 Valid, 0 Invalid
+
+Checking Category: Capacitors (Part: Samsung CL21B104KBCNNNC)
+  Part Class ID: 47b1fb41
+  Testing 14 properties...
+..............
+  Result: 14 Valid, 0 Invalid
+
+Checking Category: Inductors (Part: Murata BLM18AG601SN1D)
+  Part Class ID: d1335327
+  Testing 12 properties...
+.......EEEEE
+  Result: 7 Valid, 5 Invalid
+  Invalid IDs: ['f7ae1e75', 'fc931903', 'ec01669a', 'a257f04d', 'a4677781']
+
+Checking Category: Diodes (Part: Diodes Incorporated 1N4148WS-7-F)
+  Part Class ID: 5004c6a3
+  Testing 14 properties...
+..............
+  Result: 14 Valid, 0 Invalid
+
+Checking Category: Transistors (Part: Diodes Incorporated 2N7002-7-F)
+  Part Class ID: 3eba0378
+  Testing 15 properties...
+...............
+  Result: 15 Valid, 0 Invalid
+
+============================================================
+FINAL SUMMARY
+============================================================
+
+Category: Inductors
+  Invalid Properties to Remove: ['f7ae1e75', 'fc931903', 'ec01669a', 'a257f04d', 'a4677781']

@@ -1,0 +1,268 @@
+2025-12-03 17:10:42,037 - INFO - Initializing PAS Client...
+2025-12-03 17:10:42,037 - INFO - Obtaining new access token...
+2025-12-03 17:10:42,500 - INFO - Access token obtained successfully
+2025-12-03 17:10:42,501 - INFO - Parsing DBC file: C:\Users\z004ut2y\OneDrive - Siemens AG\Documents\01_Projects\Scripts\PopulateBOM\TemplateLibrary\TemplateLibrary.dbc
+2025-12-03 17:10:42,506 - INFO - ================================================================================
+2025-12-03 17:10:42,506 - INFO - DBC PROPERTY VALIDATION REPORT
+2025-12-03 17:10:42,506 - INFO - ================================================================================
+2025-12-03 17:10:42,506 - INFO - 
+Category: Amplifier Circuits
+2025-12-03 17:10:42,507 - INFO -   Representative Part: LM358DT (STMicroelectronics)
+2025-12-03 17:10:43,187 - INFO -   Found Class ID: c2bf0ca3
+2025-12-03 17:10:43,187 - INFO -   - Amplifier Type                 -> (Unmapped)
+2025-12-03 17:10:43,187 - INFO -   - Input Offset Voltage-Max       -> (Unmapped)
+2025-12-03 17:10:43,187 - INFO -   - Slew Rate-Nom                  -> (Unmapped)
+2025-12-03 17:10:43,187 - INFO -   - Supply Current-Max             -> (Unmapped)
+2025-12-03 17:10:43,187 - INFO - 
+Category: Batteries
+2025-12-03 17:10:43,187 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:43,187 - INFO -   - Battery Type                   -> (Unmapped)
+2025-12-03 17:10:43,187 - INFO -   - Capacity                       -> (Unmapped)
+2025-12-03 17:10:43,187 - INFO -   - Voltage                        -> (Unmapped)
+2025-12-03 17:10:43,187 - INFO - 
+Category: Capacitors
+2025-12-03 17:10:43,187 - INFO -   Representative Part: CL21B104KBCNNNC (Samsung)
+2025-12-03 17:10:43,714 - INFO -   Found Class ID: 47b1fb41
+2025-12-03 17:10:45,165 - INFO -   - Value                          -> efb047cd   [VALID] 
+2025-12-03 17:10:45,417 - INFO -   - Positive Tolerance             -> 05436dcc   [VALID] 
+2025-12-03 17:10:45,690 - INFO -   - Rated (DC) Voltage (URdc)      -> 12377564   [VALID] 
+2025-12-03 17:10:45,945 - INFO -   - Size Code                      -> 6f96199e   [VALID] 
+2025-12-03 17:10:45,945 - INFO - 
+Category: Circuit Protection
+2025-12-03 17:10:45,945 - INFO -   Representative Part: 0215005.MXP (Littelfuse)
+2025-12-03 17:10:46,413 - INFO -   Found Class ID: 81166967
+2025-12-03 17:10:46,413 - INFO -   - Circuit Protection Type        -> (Unmapped)
+2025-12-03 17:10:46,413 - INFO -   - Rated Current                  -> (Unmapped)
+2025-12-03 17:10:46,413 - INFO -   - Rated Voltage                  -> (Unmapped)
+2025-12-03 17:10:46,413 - INFO - 
+Category: Connector Support
+2025-12-03 17:10:46,413 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:46,413 - INFO -   - Rated Voltage                  -> (Unmapped)
+2025-12-03 17:10:46,413 - INFO -   - Wire and Cable Name            -> (Unmapped)
+2025-12-03 17:10:46,413 - INFO - 
+Category: Connectors
+2025-12-03 17:10:46,413 - INFO -   Representative Part: 632723300011 (Wurth Elektronik)
+2025-12-03 17:10:46,916 - INFO -   Found Class ID: 21d66188
+2025-12-03 17:10:46,916 - INFO -   - Connector Type                 -> (Unmapped)
+2025-12-03 17:10:46,916 - INFO -   - Contact Gender                 -> (Unmapped)
+2025-12-03 17:10:46,916 - INFO -   - Terminal Pitch                 -> (Unmapped)
+2025-12-03 17:10:46,916 - INFO -   - Total Number of Contacts       -> (Unmapped)
+2025-12-03 17:10:46,916 - INFO - 
+Category: Consumer Circuits
+2025-12-03 17:10:46,916 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:46,916 - INFO - 
+Category: Converters
+2025-12-03 17:10:46,916 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:46,916 - INFO -   - Number of Bits                 -> (Unmapped)
+2025-12-03 17:10:46,916 - INFO -   - Supply Voltage-Nom             -> (Unmapped)
+2025-12-03 17:10:46,916 - INFO - 
+Category: Crystals Resonators
+2025-12-03 17:10:46,916 - INFO -   Representative Part: ABS25-32.768KHZ-T (Abracon)
+2025-12-03 17:10:47,449 - INFO -   Found Class ID: adab1e39
+2025-12-03 17:10:47,449 - INFO -   - Frequency Stability            -> (Unmapped)
+2025-12-03 17:10:47,450 - INFO -   - Frequency Tolerance            -> (Unmapped)
+2025-12-03 17:10:47,450 - INFO -   - Operating Frequency-Nom        -> (Unmapped)
+2025-12-03 17:10:47,450 - INFO - 
+Category: Diodes
+2025-12-03 17:10:47,450 - INFO -   Representative Part: 1N4148WS-7-F (Diodes Incorporated)
+2025-12-03 17:10:48,034 - INFO -   Found Class ID: 5004c6a3
+2025-12-03 17:10:48,296 - INFO -   - Configuration                  -> 55daf8f5   [VALID] 
+2025-12-03 17:10:48,595 - INFO -   - Diode Type                     -> 68ddced3   [VALID] 
+2025-12-03 17:10:48,873 - INFO -   - Power Dissipation-Max          -> d1a37148   [VALID] 
+2025-12-03 17:10:49,179 - INFO -   - Reference Voltage-Nom          -> a7269fc5   [VALID] 
+2025-12-03 17:10:49,179 - INFO - 
+Category: Drivers And Interfaces
+2025-12-03 17:10:49,179 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:49,179 - INFO -   - Input Characteristics          -> (Unmapped)
+2025-12-03 17:10:49,179 - INFO -   - Receiver Number of Bits        -> (Unmapped)
+2025-12-03 17:10:49,179 - INFO -   - Supply Voltage-Nom             -> (Unmapped)
+2025-12-03 17:10:49,179 - INFO - 
+Category: Fiber Optics
+2025-12-03 17:10:49,179 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:49,179 - INFO -   - Operating Wavelength-Nom       -> (Unmapped)
+2025-12-03 17:10:49,179 - INFO -   - Return Loss-Min                -> (Unmapped)
+2025-12-03 17:10:49,179 - INFO -   - Supply Voltage-Nom             -> (Unmapped)
+2025-12-03 17:10:49,179 - INFO - 
+Category: Filters
+2025-12-03 17:10:49,179 - INFO -   Representative Part: BLM18AG601SN1D (Murata)
+2025-12-03 17:10:49,616 - INFO -   Found Class ID: d1335327
+2025-12-03 17:10:49,616 - INFO -   - 001dyn_id                      -> (Unmapped)
+2025-12-03 17:10:49,616 - INFO -   - DC Resistance-Max              -> (Unmapped)
+2025-12-03 17:10:49,616 - INFO -   - Frequency-Max                  -> (Unmapped)
+2025-12-03 17:10:49,616 - INFO -   - Frequency-Min                  -> (Unmapped)
+2025-12-03 17:10:49,616 - INFO -   - Rated Current                  -> (Unmapped)
+2025-12-03 17:10:49,616 - INFO - 
+Category: Inductors
+2025-12-03 17:10:49,616 - INFO -   Representative Part: VLS252010T-4R7M (TDK)
+2025-12-03 17:10:50,067 - INFO -   Found Class ID: 4f90015c
+2025-12-03 17:10:50,300 - INFO -   - Value                          -> f7ae1e75   [VALID] 
+2025-12-03 17:10:50,300 - INFO -   - Inductor Type                  -> (Unmapped)
+2025-12-03 17:10:50,532 - INFO -   - Tolerance                      -> a257f04d   [VALID] 
+2025-12-03 17:10:50,532 - INFO - 
+Category: Logic
+2025-12-03 17:10:50,532 - INFO -   Representative Part: SN74HC00DR (Texas Instruments)
+2025-12-03 17:10:51,147 - INFO -   Found Class ID: 68ebfb40
+2025-12-03 17:10:51,148 - INFO -   - Family                         -> (Unmapped)
+2025-12-03 17:10:51,148 - INFO -   - Package Code                   -> (Unmapped)
+2025-12-03 17:10:51,148 - INFO -   - Supply Voltage-Nom (Vsup)      -> (Unmapped)
+2025-12-03 17:10:51,148 - INFO - 
+Category: Mechanical
+2025-12-03 17:10:51,148 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:51,148 - INFO - 
+Category: Memory
+2025-12-03 17:10:51,148 - INFO -   Representative Part: AT24C256C-SSHL-T (Microchip)
+2025-12-03 17:10:51,606 - INFO -   Found Class ID: e354afaa
+2025-12-03 17:10:51,606 - INFO -   - Access Time-Max                -> (Unmapped)
+2025-12-03 17:10:51,607 - INFO -   - Memory Density                 -> (Unmapped)
+2025-12-03 17:10:51,607 - INFO -   - Organization                   -> (Unmapped)
+2025-12-03 17:10:51,607 - INFO -   - Supply Voltage-Nom (Vsup)      -> (Unmapped)
+2025-12-03 17:10:51,607 - INFO - 
+Category: Microcontrollers and Processors
+2025-12-03 17:10:51,607 - INFO -   Representative Part: STM32F103C8T6 (STMicroelectronics)
+2025-12-03 17:10:52,134 - INFO -   Found Class ID: 060e57d8
+2025-12-03 17:10:52,134 - INFO -   - Bit Size                       -> (Unmapped)
+2025-12-03 17:10:52,134 - INFO -   - Clock Frequency-Max            -> (Unmapped)
+2025-12-03 17:10:52,134 - INFO -   - CPU Family                     -> (Unmapped)
+2025-12-03 17:10:52,134 - INFO -   - Speed                          -> (Unmapped)
+2025-12-03 17:10:52,134 - INFO -   - Supply Voltage-Nom             -> (Unmapped)
+2025-12-03 17:10:52,134 - INFO - 
+Category: Optoelectronics
+2025-12-03 17:10:52,134 - INFO -   Representative Part: LG Q971-KN-1 (Osram)
+2025-12-03 17:10:52,612 - INFO -   Found Class ID: e252dfbc
+2025-12-03 17:10:52,612 - INFO -   - Color                          -> (Unmapped)
+2025-12-03 17:10:52,612 - INFO -   - Forward Current-Max            -> (Unmapped)
+2025-12-03 17:10:52,612 - INFO -   - Mounting Feature               -> (Unmapped)
+2025-12-03 17:10:52,612 - INFO -   - Viewing Angle                  -> (Unmapped)
+2025-12-03 17:10:52,612 - INFO - 
+Category: Oscillators
+2025-12-03 17:10:52,612 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:52,614 - INFO -   - Frequency Stability            -> (Unmapped)
+2025-12-03 17:10:52,614 - INFO -   - Operating Frequency-Nom        -> (Unmapped)
+2025-12-03 17:10:52,614 - INFO -   - Supply Voltage-Nom             -> (Unmapped)
+2025-12-03 17:10:52,614 - INFO - 
+Category: Power Circuits
+2025-12-03 17:10:52,614 - INFO -   Representative Part: LM7805ACT (Fairchild)
+2025-12-03 17:10:53,144 - INFO -   Found Class ID: 2a6d44be
+2025-12-03 17:10:53,145 - INFO -   - Input Voltage-Nom              -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Output Current-Max             -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Output Voltage-Nom             -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO - 
+Category: Programmable Logic
+2025-12-03 17:10:53,145 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:53,145 - INFO -   - Number of Inputs               -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Number of Logic Cells          -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Programmable Logic Type        -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Supply Voltage-Nom             -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO - 
+Category: RC Networks
+2025-12-03 17:10:53,145 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:53,145 - INFO -   - Capacitance                    -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - First Element Resistance       -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Rated (DC) Voltage (URdc)      -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Rated Power Dissipation (P)    -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Resistance Tolerance           -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO - 
+Category: RF and Microwave
+2025-12-03 17:10:53,145 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:53,145 - INFO -   - Characteristic Impedance       -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Input Power-Max (CW)           -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - Operating Frequency-Max        -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO -   - RF/Microwave Device Type       -> (Unmapped)
+2025-12-03 17:10:53,145 - INFO - 
+Category: Relays
+2025-12-03 17:10:53,145 - INFO -   Representative Part: G5V-1-DC5 (Omron)
+2025-12-03 17:10:53,371 - WARNING -   [WARNING] Could not find Class ID for representative part G5V-1-DC5
+2025-12-03 17:10:53,371 - INFO -   - Coil Power                     -> (Unmapped)
+2025-12-03 17:10:53,371 - INFO -   - Coil Resistance                -> (Unmapped)
+2025-12-03 17:10:53,371 - INFO -   - Coil Voltage-Nom               -> (Unmapped)
+2025-12-03 17:10:53,371 - INFO -   - Relay Action                   -> (Unmapped)
+2025-12-03 17:10:53,371 - INFO -   - Function                       -> (Unmapped)
+2025-12-03 17:10:53,371 - INFO - 
+Category: Resistors
+2025-12-03 17:10:53,371 - INFO -   Representative Part: CRCW040210K0FKED (Vishay)
+2025-12-03 17:10:53,886 - INFO -   Found Class ID: daeb4916
+2025-12-03 17:10:54,217 - INFO -   - Rated Power Dissipation (P)    -> b734f175   [VALID] 
+2025-12-03 17:10:54,512 - INFO -   - Value                          -> ccea073f   [VALID] 
+2025-12-03 17:10:54,794 - INFO -   - Size Code                      -> 6f96199e   [VALID] 
+2025-12-03 17:10:55,101 - INFO -   - Tolerance                      -> a257f04d   [VALID] 
+2025-12-03 17:10:55,101 - INFO - 
+Category: Sensors Transducers
+2025-12-03 17:10:55,101 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:55,101 - INFO -   - Offset-Nom                     -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Output Range                   -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Pressure Range-Max             -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Pressure Range-Min             -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Pressure Sensing Mode          -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO - 
+Category: Signal Circuits
+2025-12-03 17:10:55,101 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:55,101 - INFO -   - Input Voltage-Nom              -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Output Voltage-Nom             -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Supply Voltage-Nom (Vsup)      -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Threshold Voltage-Nom          -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO - 
+Category: Sockets
+2025-12-03 17:10:55,101 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:55,101 - INFO -   - Contact Material               -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Current Rating                 -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Number of Contacts             -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO -   - Terminal Pitch                 -> (Unmapped)
+2025-12-03 17:10:55,101 - INFO - 
+Category: Switches
+2025-12-03 17:10:55,101 - INFO -   Representative Part: B3F-1000 (Omron)
+2025-12-03 17:10:55,595 - INFO -   Found Class ID: 3cd3d344
+2025-12-03 17:10:55,597 - INFO -   - Contact Current(DC)-Max        -> (Unmapped)
+2025-12-03 17:10:55,597 - INFO -   - Contact Voltage(DC)-Max        -> (Unmapped)
+2025-12-03 17:10:55,597 - INFO -   - Electrical Life                -> (Unmapped)
+2025-12-03 17:10:55,597 - INFO -   - Function                       -> (Unmapped)
+2025-12-03 17:10:55,597 - INFO - 
+Category: Telecommunication Circuits
+2025-12-03 17:10:55,597 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:55,597 - INFO -   - Carrier Type                   -> (Unmapped)
+2025-12-03 17:10:55,597 - INFO -   - Supply Voltage-Nom             -> (Unmapped)
+2025-12-03 17:10:55,597 - INFO -   - Technology                     -> (Unmapped)
+2025-12-03 17:10:55,597 - INFO - 
+Category: Terminal Blocks
+2025-12-03 17:10:55,597 - INFO -   Representative Part: 282837-2 (TE Connectivity)
+2025-12-03 17:10:56,041 - INFO -   Found Class ID: 34d0b1d3
+2025-12-03 17:10:56,041 - INFO -   - Mounting Type                  -> (Unmapped)
+2025-12-03 17:10:56,041 - INFO -   - Rated Current                  -> (Unmapped)
+2025-12-03 17:10:56,041 - INFO -   - Rated Voltage                  -> (Unmapped)
+2025-12-03 17:10:56,041 - INFO -   - TerminalTerminalBlockType      -> (Unmapped)
+2025-12-03 17:10:56,041 - INFO - 
+Category: Thermal Support Devices
+2025-12-03 17:10:56,041 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:56,041 - INFO -   - Device Used On                 -> (Unmapped)
+2025-12-03 17:10:56,041 - INFO -   - Thermal Resistance             -> (Unmapped)
+2025-12-03 17:10:56,041 - INFO - 
+Category: Transformers
+2025-12-03 17:10:56,041 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:56,041 - INFO -   - Input Voltage-Nom              -> (Unmapped)
+2025-12-03 17:10:56,041 - INFO -   - Power Rating                   -> (Unmapped)
+2025-12-03 17:10:56,041 - INFO - 
+Category: Transistors
+2025-12-03 17:10:56,041 - INFO -   Representative Part: 2N7002-7-F (Diodes Incorporated)
+2025-12-03 17:10:56,573 - INFO -   Found Class ID: 3eba0378
+2025-12-03 17:10:56,870 - INFO -   - Collector Current-Max (IC)     -> b4fef04d   [VALID] 
+2025-12-03 17:10:57,193 - INFO -   - Collector-Emitter Voltage-Max  -> 5e887a5f   [VALID] 
+2025-12-03 17:10:57,193 - INFO -   - Configuration                  -> (Unmapped)
+2025-12-03 17:10:57,193 - INFO -   - Number of Terminals            -> (Unmapped)
+2025-12-03 17:10:57,193 - INFO -   - Transition Frequency-Nom (fT)  -> (Unmapped)
+2025-12-03 17:10:57,193 - INFO - 
+Category: Trigger Devices
+2025-12-03 17:10:57,193 - WARNING -   [WARNING] No representative part defined for this category.
+2025-12-03 17:10:57,193 - INFO -   - DC Gate Trigger Current-Max    -> (Unmapped)
+2025-12-03 17:10:57,193 - INFO -   - Holding Current-Max            -> (Unmapped)
+2025-12-03 17:10:57,193 - INFO -   - Leakage Current-Max            -> (Unmapped)
+2025-12-03 17:10:57,193 - INFO -   - RepetitivePeakOffstateVolt     -> (Unmapped)
+2025-12-03 17:10:57,193 - INFO -   - Switching Voltage-Max          -> (Unmapped)
+2025-12-03 17:10:57,193 - INFO - 
+================================================================================
+2025-12-03 17:10:57,193 - INFO - SUMMARY
+2025-12-03 17:10:57,193 - INFO - Total Fields Checked: 479
+2025-12-03 17:10:57,193 - INFO - Mapped Fields:        16
+2025-12-03 17:10:57,193 - INFO -   - Valid:            16
+2025-12-03 17:10:57,193 - INFO -   - Invalid:          0
+2025-12-03 17:10:57,193 - INFO -   - Unverified:       0
+2025-12-03 17:10:57,193 - INFO - Unmapped Fields:      109
+2025-12-03 17:10:57,193 - INFO - ================================================================================
