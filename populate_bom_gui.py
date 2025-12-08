@@ -657,266 +657,19 @@ class BOMPopulatorGUI(QMainWindow):
     def init_ui(self):
         """Initialize the user interface"""
         self.setWindowTitle("BOM to CPD Population Tool")
-        self.setMinimumSize(1100, 800)
-        
-        # Apply modern stylesheet following Material Design and enterprise UI best practices
-        self.setStyleSheet("""
-            /* Main Window */
-            QMainWindow {
-                background-color: #f8f9fa;
-            }
-            
-            /* Group Boxes - Card-like appearance */
-            QGroupBox {
-                font-weight: 600;
-                font-size: 13px;
-                border: 1px solid #dee2e6;
-                border-radius: 8px;
-                margin-top: 14px;
-                padding-top: 10px;
-                background-color: white;
-            }
-            QGroupBox::title {
-                subcontrol-origin: margin;
-                subcontrol-position: top left;
-                padding: 4px 12px;
-                color: #212529;
-                background-color: white;
-            }
-            
-            /* Primary Buttons */
-            QPushButton {
-                background-color: #0d6efd;
-                color: white;
-                border: none;
-                border-radius: 6px;
-                padding: 8px 16px;
-                font-weight: 500;
-                font-size: 13px;
-                min-width: 90px;
-            }
-            QPushButton:hover {
-                background-color: #0b5ed7;
-            }
-            QPushButton:pressed {
-                background-color: #0a58ca;
-            }
-            QPushButton:disabled {
-                background-color: #e9ecef;
-                color: #6c757d;
-            }
-            
-            /* Input Fields */
-            QLineEdit {
-                border: 1px solid #ced4da;
-                border-radius: 6px;
-                padding: 8px 12px;
-                background-color: white;
-                font-size: 13px;
-                selection-background-color: #0d6efd;
-            }
-            QLineEdit:focus {
-                border: 2px solid #0d6efd;
-                padding: 7px 11px;
-            }
-            QLineEdit:disabled {
-                background-color: #e9ecef;
-                color: #6c757d;
-            }
-            
-            /* Combo Boxes */
-            QComboBox {
-                border: 1px solid #ced4da;
-                border-radius: 6px;
-                padding: 8px 12px;
-                background-color: white;
-                font-size: 13px;
-            }
-            QComboBox:focus {
-                border: 2px solid #0d6efd;
-                padding: 7px 11px;
-            }
-            QComboBox::drop-down {
-                border: none;
-                padding-right: 10px;
-            }
-            QComboBox QAbstractItemView {
-                border: 1px solid #ced4da;
-                border-radius: 6px;
-                background-color: white;
-                selection-background-color: #0d6efd;
-            }
-            
-            /* Spin Boxes */
-            QSpinBox {
-                border: 1px solid #ced4da;
-                border-radius: 6px;
-                padding: 8px 12px;
-                background-color: white;
-                font-size: 13px;
-            }
-            QSpinBox:focus {
-                border: 2px solid #0d6efd;
-                padding: 7px 11px;
-            }
-            
-            /* Checkboxes */
-            QCheckBox {
-                spacing: 8px;
-                font-size: 13px;
-            }
-            QCheckBox::indicator {
-                width: 18px;
-                height: 18px;
-                border-radius: 4px;
-                border: 2px solid #ced4da;
-                background-color: white;
-            }
-            QCheckBox::indicator:hover {
-                border-color: #0d6efd;
-            }
-            QCheckBox::indicator:checked {
-                background-color: #0d6efd;
-                border-color: #0d6efd;
-                image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgMkw0LjUgOC41TDIgNiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=);
-            }
-            
-            /* Progress Bar */
-            QProgressBar {
-                border: 1px solid #dee2e6;
-                border-radius: 6px;
-                text-align: center;
-                background-color: #f8f9fa;
-                height: 28px;
-                font-size: 13px;
-                font-weight: 500;
-            }
-            QProgressBar::chunk {
-                background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop:0 #0d6efd, stop:1 #0b5ed7);
-                border-radius: 5px;
-            }
-            
-            /* Tables */
-            QTableWidget {
-                border: 1px solid #dee2e6;
-                border-radius: 8px;
-                background-color: white;
-                gridline-color: #f1f3f5;
-                selection-background-color: #e7f1ff;
-                font-size: 13px;
-            }
-            QTableWidget::item {
-                padding: 6px;
-            }
-            QTableWidget::item:selected {
-                background-color: #e7f1ff;
-                color: #212529;
-            }
-            QHeaderView::section {
-                background-color: #f8f9fa;
-                color: #495057;
-                padding: 10px;
-                border: none;
-                border-bottom: 2px solid #dee2e6;
-                font-weight: 600;
-                font-size: 13px;
-            }
-            
-            /* Text Edit */
-            QTextEdit {
-                border: 1px solid #dee2e6;
-                border-radius: 8px;
-                background-color: white;
-                selection-background-color: #e7f1ff;
-                font-family: 'Consolas', 'Monaco', monospace;
-                font-size: 12px;
-                padding: 8px;
-            }
-            
-            /* Menu Bar */
-            QMenuBar {
-                background-color: #212529;
-                color: white;
-                padding: 4px;
-                font-size: 13px;
-            }
-            QMenuBar::item {
-                background-color: transparent;
-                padding: 6px 14px;
-                color: white;
-                border-radius: 4px;
-            }
-            QMenuBar::item:selected {
-                background-color: #495057;
-            }
-            QMenuBar::item:pressed {
-                background-color: #343a40;
-            }
-            
-            /* Menus */
-            QMenu {
-                background-color: white;
-                border: 1px solid #dee2e6;
-                border-radius: 8px;
-                padding: 4px;
-            }
-            QMenu::item {
-                padding: 8px 24px;
-                border-radius: 4px;
-                font-size: 13px;
-            }
-            QMenu::item:selected {
-                background-color: #f8f9fa;
-            }
-            
-            /* Status Bar */
-            QStatusBar {
-                background-color: #f8f9fa;
-                color: #495057;
-                border-top: 1px solid #dee2e6;
-                font-size: 12px;
-            }
-            
-            /* Labels */
-            QLabel {
-                color: #495057;
-                font-size: 13px;
-            }
-            
-            /* Scroll Bars */
-            QScrollBar:vertical {
-                border: none;
-                background: #f8f9fa;
-                width: 12px;
-                margin: 0;
-                border-radius: 6px;
-            }
-            QScrollBar::handle:vertical {
-                background: #ced4da;
-                min-height: 30px;
-                border-radius: 6px;
-            }
-            QScrollBar::handle:vertical:hover {
-                background: #adb5bd;
-            }
-            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-                height: 0px;
-            }
-        """)
+        self.setMinimumSize(1000, 750)
 
         # Create menu bar
         self._create_menu_bar()
 
         # Central widget
         central_widget = QWidget()
-        central_widget.setStyleSheet("background-color: #f8f9fa;")
         self.setCentralWidget(central_widget)
 
-        # Main layout with better spacing
+        # Main layout
         main_layout = QVBoxLayout(central_widget)
-        main_layout.setSpacing(16)
-        main_layout.setContentsMargins(20, 20, 20, 20)
+        main_layout.setSpacing(12)
+        main_layout.setContentsMargins(12, 12, 12, 12)
 
         # Create sections
         main_layout.addWidget(self._create_file_section())
@@ -1117,56 +870,14 @@ class BOMPopulatorGUI(QMainWindow):
         self.progress_bar.setFormat("%v / %m parts")
         layout.addWidget(self.progress_bar, stretch=1)
 
-        # Buttons with modern styling
-        self.run_btn = QPushButton("▶  Run Processing")
-        self.run_btn.setMinimumWidth(150)
-        self.run_btn.setMinimumHeight(42)
-        self.run_btn.setStyleSheet("""
-            QPushButton {
-                background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                    stop:0 #198754, stop:1 #157347);
-                color: white;
-                font-weight: 600;
-                font-size: 14px;
-                border-radius: 8px;
-            }
-            QPushButton:hover {
-                background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                    stop:0 #20a560, stop:1 #198754);
-            }
-            QPushButton:pressed {
-                background-color: #146c43;
-            }
-            QPushButton:disabled {
-                background: #e9ecef;
-                color: #6c757d;
-            }
-        """)
+        # Buttons
+        self.run_btn = QPushButton("Run")
+        self.run_btn.setMinimumWidth(100)
         self.run_btn.clicked.connect(self.run_processing)
         layout.addWidget(self.run_btn)
 
-        self.cancel_btn = QPushButton("⏹  Cancel")
-        self.cancel_btn.setMinimumWidth(130)
-        self.cancel_btn.setMinimumHeight(42)
-        self.cancel_btn.setStyleSheet("""
-            QPushButton {
-                background-color: #dc3545;
-                color: white;
-                font-weight: 600;
-                font-size: 14px;
-                border-radius: 8px;
-            }
-            QPushButton:hover {
-                background-color: #bb2d3b;
-            }
-            QPushButton:pressed {
-                background-color: #b02a37;
-            }
-            QPushButton:disabled {
-                background: #e9ecef;
-                color: #6c757d;
-            }
-        """)
+        self.cancel_btn = QPushButton("Cancel")
+        self.cancel_btn.setMinimumWidth(100)
         self.cancel_btn.setEnabled(False)
         self.cancel_btn.clicked.connect(self.cancel_processing)
         layout.addWidget(self.cancel_btn)
