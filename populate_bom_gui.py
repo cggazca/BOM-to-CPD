@@ -373,12 +373,10 @@ class WorkerThread(QThread):
 
         # Track MPNs already processed this session to avoid duplicates
         processed_mpns = set()
-        # Thread-safe locks
-        results_lock = threading.Lock()
-        processed_mpns_lock = threading.Lock()
 
-        # Helper function to process a single part
-        def process_single_part(i, part):
+        # Helper function to search PAS (runs in parallel worker threads - NO database access)
+        def search_pas_for_part(i, part):
+            """Search PAS API for a part - thread-safe, no database access"""
             if self._is_cancelled:
                 return None
 
@@ -388,17 +386,16 @@ class WorkerThread(QThread):
 
             self.progress.emit(i + 1, total)
             self.log_message.emit(f"[{i+1}/{total}] {company_pn}: {manufacturer} / {mpn}")
-            
-            with results_lock:
-                results['processed'] += 1
 
             # Search PAS
             try:
                 pas_result = pas_client.search_part(mpn, manufacturer)
             except Exception as e:
+                import traceback
                 self.log_message.emit(f"  ERROR: {str(e)}")
-                with results_lock:
-                    results['errors'] += 1
+                self.log_message.emit(f"  Traceback: {traceback.format_exc()}")
+
+                # Emit signal immediately so GUI updates in real-time
                 self.part_processed.emit({
                     'company_pn': company_pn,
                     'mpn': mpn,
@@ -408,26 +405,25 @@ class WorkerThread(QThread):
                     'match_type': 'Error',
                     'message': str(e)
                 })
-                return None
+
+                return {
+                    'index': i,
+                    'part': part,
+                    'error': str(e),
+                    'pas_result': None
+                }
 
             if pas_result.get('found'):
-                with results_lock:
-                    results['found'] += 1
-
                 # Use category from PAS search result (already detected with full algorithm)
                 category = pas_result.get('category')
                 if not category:
                     category = "Uncategorized"
-                    with results_lock:
-                        results['uncategorized'] += 1
-
 
                 # Get matched MPN and Manufacturer from PAS result
                 best_match = pas_result.get('best_match', {})
                 sp_part = best_match.get('searchProviderPart', {})
                 matched_mpn = sp_part.get('manufacturerPartNumber', '')
                 matched_mfg = sp_part.get('manufacturerName', '')
-                description = sp_part.get('description', '')
 
                 self.log_message.emit(f"  Found! Category: {category}")
                 self.log_message.emit(f"  Matched: {matched_mpn}@{matched_mfg}")
@@ -462,7 +458,124 @@ class WorkerThread(QThread):
                 else:
                     part_data = extract_part_data(pas_result, company_pn, category)
 
-                # Build match details for display - show matched MPN@MFG
+                # Build match details for display
+                pas_total_count = pas_result.get('total_count', 0)
+                pas_match_type = pas_result.get('match_type', '')
+                match_details = f"{matched_mpn}@{matched_mfg}"
+                if pas_total_count > 1:
+                    match_details += f" ({pas_total_count} total)"
+
+                # Emit signal immediately so GUI updates in real-time
+                self.part_processed.emit({
+                    'company_pn': company_pn,
+                    'mpn': mpn,
+                    'manufacturer': manufacturer,
+                    'status': 'Found',
+                    'category': category,
+                    'match_type': pas_match_type,
+                    'message': match_details
+                })
+
+                return {
+                    'index': i,
+                    'part': part,
+                    'error': None,
+                    'pas_result': pas_result,
+                    'category': category,
+                    'matched_mpn': matched_mpn,
+                    'matched_mfg': matched_mfg,
+                    'part_data': part_data
+                }
+            else:
+                total_count = pas_result.get('total_count', 0)
+                match_type = pas_result.get('match_type', 'Unknown')
+                error_msg = pas_result.get('error', '')
+                self.log_message.emit(f"  Not found in PAS (searched {total_count} results, match_type={match_type}, error={error_msg})")
+
+                # Emit signal immediately so GUI updates in real-time
+                self.part_processed.emit({
+                    'company_pn': company_pn,
+                    'mpn': mpn,
+                    'manufacturer': manufacturer,
+                    'status': 'Not Found',
+                    'category': '',
+                    'match_type': 'None',
+                    'message': f'No match ({total_count} searched)'
+                })
+
+                return {
+                    'index': i,
+                    'part': part,
+                    'error': None,
+                    'pas_result': pas_result,
+                    'found': False,
+                    'total_count': total_count
+                }
+
+        # Process parts in parallel with 15 workers (balance between speed and rate limits)
+        total = len(parts)
+        max_workers = 15
+        self.log_message.emit(f"\nStarting parallel PAS API search with {max_workers} workers...")
+
+        # Collect all PAS results first (parallel API calls)
+        pas_results_list = []
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Submit all tasks
+            future_to_part = {executor.submit(search_pas_for_part, i, p): i for i, p in enumerate(parts)}
+
+            # Process completed tasks
+            for future in as_completed(future_to_part):
+                if self._is_cancelled:
+                    self.log_message.emit("Processing cancelled by user")
+                    executor.shutdown(wait=False, cancel_futures=True)
+                    break
+
+                try:
+                    search_result = future.result()
+                    if search_result:
+                        pas_results_list.append(search_result)
+                except Exception as e:
+                    self.log_message.emit(f"  ERROR in worker thread: {str(e)}")
+                    results['errors'] += 1
+
+        # Now process database operations sequentially (SQLite is single-threaded)
+        self.log_message.emit(f"\nProcessing {len(pas_results_list)} results into database...")
+
+        for search_result in pas_results_list:
+            if self._is_cancelled:
+                break
+
+            part = search_result['part']
+            company_pn = part['company_pn']
+            manufacturer = part['manufacturer']
+            mpn = part['mpn']
+
+            results['processed'] += 1
+
+            # Handle errors (already emitted in parallel phase)
+            if search_result.get('error'):
+                results['errors'] += 1
+                continue
+
+            # Handle not found (already emitted in parallel phase)
+            if search_result.get('found') == False:
+                results['not_found'] += 1
+                continue
+
+            # Handle found parts
+            if search_result.get('pas_result', {}).get('found'):
+                results['found'] += 1
+
+                category = search_result.get('category', 'Uncategorized')
+                if category == 'Uncategorized':
+                    results['uncategorized'] += 1
+
+                matched_mpn = search_result.get('matched_mpn', '')
+                matched_mfg = search_result.get('matched_mfg', '')
+                part_data = search_result.get('part_data', {})
+                pas_result = search_result.get('pas_result', {})
+
+                # Build match details for display
                 total_count = pas_result.get('total_count', 0)
                 match_type = pas_result.get('match_type', '')
                 match_details = f"{matched_mpn}@{matched_mfg}"
@@ -475,95 +588,38 @@ class WorkerThread(QThread):
                     populated_fields = set(part_data.keys())
                     unpopulated = expected_fields - populated_fields
                     if unpopulated:
-                        with results_lock:
-                            if category not in results['unpopulated_columns']:
-                                results['unpopulated_columns'][category] = {}
-                            for field in unpopulated:
-                                results['unpopulated_columns'][category][field] = results['unpopulated_columns'][category].get(field, 0) + 1
+                        if category not in results['unpopulated_columns']:
+                            results['unpopulated_columns'][category] = {}
+                        for field in unpopulated:
+                            results['unpopulated_columns'][category][field] = results['unpopulated_columns'][category].get(field, 0) + 1
 
-                # Insert data into database
+                # Insert data into database (sequential - main thread only)
                 if not config['dry_run'] and cpd_updater:
                     # Check if we already processed this MPN in this session
-                    with processed_mpns_lock:
-                        already_processed = matched_mpn in processed_mpns
-                        if not already_processed:
-                            processed_mpns.add(matched_mpn)
-                    
-                    if already_processed:
-                        with results_lock:
-                            results['skipped_duplicates'] += 1
+                    if matched_mpn in processed_mpns:
+                        results['skipped_duplicates'] += 1
                         self.log_message.emit(f"  Skipped (duplicate MPN already processed)")
                     else:
+                        processed_mpns.add(matched_mpn)
+
                         # Check if part exists in DB for update vs insert tracking
                         existing_part = cpd_updater.find_part_by_mpn(category, matched_mpn)
                         was_update = existing_part is not None
 
                         if cpd_updater.insert_or_update_part(category, part_data):
-                            with results_lock:
-                                if was_update:
-                                    results['updated'] += 1
-                                    results['updated_by_category'][category] = results['updated_by_category'].get(category, 0) + 1
-                                else:
-                                    results['inserted'] += 1
-                                    results['inserted_by_category'][category] = results['inserted_by_category'].get(category, 0) + 1
                             if was_update:
+                                results['updated'] += 1
+                                results['updated_by_category'][category] = results['updated_by_category'].get(category, 0) + 1
                                 self.log_message.emit(f"  Updated in {category}")
                             else:
+                                results['inserted'] += 1
+                                results['inserted_by_category'][category] = results['inserted_by_category'].get(category, 0) + 1
                                 self.log_message.emit(f"  Inserted in {category}")
                         else:
-                            with results_lock:
-                                results['errors'] += 1
+                            results['errors'] += 1
                             self.log_message.emit(f"  Failed to insert")
 
-                return {
-                    'company_pn': company_pn,
-                    'mpn': mpn,
-                    'manufacturer': manufacturer,
-                    'status': 'Found',
-                    'category': category,
-                    'match_type': match_type,
-                    'message': match_details
-                }
-            else:
-                with results_lock:
-                    results['not_found'] += 1
-                total_count = pas_result.get('total_count', 0)
-                self.log_message.emit(f"  Not found in PAS (searched {total_count} results)")
-
-                return {
-                    'company_pn': company_pn,
-                    'mpn': mpn,
-                    'manufacturer': manufacturer,
-                    'status': 'Not Found',
-                    'category': '',
-                    'match_type': 'None',
-                    'message': f'No match ({total_count} searched)'
-                }
-
-        # Process parts in parallel with 15 workers (balance between speed and rate limits)
-        total = len(parts)
-        max_workers = 15
-        self.log_message.emit(f"\nStarting parallel processing with {max_workers} workers...")
-        
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            # Submit all tasks
-            future_to_part = {executor.submit(process_single_part, i, p): i for i, p in enumerate(parts)}
-            
-            # Process completed tasks
-            for future in as_completed(future_to_part):
-                if self._is_cancelled:
-                    self.log_message.emit("Processing cancelled by user")
-                    executor.shutdown(wait=False, cancel_futures=True)
-                    break
-                
-                try:
-                    result = future.result()
-                    if result:
-                        self.part_processed.emit(result)
-                except Exception as e:
-                    self.log_message.emit(f"  ERROR in worker thread: {str(e)}")
-                    with results_lock:
-                        results['errors'] += 1
+                # Note: part_processed signal already emitted in parallel phase
 
         # Cleanup
         if cpd_updater:
@@ -601,19 +657,266 @@ class BOMPopulatorGUI(QMainWindow):
     def init_ui(self):
         """Initialize the user interface"""
         self.setWindowTitle("BOM to CPD Population Tool")
-        self.setMinimumSize(900, 700)
+        self.setMinimumSize(1100, 800)
+        
+        # Apply modern stylesheet following Material Design and enterprise UI best practices
+        self.setStyleSheet("""
+            /* Main Window */
+            QMainWindow {
+                background-color: #f8f9fa;
+            }
+            
+            /* Group Boxes - Card-like appearance */
+            QGroupBox {
+                font-weight: 600;
+                font-size: 13px;
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                margin-top: 14px;
+                padding-top: 10px;
+                background-color: white;
+            }
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                subcontrol-position: top left;
+                padding: 4px 12px;
+                color: #212529;
+                background-color: white;
+            }
+            
+            /* Primary Buttons */
+            QPushButton {
+                background-color: #0d6efd;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                padding: 8px 16px;
+                font-weight: 500;
+                font-size: 13px;
+                min-width: 90px;
+            }
+            QPushButton:hover {
+                background-color: #0b5ed7;
+            }
+            QPushButton:pressed {
+                background-color: #0a58ca;
+            }
+            QPushButton:disabled {
+                background-color: #e9ecef;
+                color: #6c757d;
+            }
+            
+            /* Input Fields */
+            QLineEdit {
+                border: 1px solid #ced4da;
+                border-radius: 6px;
+                padding: 8px 12px;
+                background-color: white;
+                font-size: 13px;
+                selection-background-color: #0d6efd;
+            }
+            QLineEdit:focus {
+                border: 2px solid #0d6efd;
+                padding: 7px 11px;
+            }
+            QLineEdit:disabled {
+                background-color: #e9ecef;
+                color: #6c757d;
+            }
+            
+            /* Combo Boxes */
+            QComboBox {
+                border: 1px solid #ced4da;
+                border-radius: 6px;
+                padding: 8px 12px;
+                background-color: white;
+                font-size: 13px;
+            }
+            QComboBox:focus {
+                border: 2px solid #0d6efd;
+                padding: 7px 11px;
+            }
+            QComboBox::drop-down {
+                border: none;
+                padding-right: 10px;
+            }
+            QComboBox QAbstractItemView {
+                border: 1px solid #ced4da;
+                border-radius: 6px;
+                background-color: white;
+                selection-background-color: #0d6efd;
+            }
+            
+            /* Spin Boxes */
+            QSpinBox {
+                border: 1px solid #ced4da;
+                border-radius: 6px;
+                padding: 8px 12px;
+                background-color: white;
+                font-size: 13px;
+            }
+            QSpinBox:focus {
+                border: 2px solid #0d6efd;
+                padding: 7px 11px;
+            }
+            
+            /* Checkboxes */
+            QCheckBox {
+                spacing: 8px;
+                font-size: 13px;
+            }
+            QCheckBox::indicator {
+                width: 18px;
+                height: 18px;
+                border-radius: 4px;
+                border: 2px solid #ced4da;
+                background-color: white;
+            }
+            QCheckBox::indicator:hover {
+                border-color: #0d6efd;
+            }
+            QCheckBox::indicator:checked {
+                background-color: #0d6efd;
+                border-color: #0d6efd;
+                image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgMkw0LjUgOC41TDIgNiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=);
+            }
+            
+            /* Progress Bar */
+            QProgressBar {
+                border: 1px solid #dee2e6;
+                border-radius: 6px;
+                text-align: center;
+                background-color: #f8f9fa;
+                height: 28px;
+                font-size: 13px;
+                font-weight: 500;
+            }
+            QProgressBar::chunk {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                    stop:0 #0d6efd, stop:1 #0b5ed7);
+                border-radius: 5px;
+            }
+            
+            /* Tables */
+            QTableWidget {
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                background-color: white;
+                gridline-color: #f1f3f5;
+                selection-background-color: #e7f1ff;
+                font-size: 13px;
+            }
+            QTableWidget::item {
+                padding: 6px;
+            }
+            QTableWidget::item:selected {
+                background-color: #e7f1ff;
+                color: #212529;
+            }
+            QHeaderView::section {
+                background-color: #f8f9fa;
+                color: #495057;
+                padding: 10px;
+                border: none;
+                border-bottom: 2px solid #dee2e6;
+                font-weight: 600;
+                font-size: 13px;
+            }
+            
+            /* Text Edit */
+            QTextEdit {
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                background-color: white;
+                selection-background-color: #e7f1ff;
+                font-family: 'Consolas', 'Monaco', monospace;
+                font-size: 12px;
+                padding: 8px;
+            }
+            
+            /* Menu Bar */
+            QMenuBar {
+                background-color: #212529;
+                color: white;
+                padding: 4px;
+                font-size: 13px;
+            }
+            QMenuBar::item {
+                background-color: transparent;
+                padding: 6px 14px;
+                color: white;
+                border-radius: 4px;
+            }
+            QMenuBar::item:selected {
+                background-color: #495057;
+            }
+            QMenuBar::item:pressed {
+                background-color: #343a40;
+            }
+            
+            /* Menus */
+            QMenu {
+                background-color: white;
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                padding: 4px;
+            }
+            QMenu::item {
+                padding: 8px 24px;
+                border-radius: 4px;
+                font-size: 13px;
+            }
+            QMenu::item:selected {
+                background-color: #f8f9fa;
+            }
+            
+            /* Status Bar */
+            QStatusBar {
+                background-color: #f8f9fa;
+                color: #495057;
+                border-top: 1px solid #dee2e6;
+                font-size: 12px;
+            }
+            
+            /* Labels */
+            QLabel {
+                color: #495057;
+                font-size: 13px;
+            }
+            
+            /* Scroll Bars */
+            QScrollBar:vertical {
+                border: none;
+                background: #f8f9fa;
+                width: 12px;
+                margin: 0;
+                border-radius: 6px;
+            }
+            QScrollBar::handle:vertical {
+                background: #ced4da;
+                min-height: 30px;
+                border-radius: 6px;
+            }
+            QScrollBar::handle:vertical:hover {
+                background: #adb5bd;
+            }
+            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                height: 0px;
+            }
+        """)
 
         # Create menu bar
         self._create_menu_bar()
 
         # Central widget
         central_widget = QWidget()
+        central_widget.setStyleSheet("background-color: #f8f9fa;")
         self.setCentralWidget(central_widget)
 
-        # Main layout
+        # Main layout with better spacing
         main_layout = QVBoxLayout(central_widget)
-        main_layout.setSpacing(10)
-        main_layout.setContentsMargins(10, 10, 10, 10)
+        main_layout.setSpacing(16)
+        main_layout.setContentsMargins(20, 20, 20, 20)
 
         # Create sections
         main_layout.addWidget(self._create_file_section())
@@ -814,15 +1117,56 @@ class BOMPopulatorGUI(QMainWindow):
         self.progress_bar.setFormat("%v / %m parts")
         layout.addWidget(self.progress_bar, stretch=1)
 
-        # Buttons
-        self.run_btn = QPushButton("Run")
-        self.run_btn.setMinimumWidth(100)
-        self.run_btn.setStyleSheet("QPushButton { background-color: #4CAF50; color: white; font-weight: bold; }")
+        # Buttons with modern styling
+        self.run_btn = QPushButton("▶  Run Processing")
+        self.run_btn.setMinimumWidth(150)
+        self.run_btn.setMinimumHeight(42)
+        self.run_btn.setStyleSheet("""
+            QPushButton {
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                    stop:0 #198754, stop:1 #157347);
+                color: white;
+                font-weight: 600;
+                font-size: 14px;
+                border-radius: 8px;
+            }
+            QPushButton:hover {
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                    stop:0 #20a560, stop:1 #198754);
+            }
+            QPushButton:pressed {
+                background-color: #146c43;
+            }
+            QPushButton:disabled {
+                background: #e9ecef;
+                color: #6c757d;
+            }
+        """)
         self.run_btn.clicked.connect(self.run_processing)
         layout.addWidget(self.run_btn)
 
-        self.cancel_btn = QPushButton("Cancel")
-        self.cancel_btn.setMinimumWidth(100)
+        self.cancel_btn = QPushButton("⏹  Cancel")
+        self.cancel_btn.setMinimumWidth(130)
+        self.cancel_btn.setMinimumHeight(42)
+        self.cancel_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #dc3545;
+                color: white;
+                font-weight: 600;
+                font-size: 14px;
+                border-radius: 8px;
+            }
+            QPushButton:hover {
+                background-color: #bb2d3b;
+            }
+            QPushButton:pressed {
+                background-color: #b02a37;
+            }
+            QPushButton:disabled {
+                background: #e9ecef;
+                color: #6c757d;
+            }
+        """)
         self.cancel_btn.setEnabled(False)
         self.cancel_btn.clicked.connect(self.cancel_processing)
         layout.addWidget(self.cancel_btn)
